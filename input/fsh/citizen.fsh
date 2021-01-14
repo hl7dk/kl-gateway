@@ -1,7 +1,7 @@
 Profile: KLGatewayCareCitizen
 Parent: Patient
 Id: klgateway-care-citizen
-Title: "Care Citizen"
+Title: "CareCitizen"
 Description: "Administrative information about a citizen receiving care or care related services."
 * identifier 1..1
 * identifier only dk-core-cpr-identifier

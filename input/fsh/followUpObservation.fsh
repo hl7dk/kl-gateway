@@ -3,7 +3,7 @@ Alias: $SnomedCT = http://snomed.info/sct
 Profile: KLGatewayCareFollowUpObservation
 Parent: Observation
 Id: klgateway-care-follow-up-observation
-Title: "Care Follow Up Observation"
+Title: "CareFollowUpObservation"
 Description: "Structured result or outcome of a follow up."
 * identifier ..0
 * basedOn ..0
@@ -35,6 +35,11 @@ Description: "Structured result or outcome of a follow up."
 * hasMember 0..0
 * derivedFrom ..0
 * component ..0
+
+//Danish descriptions
+* subject ^short = "[DK] opfølgningsubjekt"
+* effective[x] ^short = "[DK] opfølgningstid"
+* status ^short = "[DK] opfølgningsstatus"
 
 
 Instance: VaskeSigFortsaettes

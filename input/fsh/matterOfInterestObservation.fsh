@@ -1,13 +1,12 @@
 Profile: KLGatewayCareMatterOfInterestObservation
 Parent: Observation
 Id: klgateway-care-matter-of-interest-observation
-Title: "Care Matter of Interest Observation"
+Title: "CareMatterOfInterestObservation"
 Description: "Matter or area of interest in relation to the care of the citizen."
 * identifier ..0
 * basedOn ..0
 * partOf ..0
 * category ..0
-* status = #final
 * code from FSIIICareMatterOfInterests
 * subject only Reference(klgateway-care-citizen)
 * subject ^type.aggregation = #bundled
@@ -29,6 +28,13 @@ Description: "Matter or area of interest in relation to the care of the citizen.
 * hasMember 0..0
 * derivedFrom ..0
 * component ..0
+
+//Danish descriptions
+* code ^short = "[DK] oplysningskode"
+* subject ^short = "[DK] oplysningssubjekt"
+* effective[x] ^short = "[DK] oplysningstid"
+* status ^short = "[DK] oplysningsstatus"
+
 
 Alias: $KLTerminology = http://kl.dk/fhir/common/caresocial/CodeSystem/FSIII
 

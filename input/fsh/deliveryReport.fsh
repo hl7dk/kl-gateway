@@ -1,7 +1,7 @@
 Profile: KLGatewayCareDeliveryReport
 Parent: Bundle
 Id: klgateway-care-delivery-report
-Title: "Care Delivery Report"
+Title: "CareDeliveryReport"
 Description: "Deliver report to deliver for each citizen."
 * identifier ..0
 * type = #collection

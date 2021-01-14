@@ -4,7 +4,7 @@ Alias: $KLCommonCodes = http://kl.dk/fhir/common/caresocial/CodeSystem/KLCommonC
 Profile: KLGatewayCareGoal
 Parent: Goal
 Id: klgateway-care-goal
-Title: "Care Goal"
+Title: "CareGoal"
 Description: "Describes the intended or expected functional level for a condition of a citizen."
 * identifier ..0
 * lifecycleStatus ^definition = "Shall be planned, entered-in-error, or fit the current lifecycle status of the goal"
@@ -45,6 +45,15 @@ Description: "Describes the intended or expected functional level for a conditio
 * outcomeCode ..0
 * outcomeReference ..0
 * obeys klgateway-adresses-must-be-home-care-condition
+
+//Danish descriptions
+* category ^short = "[DK] målkategori"
+* target ^short = "[DK] målSværhedsgrad"
+* description ^short = "[DK] målbeskrivelse"
+* subject ^short = "[DK] målSubjekt"
+* addresses ^short = "[DK] målrelateret"
+* target.measure ^short = "[DK] målemetode"
+
 
 Invariant: klgateway-adresses-must-be-home-care-condition
 Description: "The goal is only allowed to address home care conditions"

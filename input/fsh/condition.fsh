@@ -5,7 +5,7 @@ Alias: $VerificationStatus = http://terminology.hl7.org/CodeSystem/condition-ver
 Profile: KLGatewayCareCondition
 Parent: Condition
 Id: klgateway-care-condition
-Title: "Care Condition"
+Title: "CareCondition"
 Description: "Detailed information about conditions."
 * identifier ..0
 * clinicalStatus 1..1
@@ -14,9 +14,8 @@ Description: "Detailed information about conditions."
 * clinicalStatus.coding.userSelected ..0
 * clinicalStatus.text ..0
 * verificationStatus MS
-* verificationStatus ^definition = "Must be present if entered-in-error. Must not be present otherwise."
+* verificationStatus ^definition = "Shall be present if entered-in-error. Assumed to be confirmed if absent."
 * verificationStatus.coding 1..1
-* verificationStatus.coding = $VerificationStatus#entered-in-error
 * verificationStatus.coding.system ..0
 * verificationStatus.coding.version ..0
 * verificationStatus.coding.display ..0
@@ -24,7 +23,6 @@ Description: "Detailed information about conditions."
 * verificationStatus.text ..0
 * category 1..1
 * category.coding 1..1
-* category.coding = $ConditionCategory#problem-list-item
 * category.coding.version ..0
 * category.coding.display ..0
 * category.coding.userSelected ..0
@@ -48,6 +46,17 @@ Description: "Detailed information about conditions."
 * extension contains klgateway-care-follow-up-encounter-extension named followUpEncounter 0..1 MS
 * extension[followUpEncounter] ^definition = "Encounter for following up on this condition. Must be present if a follow-up date is known"
 * obeys klgateway-severity-mandatory-in-home-care-not-allowed-in-nursing
+
+//Danish descriptions
+* code.coding ^short = "[DK] tilstandskode"
+* code.coding ^short = "[DK] FSIII tilstandskode"
+* severity.coding ^short = "[DK] tilstandssværhedsgrad" 
+* clinicalStatus ^short = "[DK] tilstandsstatus"
+* verificationStatus ^short = "[DK] tilstandsstatus"
+* recordedDate ^short = "[DK] tilstandsoprettelsestid" 
+* extension[followUpEncounter] ^short = "[DK] tilstandsplanlagtOpfølgning" 
+* subject ^short = "[DK] tilstandssubjekt" 
+* category.coding ^short = "[DK] tilstandsfokus"
 
 Invariant: klgateway-severity-mandatory-in-home-care-not-allowed-in-nursing
 Description: "The severity is mandatory for home care and not allowed for nursing conditions"
