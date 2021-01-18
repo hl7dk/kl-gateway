@@ -1,7 +1,7 @@
 ### Scope and usage
 In a Danish municipality setting, CompletedIntervention is used to describe what activities has been delivered (e.g. a visit from a nurse to a citizen home where wound care is delivered). A CompletedIntervention always describes actual activities of one encounter. It should not be confused with PlannedIntervention, which describes the intention of activities, typically for several encounters.
 
-In this implementation guide it is only used for interventions delivered acute or otherwise not planned.
+In this implementation guide it is only used for interventions delivered acute or otherwise not planned at the time of delivery. The completed intervention is still considered unplanned if the intervention is planned after the fact.
 
 ### Conversions between Danish information model and FHIR-profile
 
