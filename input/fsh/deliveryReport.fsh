@@ -17,6 +17,7 @@ Description: "Deliver report to deliver for each citizen."
     goal 0.. and
     citizensOwnObservation 0.. and
     plannedIntervention 0.. and
+    completedIntervention 0.. and
     matterOfInterestObservation 0.. and
     encounter 0.. and
     followUpObservation 0..
@@ -30,6 +31,8 @@ Description: "Deliver report to deliver for each citizen."
 * entry[citizensOwnObservation].resource only KLGatewayCareCitizensOwnObservation
 * entry[plannedIntervention].resource 1..1
 * entry[plannedIntervention].resource only KLGatewayCarePlannedIntervention
+* entry[completedIntervention].resource 1..1
+* entry[completedIntervention].resource only KLGatewayCareCompletedIntervention
 * entry[matterOfInterestObservation].resource 1..1
 * entry[matterOfInterestObservation].resource only KLGatewayCareMatterOfInterestObservation
 * entry[encounter].resource 1..1
@@ -37,6 +40,7 @@ Description: "Deliver report to deliver for each citizen."
 * entry[followUpObservation].resource 1..1
 * entry[followUpObservation].resource only KLGatewayCareFollowUpObservation
 * signature ..0
+
 
 Instance: TestPersonReport
 InstanceOf: KLGatewayCareDeliveryReport
@@ -59,6 +63,8 @@ Description: "Example of a delivery report for the test person"
 * entry[plannedIntervention].resource = PersonligHygiejne
 * entry[plannedIntervention].fullUrl = "CarePlan/Dialyse"
 * entry[plannedIntervention].resource = Dialyse
+* entry[completedIntervention].fullUrl = "Procedure/Saarbehandling"
+* entry[completedIntervention].resource = Saarbehandling    
 * entry[matterOfInterestObservation].fullUrl = "Observation/EgensomsorgBegraensninger"
 * entry[matterOfInterestObservation].resource = EgensomsorgBegraensninger
 * entry[encounter].fullUrl = "Encounter/OpfoelgningsKontakt"

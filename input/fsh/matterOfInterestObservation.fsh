@@ -7,15 +7,8 @@ Description: "Matter or area of interest in relation to the care of the citizen.
 * basedOn ..0
 * partOf ..0
 * category ..0
-* code.coding ^slicing.discriminator.type = #value
-* code.coding ^slicing.discriminator.path = "system"
-* code.coding ^slicing.rules = #closed
-* code.coding contains area 1..1 and local 0..1
-* code.coding[area].system = "http://kl.dk/fhir/common/caresocial/CodeSystem/FSIII"
-* code.coding[area] from FSIIICareMatterOfInterests
-* code.coding[local].system = "http://gateway.kl.dk/CodeSystem/LocallyDefinedMatterOfInterests"
-* code.coding[local].code 1..1
-* code.coding[local].display 1..1
+* code.coding 1..1
+* code.coding from FSIIICareMatterOfInterests
 * subject only Reference(klgateway-care-citizen)
 * subject ^type.aggregation = #bundled
 * focus ..0
@@ -24,11 +17,10 @@ Description: "Matter or area of interest in relation to the care of the citizen.
 * effective[x] only dateTime
 * issued ..0
 * performer ..0
-
 * value[x] MS
 * value[x] only CodeableConcept
 * value[x] from KLGatewayCareMatterOfInterestValues
-
+* value[x] ^definition = "Shall contain 'B6 Ikke relevant' when the matter of interest is no longer in focus, otherwise the value shall not be set."
 * dataAbsentReason ..0
 * interpretation ..0
 * note ..0
@@ -40,6 +32,7 @@ Description: "Matter or area of interest in relation to the care of the citizen.
 * hasMember 0..0
 * derivedFrom ..0
 * component ..0
+* extension contains klgateway-care-finding-context-at-risk-extension named findingContextAtRisk 0..1
 
 //Danish descriptions
 * code ^short = "[DK] oplysningskode"
@@ -57,3 +50,12 @@ Description: "An observation that self-care is an area that is a matter of inter
 * code.coding = $KLTerminology#J1
 * subject = Reference(TestPerson)
 * effectiveDateTime = 2020-08-14
+
+Instance: EgensomsorgBegraensningerOmkringKropspleje
+InstanceOf: KLGatewayCareMatterOfInterestObservation
+Description: "An observation that self-care is an area that is a matter of interest regarding the test person with potential problems around bodily care"
+* status = #final
+* code.coding = $KLTerminology#J1
+* subject = Reference(TestPerson)
+* effectiveDateTime = 2020-08-14
+* extension[findingContextAtRisk].valueCoding = $KLTerminology#J1.2

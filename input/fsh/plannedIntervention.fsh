@@ -42,7 +42,7 @@ Description: "Planned interventions for nursing and home care in Danish Municipa
 * activity.detail.code.coding contains level2 1..1 and level3 0..1 MS
 * activity.detail.code.coding[level2].system = "http://kl.dk/fhir/common/caresocial/CodeSystem/FSIII"
 * activity.detail.code.coding[level2] from FSIIICareInterventions
-* activity.detail.code.coding[level3].system = "http://gateway.kl.dk/CodeSystem/LocallyDefinedInterventions"
+* activity.detail.code.coding[level3].system = "http://gateway.kl.dk/1.0/CodeSystem/LocallyDefinedInterventions"
 * activity.detail.code.coding[level3].code 1..1
 * activity.detail.code.coding[level3].display 1..1
 * activity.detail.code.coding[level3] ^definition = "Shall contain locally defined code if it is a locally defined level 3 intervention"
