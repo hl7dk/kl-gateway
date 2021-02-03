@@ -1,9 +1,9 @@
 ### Scope and usage
 The PlannedIntervention may be instatiated whenever an intervention is planned for a citizen in Danish municipalities. PlannedIntervention is used for planning ahead. When the intervention is acute or otherwise not planned, use CompletedIntervention instead.
 
-CarePlan.activity.detail.code.coding holds the intervention code from FSIII. CarePlan.activity.detail.description is a description of the intervention that should be carried out.
+CarePlan.activity.detail.code.coding holds the intervention code from FSIII of the intervention that should be carried out.
 
-It is important to distiguish correctly between the dates and times stated in the model. CarePlan.period.start is when the PlannedIntervention was authorized (bevillingstid). The planned end-date is CarePlan.period.end, unless the date has already occured and the status is "completed", then it is the actual end-date.
+It is important to distiguish correctly between the dates and times stated in the model. CarePlan.period.start is from when the PlannedIntervention is authorized (bevillingstid). The planned end-date is CarePlan.period.end, unless the date has already occured and the status is "completed", then it is the actual end-date.
 
 CarePlan.status and CarePlan.intent are mandatory in the FHIR CarePlan resource. It is important that the intent is set to "order", when the intervention have been approved by municipality authorities (når bevillingen er sket). The status should active, revoked and completed plans. Note that the meaning of active is "ready to be acted upon", so it does not signify that the first activities have occured. CarePlan.activity.detail.status is also mandatory, and in this case it will suffice to use the values unknown and entered-in-error. Also use these for detail-status.
 
