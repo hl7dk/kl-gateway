@@ -147,4 +147,7 @@ The gateway thus validates that the format of the content is valid, the structur
 
 The gateway is not able to validate immediately whether the reported data conflicts with previously reported data. Problems like this will probably not be found until the data is processed for business intelligence or reporting to other recipients. Handling these problems will have to be a manual process. The gateway will for obvious reasons not be able to validate whether all the data from the source systems has been reported, including attributes with zero to one or zero to many cardinality marked as "must support".
 
+#### Examples
+The implementation guide contains a number of examples for each profile used in a delivery report. See [Delivery report example](Bundle-TestPersonReport.html) for an example of a complete delivery report.
+
 __Note:__ Must support markers are used according to the FHIR specification and means that it shall be included in the report if the information is available. A precise definition of what available means in each case is described in the definition of the element.
