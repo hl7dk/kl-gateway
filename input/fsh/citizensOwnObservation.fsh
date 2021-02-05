@@ -1,7 +1,7 @@
 Profile: KLGatewayCareCitizensOwnObservation
 Parent: Observation
 Id: klgateway-care-citizens-own-observation
-Title: "Care Citizens Own Observation"
+Title: "CareCitizensOwnObservation"
 Description: "Measurements and simple assertions made about a patient by the patient."
 * identifier ..0
 * basedOn ..0
@@ -44,6 +44,14 @@ Description: "Measurements and simple assertions made about a patient by the pat
 * component ..0
 * obeys klgateway-citizen-observation-code-and-value-must-match
 * obeys klgateway-focus-must-be-home-care-condition-or-area
+
+//Danish descriptions
+* code.coding ^short = "[DK] borgervurderingskode"
+* value[x].coding ^short = "[DK] borgervurderingsresultat"
+* subject ^short = "[DK] borgervurderingssubjekt"
+* focus ^short = "[DK] borgervurderingsfokus"
+* effective[x] ^short = "[DK] borgervurderingstid"
+* status ^short = "[DK] borgervurderingsstatus"
 
 Invariant: klgateway-citizen-observation-code-and-value-must-match
 Description: "The value of the observation shall be member of the valueset matching the code of the observation"

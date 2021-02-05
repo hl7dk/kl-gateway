@@ -10,11 +10,12 @@ class "Planned Intervention" as carePlannedIntervention
 class "Encounter" as encounter
 class "Follow Up Observation" as careFollowUpObservation
 class "Matter of Interest Observation" as matterOfInterestObservation
-' class "Matter of Interest Severity" as matterOfInterestSeverityObservation
+class "Completed Intervention" as completedIntervention
 
 citizen --"*" condition
 citizen --"*" matterOfInterestObservation
 citizen --"*" carePlannedIntervention
+citizen --"*" completedIntervention
 
 condition --"0..1" goal
 condition --"0..2" citizensOwnObservation

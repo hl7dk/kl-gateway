@@ -4,10 +4,9 @@ Alias: $KLCommonCodes = http://kl.dk/fhir/common/caresocial/CodeSystem/KLCommonC
 Profile: KLGatewayCareEncounter
 Parent: Encounter
 Id: klgateway-care-encounter
-Title: "Care Encounter"
+Title: "CareEncounter"
 Description: "Encounter for following up on conditions, care plans, or observations."
 * identifier ..0
-* status = #planned
 * statusHistory ..0
 * class = $v3-ActCode#HH
 * class.version ..0
@@ -43,6 +42,14 @@ Description: "Encounter for following up on conditions, care plans, or observati
 * location ..0
 * serviceProvider ..0
 * partOf ..0
+
+//Danish descriptions
+* status ^short = "[DK] kontaktstatus"
+* type.coding ^short = "[DK] kontakttype"
+* period.start ^short = "[DK] kontaktstart"
+* period.end ^short = "[DK] kontaktslut"
+* subject ^short = "[DK] kontaktsubjekt"
+* class ^short = "[DK] kontaktklasse"
 
 
 Instance: OpfoelgningsKontakt

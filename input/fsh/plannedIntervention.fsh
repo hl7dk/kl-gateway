@@ -1,7 +1,7 @@
 Profile: KLGatewayCarePlannedIntervention
 Parent: CarePlan
 Id: klgateway-care-planned-intervention
-Title: "Care Planned Intervention"
+Title: "CarePlannedIntervention"
 Description: "Planned interventions for nursing and home care in Danish Municipalities."
 * identifier ..0
 * instantiatesCanonical ..0
@@ -42,7 +42,7 @@ Description: "Planned interventions for nursing and home care in Danish Municipa
 * activity.detail.code.coding contains level2 1..1 and level3 0..1 MS
 * activity.detail.code.coding[level2].system = "http://kl.dk/fhir/common/caresocial/CodeSystem/FSIII"
 * activity.detail.code.coding[level2] from FSIIICareInterventions
-* activity.detail.code.coding[level3].system = "http://gateway.kl.dk/CodeSystem/LocallyDefinedInterventions"
+* activity.detail.code.coding[level3].system = "http://gateway.kl.dk/1.0/CodeSystem/LocallyDefinedInterventions"
 * activity.detail.code.coding[level3].code 1..1
 * activity.detail.code.coding[level3].display 1..1
 * activity.detail.code.coding[level3] ^definition = "Shall contain locally defined code if it is a locally defined level 3 intervention"
@@ -65,6 +65,19 @@ Description: "Planned interventions for nursing and home care in Danish Municipa
 * note ..0
 * extension contains klgateway-care-follow-up-encounter-extension named followUpEncounter 0..1 MS
 * extension[followUpEncounter] ^definition = "Encounter for following up on this intervention. Must be present if a follow-up date is known"
+
+//Danish descriptions
+* activity.detail.code.coding ^short = "[DK] indsatsskode"
+* activity.detail.description ^short = "[DK] handlingsanvisning"
+* period.start ^short = "[DK] indsatsbevillingstid"
+* period.end ^short = "[DK] indsatsafslutningstid"
+* status ^short = "[DK] indsatsstatus"
+* intent ^short = "[DK] indsatshensigt"
+* subject ^short = "[DK] indsatssubjekt"
+* extension[followUpEncounter] ^short = "[DK] indsatsPlanlagtOpfølgning"
+* activity.detail.reasonReference ^short = "[DK] indsatsbegrundelse"
+* activity.outcomeReference ^short = "[DK] indsatsgennemførtAktivitet"
+* activity.detail.status ^short = "[DK] indsatsAktivitetsstatus"
 
 
 Alias: $KLTerminology = http://kl.dk/fhir/common/caresocial/CodeSystem/FSIII

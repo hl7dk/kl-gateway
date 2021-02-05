@@ -67,9 +67,9 @@ Free text information about the citizens own observations is not part of this re
 - The value of a performance observation is a valid performance code according to FSIII (Udførelse)
 
 #### Planned Interventions
-Information about the planned interventions (FSIII indsatser) that the municipality performs to address the conditions of the citizen. A planned intervention represents one type of care given to the citizen. It must contain the level 2 code for the intervention, the start time, the end time if ended, references to the conditions the intervention addresses if known, and a reference to an encounter with the follow-up date of the intervention if known.
+Information about the planned interventions (FSIII indsatser) that the municipality has granted to address the conditions of the citizen. A planned intervention represents one type of care given to the citizen. It must contain the level 2 code for the intervention, the start time, the end time if ended, references to the conditions the intervention addresses if known, and a reference to an encounter with the follow-up date of the intervention if known.
 
-A citizen may be granted several level 3 intervensions for the same level 2 intervention. Level 3 interventions are reported using both the level 2 code and the locally defined level 3 code. Interventions are allowed to be overlapping to support this.
+A citizen may be granted several level 3 interventions for the same level 2 intervention. Level 3 interventions are reported using both the level 2 code and the locally defined level 3 code. Interventions are allowed to be overlapping to support this.
 
 All changes to the planned interventions since the last reporting must be contained in a new report, including all conditions and follow-up encounters referenced by the reported interventions.
 
@@ -78,8 +78,22 @@ Free text information about care plans is not part of this reporting.
 ##### Validation
 - Planned interventions refer to the citizen included in the report
 - Planned interventions have a start date
-- Home care interventions have a valid home care or nursing intervention code according to FSIII (Servicelov/sundhedslovlov indsats)
+- Planned interventions have a valid home care or nursing intervention code according to FSIII (Servicelov/sundhedslovlov indsats)
 - Planned interventions refer to zero or more health care or nursing conditions included in the report as reason for intervention
+
+#### Completed Interventions
+Information about completed interventions (FSIII Indsatser) that the municipality has delivered acute or in any other way not as planned interventions. A completed intervention represents one type of care given to the citizen. It must contain the level 2 code for the intervention and the start time of the delivery.
+
+A completed intervention my be documented as a level 3 intervension. Level 3 interventions are reported using both the level 2 code and the locally defined level 3 code.
+
+All changes to the completed but not planned interventions since the last reporting must be contained in a new report.
+
+Free text information about care plans is not part of this reporting.
+
+##### Validation
+- Completed interventions refer to the citizen included in the report
+- Completed interventions have a start date
+- Completed interventions have a valid home care or nursing intervention code according to FSIII (Servicelov/sundhedslovlov indsats)
 
 #### Matter of Interest Observations
 Information about matters of interest for home care or nursing condition areas (FSIII tilstandsområder). A matter of interest observation must contain the condition area, either home care or nursing, and the time of the observation. A matter of interest observation must also contain an encounter with a follow-up date, if available.
@@ -132,5 +146,8 @@ The delivery report is immediately validated when a source system posts it to th
 The gateway thus validates that the format of the content is valid, the structure of all resources are correct, the cardinatity of all values are valid, codings only contains valid codes, and that all referenced resources are included in the report. The rules described on this page are validated to the extent possible through more complex constraints in the profiles. The constraints in the profiles also contains a textual description to describe the error when the validation finds that a constraint is not observed. This includes more technical validations not listed above, such as fixed values aligned with the shared information model (FKI) and the FHIR standard in general.
 
 The gateway is not able to validate immediately whether the reported data conflicts with previously reported data. Problems like this will probably not be found until the data is processed for business intelligence or reporting to other recipients. Handling these problems will have to be a manual process. The gateway will for obvious reasons not be able to validate whether all the data from the source systems has been reported, including attributes with zero to one or zero to many cardinality marked as "must support".
+
+#### Examples
+The implementation guide contains a number of examples for each profile used in a delivery report. See [Delivery report example](Bundle-TestPersonReport.html) for an example of a complete delivery report.
 
 __Note:__ Must support markers are used according to the FHIR specification and means that it shall be included in the report if the information is available. A precise definition of what available means in each case is described in the definition of the element.
