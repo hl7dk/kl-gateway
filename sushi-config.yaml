@@ -18,6 +18,7 @@ dependencies:
 menu:
   Home: index.html
   Artifacts: artifacts.html
+  Homecare Example: Homecare.html
   Downloads: downloads.html
 
 parameters:
