@@ -21,8 +21,10 @@ Description: "Detailed information about conditions."
 * verificationStatus.coding.display ..0
 * verificationStatus.coding.userSelected ..0
 * verificationStatus.text ..0
-* category 1..1
+* category ..1 MS
+* category ^definition = "Category must be problem-list-item for active and left out for inactive conditions"
 * category.coding 1..1
+* category.coding.code = #problem-list-item
 * category.coding.version ..0
 * category.coding.display ..0
 * category.coding.userSelected ..0
@@ -76,7 +78,7 @@ Description: "Assessed ability for the test person to wash himself"
 * code = $KLTerminology#J1.1
 * subject = Reference(TestPerson)
 * recordedDate = 2020-08-14
-* extension[followUpEncounter].valueReference = Reference(OpfoelgningsKontakt)
+* extension[followUpEncounter].valueReference = Reference(bfa70a76-318d-453d-9abc-76982f8d13ca)
 
 Instance: ProblemerMedPersonligPleje
 InstanceOf: KLGatewayCareCondition
@@ -86,4 +88,4 @@ Description: "Assessed ability for the test person to perform personal care"
 * code = $KLTerminology#I1.1
 * subject = Reference(TestPerson)
 * recordedDate = 2020-08-14
-* extension[followUpEncounter].valueReference = Reference(OpfoelgningsKontakt)
+* extension[followUpEncounter].valueReference = Reference(bfa70a76-318d-453d-9abc-76982f8d13ca)

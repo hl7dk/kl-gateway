@@ -67,8 +67,8 @@ Description: "Example of a delivery report for the test person"
 * entry[completedIntervention].resource = Saarbehandling    
 * entry[matterOfInterestObservation].fullUrl = "Observation/EgensomsorgBegraensninger"
 * entry[matterOfInterestObservation].resource = EgensomsorgBegraensninger
-* entry[encounter].fullUrl = "Encounter/OpfoelgningsKontakt"
-* entry[encounter].resource = OpfoelgningsKontakt
+* entry[encounter].fullUrl = "Encounter/bfa70a76-318d-453d-9abc-76982f8d13ca"
+* entry[encounter].resource = bfa70a76-318d-453d-9abc-76982f8d13ca
 * entry[followUpObservation][0].fullUrl = "Observation/VaskeSigFortsaettes"
 * entry[followUpObservation][0].resource = VaskeSigFortsaettes
 * entry[followUpObservation][1].fullUrl = "Observation/PersonligPlejeFortsaettes"

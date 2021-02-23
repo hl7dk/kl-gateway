@@ -20,6 +20,10 @@ RuleSet: GoalEntryVersion(instance, version)
 * entry[goal][+].fullUrl = "Goal/{instance}"
 * entry[goal][=].resource = {instance}-{version}
 
+RuleSet: CitizensOwnObservationEntry(instance)
+* entry[citizensOwnObservation][+].fullUrl = "Observation/{instance}"
+* entry[citizensOwnObservation][=].resource = {instance}
+
 RuleSet: PlannedInterventionEntry(instance)
 * entry[plannedIntervention][+].fullUrl = "CarePlan/{instance}"
 * entry[plannedIntervention][=].resource = {instance}
@@ -36,3 +40,7 @@ RuleSet: EncounterEntry(instance)
 RuleSet: FollowUpObservationEntry(instance)
 * entry[followUpObservation][+].fullUrl = "Observation/{instance}"
 * entry[followUpObservation][=].resource = {instance}
+
+RuleSet: MatterOfInterestEntry(instance)
+* entry[matterOfInterestObservation][+].fullUrl = "Observation/{instance}"
+* entry[matterOfInterestObservation][=].resource = {instance}
