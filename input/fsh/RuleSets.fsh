@@ -33,6 +33,10 @@ RuleSet: PlannedInterventionEntryVersion(instance, version)
 * entry[plannedIntervention][+].fullUrl = "CarePlan/{instance}"
 * entry[plannedIntervention][=].resource = {instance}-{version}
 
+RuleSet: CompletedInterventionEntry(instance)
+* entry[completedIntervention][+].fullUrl = "Procedure/{instance}"
+* entry[completedIntervention][=].resource = {instance}
+
 RuleSet: EncounterEntry(instance)
 * entry[encounter][+].fullUrl = "Encounter/{instance}"
 * entry[encounter][=].resource = {instance}

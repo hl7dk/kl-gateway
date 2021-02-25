@@ -31,7 +31,10 @@ Description: "Documentation for completed interventions (activities related to o
 * performer ..0
 * location ..0
 * reasonCode ..0
-* reasonReference ..0
+* reasonReference only Reference(KLGatewayCareCondition)
+* reasonReference MS
+* reasonReference ^definition = "Reason for this intervention. Must contain all conditions known to be addressed by this intervention"
+* reasonReference ^type.aggregation = #bundled
 * bodySite ..0
 * outcome ..0
 * report ..0

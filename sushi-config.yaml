@@ -19,6 +19,7 @@ menu:
   Home: index.html
   Artifacts: artifacts.html
   Homecare Example: Homecare.html
+  Nursing Example: Nursing.html
   Downloads: downloads.html
 
 parameters:
