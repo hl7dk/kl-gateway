@@ -123,7 +123,7 @@ A delivery report is generated containing the citizen, 1 previous condition, 1 p
 
 [DeliveryReport-PeterOlsen-5](Bundle-cc93afc5-7849-4895-84eb-00bb5c129c0b.html)
 
-### Sixth Encounter February 17th, 2021 - Training
+### Sixth Encounter February 18th, 2021 - Training
 
 #### Story
 I træningscenterets udredning efter serviceloven spørges Peters om sin egne vurdering i forhold til udførelse og betydning af de forskellige aktiviteter.
