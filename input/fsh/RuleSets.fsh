@@ -1,50 +1,50 @@
 RuleSet: CitizenEntry(instance)
-* entry[citizen].fullUrl = "Patient/{instance}"
-* entry[citizen].resource = {instance}
+* entry[+].fullUrl = "Patient/{instance}"
+* entry[=].resource = {instance}
 
 RuleSet: ConditionEntry(instance)
-* entry[condition][+].fullUrl = "Condition/{instance}"
-* entry[condition][=].resource = {instance}
+* entry[+].fullUrl = "Condition/{instance}"
+* entry[=].resource = {instance}
 
 // Assumes fake id <guid>-<version>
 RuleSet: ConditionEntryVersion(instance, version)
-* entry[condition][+].fullUrl = "Condition/{instance}"
-* entry[condition][=].resource = {instance}-{version}
+* entry[+].fullUrl = "Condition/{instance}"
+* entry[=].resource = {instance}-{version}
 
 RuleSet: GoalEntry(instance)
-* entry[goal][+].fullUrl = "Goal/{instance}"
-* entry[goal][=].resource = {instance}
+* entry[+].fullUrl = "Goal/{instance}"
+* entry[=].resource = {instance}
 
 // Assumes fake id <guid>-<version>
 RuleSet: GoalEntryVersion(instance, version)
-* entry[goal][+].fullUrl = "Goal/{instance}"
-* entry[goal][=].resource = {instance}-{version}
+* entry[+].fullUrl = "Goal/{instance}"
+* entry[=].resource = {instance}-{version}
 
 RuleSet: CitizensOwnObservationEntry(instance)
-* entry[citizensOwnObservation][+].fullUrl = "Observation/{instance}"
-* entry[citizensOwnObservation][=].resource = {instance}
+* entry[+].fullUrl = "Observation/{instance}"
+* entry[=].resource = {instance}
 
 RuleSet: PlannedInterventionEntry(instance)
-* entry[plannedIntervention][+].fullUrl = "CarePlan/{instance}"
-* entry[plannedIntervention][=].resource = {instance}
+* entry[+].fullUrl = "CarePlan/{instance}"
+* entry[=].resource = {instance}
 
 // Assumes fake id <guid>-<version>
 RuleSet: PlannedInterventionEntryVersion(instance, version)
-* entry[plannedIntervention][+].fullUrl = "CarePlan/{instance}"
-* entry[plannedIntervention][=].resource = {instance}-{version}
+* entry[+].fullUrl = "CarePlan/{instance}"
+* entry[=].resource = {instance}-{version}
 
 RuleSet: CompletedInterventionEntry(instance)
-* entry[completedIntervention][+].fullUrl = "Procedure/{instance}"
-* entry[completedIntervention][=].resource = {instance}
+* entry[+].fullUrl = "Procedure/{instance}"
+* entry[=].resource = {instance}
 
 RuleSet: EncounterEntry(instance)
-* entry[encounter][+].fullUrl = "Encounter/{instance}"
-* entry[encounter][=].resource = {instance}
+* entry[+].fullUrl = "Encounter/{instance}"
+* entry[=].resource = {instance}
 
 RuleSet: FollowUpObservationEntry(instance)
-* entry[followUpObservation][+].fullUrl = "Observation/{instance}"
-* entry[followUpObservation][=].resource = {instance}
+* entry[+].fullUrl = "Observation/{instance}"
+* entry[=].resource = {instance}
 
 RuleSet: MatterOfInterestEntry(instance)
-* entry[matterOfInterestObservation][+].fullUrl = "Observation/{instance}"
-* entry[matterOfInterestObservation][=].resource = {instance}
+* entry[+].fullUrl = "Observation/{instance}"
+* entry[=].resource = {instance}
