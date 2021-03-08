@@ -15,7 +15,7 @@ Description: "Structured result or outcome of a follow up."
 * subject only Reference(klgateway-care-citizen)
 * subject ^type.aggregation = #bundled
 * focus 1..
-* focus only Reference(KLGatewayCareCondition or KLGatewayCarePlannedIntervention or KLGatewayCareMatterOfInterestObservation) 
+* focus only Reference(KLGatewayCareCondition or KLGatewayCarePlannedIntervention) 
 * encounter 0..0
 * effective[x] 1..1
 * effective[x] only dateTime
@@ -79,15 +79,5 @@ Description: "Follow-up observation documenting that the planned intervention on
 * code = $SnomedCT#712744002
 * subject = Reference(TestPerson)
 * focus = Reference(Dialyse)
-* effectiveDateTime = 2020-08-14
-* valueCodeableConcept = $KLTerminology#E1
-
-Instance: EgensomsorgBegraensningerFortsaettes
-InstanceOf: KLGatewayCareFollowUpObservation
-Description: "Follow-up observation documenting that focus on conditions within the area of self-care should be continued for the test person"
-* status = #final
-* code = $SnomedCT#712744002
-* subject = Reference(TestPerson)
-* focus = Reference(EgensomsorgBegraensninger)
 * effectiveDateTime = 2020-08-14
 * valueCodeableConcept = $KLTerminology#E1

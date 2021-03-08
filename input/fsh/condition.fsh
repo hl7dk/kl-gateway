@@ -9,6 +9,7 @@ Title: "CareCondition"
 Description: "Detailed information about conditions."
 * identifier ..0
 * clinicalStatus 1..1
+* clinicalStatus.coding 1..1
 * clinicalStatus.coding.version ..0
 * clinicalStatus.coding.display ..0
 * clinicalStatus.coding.userSelected ..0
@@ -30,9 +31,11 @@ Description: "Detailed information about conditions."
 * category.coding.userSelected ..0
 * category.text ..0
 * severity 0..1
+* severity.coding 1..1
 * severity from http://kl.dk/fhir/common/caresocial/ValueSet/KLSeveritiesFSIII (required)
 * code 1..1
 * code from FSIIICareConditions (required)
+* code.coding 1..1
 * bodySite ..0
 * subject only Reference(klgateway-care-citizen)
 * subject ^type.aggregation = #bundled

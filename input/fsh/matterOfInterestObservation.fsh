@@ -32,7 +32,7 @@ Description: "Matter or area of interest in relation to the care of the citizen.
 * hasMember 0..0
 * derivedFrom ..0
 * component ..0
-* extension contains klgateway-care-finding-context-at-risk-extension named findingContextAtRisk 0..1
+* extension contains klgateway-care-finding-context-at-risk-extension named findingContextAtRisk 0..
 
 //Danish descriptions
 * code ^short = "[DK] oplysningskode"

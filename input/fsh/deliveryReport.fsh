@@ -69,5 +69,3 @@ Description: "Example of a delivery report for the test person"
 * entry[=].resource = PersonligHygiejneFortsaettes
 * entry[+].fullUrl = "Observation/DialyseFortsaettes"
 * entry[=].resource = DialyseFortsaettes
-* entry[+].fullUrl = "Observation/EgensomsorgBegraensningerFortsaettes"
-* entry[=].resource = EgensomsorgBegraensningerFortsaettes
