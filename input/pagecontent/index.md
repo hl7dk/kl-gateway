@@ -25,7 +25,7 @@ Information about the citizen that is the subject of the report. The main inform
 #### Conditions
 Information about the conditions (FSIII tilstande) of the citizen as assessed by the care practitioners. A condition represents an assessement of either a home care or a nursing condition and it must contain the level 2 condition code as defined by FSIII, the time that it was recorded, and a reference to an encounter with the follow-up date of the condition if it is known. Home care conditions must also contain the severity of the condition represented as the functioning level as defined by FSIII.
 
-All information about conditions that has changed since the last reporting must be contained in a new report, including all referenced follow-up encounters. Changes in the assessment may include conditions that are new, updated by a new assessment or no longer in relevant. A condition that has changed since previously reported shall have the same code according to FSIII and is considered to be an update to the assessment regardless of the id of the resource.
+All information about conditions that has changed since the last reporting must be contained in a new report, including referenced follow-up encounters. Changes in the assessment may include conditions that are new, updated by a new assessment or no longer in relevant. A condition that has changed since previously reported shall have the same code according to FSIII and is considered to be an update to the assessment regardless of the id of the resource.
 
 Free text information about the conditions is not part of this reporting.
 
@@ -71,7 +71,7 @@ Information about the planned interventions (FSIII indsatser) that the municipal
 
 A citizen may be granted several level 3 interventions for the same level 2 intervention. Level 3 interventions are reported using both the level 2 code and the locally defined level 3 code. Interventions are allowed to be overlapping to support this.
 
-All changes to the planned interventions since the last reporting must be contained in a new report, including all conditions and follow-up encounters referenced by the reported interventions.
+All changes to the planned interventions since the last reporting must be contained in a new report, including conditions and follow-up encounters referenced by the reported interventions.
 
 Free text information about care plans is not part of this reporting.
 
@@ -82,7 +82,7 @@ Free text information about care plans is not part of this reporting.
 - Planned interventions refer to zero or more health care or nursing conditions included in the report as reason for intervention
 
 #### Completed Interventions
-Information about completed interventions (FSIII Indsatser) that the municipality has delivered acute or in any other way not as planned interventions. A completed intervention represents one type of care given to the citizen. It must contain the level 2 code for the intervention and the start time of the delivery.
+Information about completed interventions (FSIII Indsatser) that the municipality has delivered acute or in any other way not as planned interventions. A completed intervention represents one type of care given to the citizen. It must contain the level 2 code for the intervention, references to the conditions the intervention addresses if known, and the start time of the delivery.
 
 A completed intervention my be documented as a level 3 intervension. Level 3 interventions are reported using both the level 2 code and the locally defined level 3 code.
 
@@ -94,11 +94,12 @@ Free text information about care plans is not part of this reporting.
 - Completed interventions refer to the citizen included in the report
 - Completed interventions have a start date
 - Completed interventions have a valid home care or nursing intervention code according to FSIII (Servicelov/sundhedslovlov indsats)
+- Planned interventions refer to zero or more health care or nursing conditions included in the report as reason for intervention
 
 #### Matter of Interest Observations
-Information about matters of interest for home care or nursing condition areas (FSIII tilstandsområder). A matter of interest observation must contain the condition area, either home care or nursing, and the time of the observation. A matter of interest observation must also contain an encounter with a follow-up date, if available.
+Information about matters of interest for home care or nursing condition areas (FSIII tilstandsområder). A matter of interest observation must contain the condition area, either home care or nursing, and the time of the observation.
 
-All changes to the matter of interest observations since the last reporting must be included in a new report, including all the referenced follow-up encounters.
+All changes to the matter of interest observations since the last reporting must be included in a new report, including referenced follow-up encounters.
 
 Free text information about area observations is not part of this reporting.
 

@@ -1,40 +1,41 @@
-@startuml GatewayModel
+    @startuml GatewayModel
 
-hide empty members
+    hide empty members
 
-class "Citizen" as citizen
-class "Condition" as condition
-class "Goal" as goal
-class "Citizens Own Observation" as citizensOwnObservation
-class "Planned Intervention" as carePlannedIntervention
-class "Encounter" as encounter
-class "Follow Up Observation" as careFollowUpObservation
-class "Matter of Interest Observation" as matterOfInterestObservation
-class "Completed Intervention" as completedIntervention
+    class "Citizen" as citizen
+    class "Completed Intervention" as completedIntervention
+    class "Condition" as condition
+    class "Planned Intervention" as carePlannedIntervention
+    class "Goal" as goal
+    class "Citizens Own Observation" as citizensOwnObservation
+    class "Encounter" as encounter
+    class "Follow Up Observation" as careFollowUpObservation
+    class "Matter of Interest Observation" as matterOfInterestObservation
 
-citizen --"*" condition
-citizen --"*" matterOfInterestObservation
-citizen --"*" carePlannedIntervention
-citizen --"*" completedIntervention
+    citizen --"*" condition
+    citizen --"*" matterOfInterestObservation
+    citizen --"*" carePlannedIntervention
+    citizen --"*" completedIntervention
 
-condition --"0..1" goal
-condition --"0..2" citizensOwnObservation
+    condition --"0..1" goal
+    condition --"0..2" citizensOwnObservation
 
-matterOfInterestObservation --"0..2" citizensOwnObservation
+    matterOfInterestObservation --"0..2" citizensOwnObservation
 
-condition --"0..1" encounter
+    condition --"0..1" encounter
 
-carePlannedIntervention -"*" condition
+    completedIntervention -"*" condition
+    condition "*"- carePlannedIntervention
 
-carePlannedIntervention -"0..1" encounter
+    carePlannedIntervention -"0..1" encounter
 
-' encounter -"0..1" careFollowUpObservation
+    ' encounter -"0..1" careFollowUpObservation
 
-matterOfInterestObservation --"0..1" encounter
-' matterOfInterestObservation --"0..1" matterOfInterestSeverityObservation
+    matterOfInterestObservation --"0..1" encounter
+    ' matterOfInterestObservation --"0..1" matterOfInterestSeverityObservation
 
-carePlannedIntervention --"0..1" careFollowUpObservation
-condition --"0..1" careFollowUpObservation
-' matterOfInterestObservation --"0..1" careFollowUpObservation
+    carePlannedIntervention --"0..1" careFollowUpObservation
+    condition --"0..1" careFollowUpObservation
+    ' matterOfInterestObservation --"0..1" careFollowUpObservation
 
-@enduml
+    @enduml

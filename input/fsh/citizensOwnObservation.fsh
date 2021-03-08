@@ -63,8 +63,8 @@ Invariant: klgateway-focus-must-be-home-care-condition-or-area
 Description: "The focus shall be a home care condition or a home care matter of interest"
 Severity: #error
 Expression: "focus.resolve().code.coding.memberOf('http://kl.dk/fhir/common/caresocial/ValueSet/KLConditionCodesHomeCare')
-          or focus.resolve().code.coding.memberOf('http://kl.dk/fhir/common/caresocial/ValueSet/HomeCareAreas')"
-
+          or focus.resolve().code.coding.memberOf('http://kl.dk/fhir/common/caresocial/ValueSet/KLHomeCareAreasFSIII')"
+                                                   
 
 Instance: UdfoererSelvVaskeSig
 InstanceOf: KLGatewayCareCitizensOwnObservation

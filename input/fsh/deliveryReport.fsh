@@ -8,38 +8,30 @@ Description: "Deliver report to deliver for each citizen."
 * timestamp 1..1
 * total ..0
 * link ..0
-* entry ^slicing.discriminator.type = #profile
-* entry ^slicing.discriminator.path = "resource"
-* entry ^slicing.rules = #closed
-* entry contains
-    citizen 1..1 and
-    condition 0.. and
-    goal 0.. and
-    citizensOwnObservation 0.. and
-    plannedIntervention 0.. and
-    completedIntervention 0.. and
-    matterOfInterestObservation 0.. and
-    encounter 0.. and
-    followUpObservation 0..
-* entry[citizen].resource 1..1
-* entry[citizen].resource only KLGatewayCareCitizen
-* entry[condition].resource 1..1
-* entry[condition].resource only KLGatewayCareCondition
-* entry[goal].resource 1..1
-* entry[goal].resource only KLGatewayCareGoal
-* entry[citizensOwnObservation].resource 1..1
-* entry[citizensOwnObservation].resource only KLGatewayCareCitizensOwnObservation
-* entry[plannedIntervention].resource 1..1
-* entry[plannedIntervention].resource only KLGatewayCarePlannedIntervention
-* entry[completedIntervention].resource 1..1
-* entry[completedIntervention].resource only KLGatewayCareCompletedIntervention
-* entry[matterOfInterestObservation].resource 1..1
-* entry[matterOfInterestObservation].resource only KLGatewayCareMatterOfInterestObservation
-* entry[encounter].resource 1..1
-* entry[encounter].resource only KLGatewayCareEncounter
-* entry[followUpObservation].resource 1..1
-* entry[followUpObservation].resource only KLGatewayCareFollowUpObservation
+* entry.resource 1..1
+* entry.resource only
+    KLGatewayCareCitizen or
+    KLGatewayCareCondition or
+    KLGatewayCareGoal or
+    KLGatewayCarePlannedIntervention or
+    KLGatewayCareCompletedIntervention or
+    KLGatewayCareEncounter or
+    Observation // KLGatewayCareCitizensOwnObservation or KLGatewayCareMatterOfInterestObservation or KLGatewayCareFollowUpObservation
+* entry.resource ^short = "Content constrained to known profiles (see also constraint gateway-care-report-1)"
+* entry.search ..0
+* entry.request ..0
+* entry.response ..0
 * signature ..0
+* obeys gateway-care-report-1
+
+
+Invariant: gateway-care-report-1
+Description: "All observation resources shall conform to either klgateway-care-citizens-own-observation profile, klgateway-care-matter-of-interest-observation, or klgateway-care-follow-up-observation"
+Severity: #error
+Expression: "entry.ofType(Observation).all(
+    resource.conformsTo('http://gateway.kl.dk/1.0/StructureDefinition/klgateway-care-citizens-own-observation')
+ or resource.conformsTo('http://gateway.kl.dk/1.0/StructureDefinition/klgateway-care-matter-of-interest-observation')
+ or resource.conformsTo('http://gateway.kl.dk/1.0/StructureDefinition/klgateway-care-follow-up-observation'))"
 
 
 Instance: TestPersonReport
@@ -47,35 +39,33 @@ InstanceOf: KLGatewayCareDeliveryReport
 Description: "Example of a delivery report for the test person"
 * type = #collection
 * timestamp = 2020-08-14T00:00:00Z
-* entry[citizen].fullUrl = "Patient/TestPerson"
-* entry[citizen].resource = TestPerson
-* entry[condition][0].fullUrl = "Condition/VaskeSigLetteBegraensninger"
-* entry[condition][0].resource = VaskeSigLetteBegraensninger 
-* entry[goal].fullUrl = "Goal/ForventetIngenBegraensninger"
-* entry[goal].resource = ForventetIngenBegraensninger
-* entry[citizensOwnObservation][0].fullUrl = "Observation/OpleverIkkeBegraensningerMedVaskeSig"
-* entry[citizensOwnObservation][0].resource = OpleverIkkeBegraensningerMedVaskeSig
-* entry[citizensOwnObservation][1].fullUrl = "Observation/UdfoererSelvVaskeSig"
-* entry[citizensOwnObservation][1].resource = UdfoererSelvVaskeSig
-* entry[condition][1].fullUrl = "Condition/ProblemerMedPersonligPleje"
-* entry[condition][1].resource = ProblemerMedPersonligPleje
-* entry[plannedIntervention].fullUrl = "CarePlan/PersonligHygiejne"
-* entry[plannedIntervention].resource = PersonligHygiejne
-* entry[plannedIntervention].fullUrl = "CarePlan/Dialyse"
-* entry[plannedIntervention].resource = Dialyse
-* entry[completedIntervention].fullUrl = "Procedure/Saarbehandling"
-* entry[completedIntervention].resource = Saarbehandling    
-* entry[matterOfInterestObservation].fullUrl = "Observation/EgensomsorgBegraensninger"
-* entry[matterOfInterestObservation].resource = EgensomsorgBegraensninger
-* entry[encounter].fullUrl = "Encounter/OpfoelgningsKontakt"
-* entry[encounter].resource = OpfoelgningsKontakt
-* entry[followUpObservation][0].fullUrl = "Observation/VaskeSigFortsaettes"
-* entry[followUpObservation][0].resource = VaskeSigFortsaettes
-* entry[followUpObservation][1].fullUrl = "Observation/PersonligPlejeFortsaettes"
-* entry[followUpObservation][1].resource = PersonligPlejeFortsaettes
-* entry[followUpObservation][2].fullUrl = "Observation/PersonligHygiejneFortsaettes"
-* entry[followUpObservation][2].resource = PersonligHygiejneFortsaettes
-* entry[followUpObservation][3].fullUrl = "Observation/DialyseFortsaettes"
-* entry[followUpObservation][3].resource = DialyseFortsaettes
-* entry[followUpObservation][4].fullUrl = "Observation/EgensomsorgBegraensningerFortsaettes"
-* entry[followUpObservation][4].resource = EgensomsorgBegraensningerFortsaettes
+* entry[+].fullUrl = "Patient/TestPerson"
+* entry[=].resource = TestPerson
+* entry[+].fullUrl = "Condition/VaskeSigLetteBegraensninger"
+* entry[=].resource = VaskeSigLetteBegraensninger 
+* entry[+].fullUrl = "Goal/ForventetIngenBegraensninger"
+* entry[=].resource = ForventetIngenBegraensninger
+* entry[+].fullUrl = "Observation/OpleverIkkeBegraensningerMedVaskeSig"
+* entry[=].resource = OpleverIkkeBegraensningerMedVaskeSig
+* entry[+].fullUrl = "Observation/UdfoererSelvVaskeSig"
+* entry[=].resource = UdfoererSelvVaskeSig
+* entry[+].fullUrl = "Condition/ProblemerMedPersonligPleje"
+* entry[=].resource = ProblemerMedPersonligPleje
+* entry[+].fullUrl = "CarePlan/PersonligHygiejne"
+* entry[=].resource = PersonligHygiejne
+* entry[+].fullUrl = "CarePlan/Dialyse"
+* entry[=].resource = Dialyse
+* entry[+].fullUrl = "Procedure/Saarbehandling"
+* entry[=].resource = Saarbehandling    
+* entry[+].fullUrl = "Observation/EgensomsorgBegraensninger"
+* entry[=].resource = EgensomsorgBegraensninger
+* entry[+].fullUrl = "Encounter/bfa70a76-318d-453d-9abc-76982f8d13ca"
+* entry[=].resource = bfa70a76-318d-453d-9abc-76982f8d13ca
+* entry[+].fullUrl = "Observation/VaskeSigFortsaettes"
+* entry[=].resource = VaskeSigFortsaettes
+* entry[+].fullUrl = "Observation/PersonligPlejeFortsaettes"
+* entry[=].resource = PersonligPlejeFortsaettes
+* entry[+].fullUrl = "Observation/PersonligHygiejneFortsaettes"
+* entry[=].resource = PersonligHygiejneFortsaettes
+* entry[+].fullUrl = "Observation/DialyseFortsaettes"
+* entry[=].resource = DialyseFortsaettes
