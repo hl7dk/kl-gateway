@@ -22,20 +22,16 @@
 
     matterOfInterestObservation --"0..2" citizensOwnObservation
 
-    condition --"0..1" encounter
+    condition "*"--"0..1" encounter
 
-    completedIntervention -"*" condition
-    condition "*"- carePlannedIntervention
+    completedIntervention "*"-"*" condition
+    condition "*"-"*" carePlannedIntervention
 
-    carePlannedIntervention -"0..1" encounter
+    carePlannedIntervention "*"-"0..1" encounter
 
-    ' encounter -"0..1" careFollowUpObservation
+    matterOfInterestObservation "*"--"0..1" encounter
 
-    matterOfInterestObservation --"0..1" encounter
-    ' matterOfInterestObservation --"0..1" matterOfInterestSeverityObservation
-
-    carePlannedIntervention --"0..1" careFollowUpObservation
-    condition --"0..1" careFollowUpObservation
-    ' matterOfInterestObservation --"0..1" careFollowUpObservation
+    carePlannedIntervention "*"--"0..1" careFollowUpObservation
+    condition "*"--"0..1" careFollowUpObservation
 
     @enduml
