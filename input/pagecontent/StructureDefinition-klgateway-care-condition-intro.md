@@ -28,7 +28,6 @@ Nedenstående tabel oversætter mellem de attributter der er defineret i den fæ
 |   FKI-attribut      | Definition        | FHIR  |
 | ------------- |-------------| -----|
 |tilstandskode|Udtrykker hvilken klasse tilstanden tilhører.|Condition.code.coding|
-|tilstandssværhedsgrad|Udtrykker hvilken klasse tilstandens sværhedsgrad har.|Condition.severity.coding|
 |tilstandsstatus|Klasse der udtrykker en status for om tilstanden er til stede eller ej.|Condition.clinicalStatus og Condition.verificationStatus|
 |tilstandsoprettelsestid|tidsangivelse for hvornår tilstanden først blev oprettet i journalen|Condition.recordedDate|
 |tilstandsplanlagtOpfølgning|Kontakt, hvor det planlægges at følge op på tilstanden |Condition.extension:followUpEncounter|
