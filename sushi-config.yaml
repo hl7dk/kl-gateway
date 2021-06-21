@@ -10,7 +10,7 @@ publisher:
   name: KL
   url: http://www.kl.dk
 jurisdiction: urn:iso:std:iso:3166#DK "Denmark"
-
+	
 dependencies:
   dk.fhir.ig.dk-core: current
   dk.fhir.ig.kl.common.caresocial: current

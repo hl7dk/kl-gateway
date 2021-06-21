@@ -407,6 +407,7 @@ Usage: #inline
 Instance: 4438410f-c879-45ec-9626-75c85fa1449a
 InstanceOf: KLGatewayCareFollowUpObservation
 Description: "Follow-up observation documenting that focus on all conditions should be continued unchanged for Jens Hansen"
+Usage: #inline
 * status = #final
 * code = $SnomedCT#712744002
 * subject = Reference(eec9e8e9-221d-4eae-a54d-cdd403661def) // Jens Hansen
@@ -742,6 +743,7 @@ Usage: #inline
 Instance: e434699d-5f4e-491b-9f76-5c5dbd539edc
 InstanceOf: KLGatewayCareFollowUpObservation
 Description: "Follow-up observation documenting that focus on all conditions should be continued unchanged for Jens Hansen"
+Usage: #inline
 * status = #final
 * code = $SnomedCT#712744002
 * subject = Reference(eec9e8e9-221d-4eae-a54d-cdd403661def) // Jens Hansen

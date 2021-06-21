@@ -43,6 +43,7 @@ Usage: #inline
 Instance: a3062931-5443-4c2f-b1af-7426c23cd362
 InstanceOf: KLGatewayCareCompletedIntervention
 Description: "Completed intervention doing undersøgelse og måling af værdier for Peter Olsen"
+Usage: #inline
 * status = #completed
 * code.coding.system = "http://kl.dk/fhir/common/caresocial/CodeSystem/FSIII"
 * code.coding.code = #G1.41 // Undersøgelse og måling af værdier
@@ -53,6 +54,7 @@ Description: "Completed intervention doing undersøgelse og måling af værdier 
 Instance: ac3d11f3-666e-4b66-b3d3-deb9b7d8dba9
 InstanceOf: KLGatewayCareCompletedIntervention
 Description: "Completed intervention doing supplerende udredning for Peter Olsen"
+Usage: #inline
 * status = #completed
 * code.coding.system = "http://kl.dk/fhir/common/caresocial/CodeSystem/FSIII"
 * code.coding.code = #G1.47 // Supplerende udredning
@@ -126,6 +128,7 @@ Usage: #inline
 Instance: ee421741-4e60-46f2-b4d6-fc60bf85c42b
 InstanceOf: KLGatewayCareFollowUpObservation
 Description: "Follow-up observation documenting that focus on respirationsproblemer should be continued unchanged for Jens Hansen"
+Usage: #inline
 * status = #final
 * code = $SnomedCT#712744002
 * subject = Reference(4a45e179-ace1-4ace-9991-8276c0ba490a) // Peter Olsen
@@ -188,6 +191,7 @@ Usage: #inline
 Instance: c9c93481-f170-4653-b837-6e8eacd716ca
 InstanceOf: KLGatewayCareMatterOfInterestObservation
 Description: "Respiration og cirkulation area is not relevant for Peter Olsen"
+Usage: #inline
 * status = #final
 * code.coding = $KLTerminology#I7 // Respiration og cirkulation
 * subject = Reference(4a45e179-ace1-4ace-9991-8276c0ba490a) // Peter Olsen
@@ -198,6 +202,7 @@ Description: "Respiration og cirkulation area is not relevant for Peter Olsen"
 Instance: c0e46d1a-bcd2-4b4f-bc74-db1237157d4e
 InstanceOf: KLGatewayCareFollowUpObservation
 Description: "Follow-up observation documenting that focus on respirationsproblemer should be continued unchanged for Jens Hansen"
+Usage: #inline
 * status = #final
 * code = $SnomedCT#712744002
 * subject = Reference(4a45e179-ace1-4ace-9991-8276c0ba490a) // Peter Olsen
@@ -208,6 +213,7 @@ Description: "Follow-up observation documenting that focus on respirationsproble
 Instance: 4c160af3-dc6f-4405-a52a-b93447e06b68
 InstanceOf: KLGatewayCareFollowUpObservation
 Description: "Follow-up observation documenting that focus on respirationsproblemer should be changed (inden for rammen) for Jens Hansen"
+Usage: #inline
 * status = #final
 * code = $SnomedCT#712744002
 * subject = Reference(4a45e179-ace1-4ace-9991-8276c0ba490a) // Peter Olsen
@@ -361,6 +367,7 @@ Usage: #inline
 Instance: 357d2a34-8a4d-4302-988d-de69c4bfe0de
 InstanceOf: KLGatewayCareMatterOfInterestObservation
 Description: "Psykosociale forhold area is a potential problem for Peter Olsen"
+Usage: #inline
 * status = #final
 * code.coding = $KLTerminology#I6 // Psykosociale forhold
 * subject = Reference(4a45e179-ace1-4ace-9991-8276c0ba490a) // Peter Olsen
@@ -369,6 +376,7 @@ Description: "Psykosociale forhold area is a potential problem for Peter Olsen"
 Instance: f5c24a73-fac8-44c8-972e-7b4aa13c1c40
 InstanceOf: KLGatewayCareMatterOfInterestObservation
 Description: "Søvn og hvile area is a potential problem for Peter Olsen"
+Usage: #inline
 * status = #final
 * code.coding = $KLTerminology#I10 // Søvn og hvile
 * subject = Reference(4a45e179-ace1-4ace-9991-8276c0ba490a) // Peter Olsen
@@ -378,6 +386,7 @@ Description: "Søvn og hvile area is a potential problem for Peter Olsen"
 Instance: d54367e4-c2c5-49f6-bd28-a154af029b36
 InstanceOf: KLGatewayCareFollowUpObservation
 Description: "Follow-up observation documenting that focus on problemer med mobilitet og bevægelse afsluttes for Peter Olsen"
+Usage: #inline
 * status = #final
 * code = $SnomedCT#712744002
 * subject = Reference(4a45e179-ace1-4ace-9991-8276c0ba490a) // Peter Olsen
@@ -403,6 +412,7 @@ Description: "Reporting of Peter Olsen after first encounter with training"
 Instance: 2d5aab71-9c3f-49b2-92e0-07619ae321e5
 InstanceOf: KLGatewayCareCitizensOwnObservation
 Description: "Peter Olsen udfører selv at gå"
+Usage: #inline
 * status = #final
 * code = $KLTerminology#C // Udførelse
 * subject = Reference(4a45e179-ace1-4ace-9991-8276c0ba490a) // Peter Olsen
@@ -413,6 +423,7 @@ Description: "Peter Olsen udfører selv at gå"
 Instance: f35aa1be-0ed2-4d86-8d62-178a7d20c923
 InstanceOf: KLGatewayCareCitizensOwnObservation
 Description: "Peter Olsen oplever ikke begrænsninger i at gå"
+Usage: #inline
 * status = #final
 * code = $KLTerminology#D // Betydning
 * subject = Reference(4a45e179-ace1-4ace-9991-8276c0ba490a) // Peter Olsen
