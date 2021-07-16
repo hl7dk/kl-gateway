@@ -32,6 +32,8 @@ Description: "Matter or area of interest in relation to the care of the citizen.
 * hasMember 0..0
 * derivedFrom ..0
 * component ..0
+* extension contains klgateway-care-follow-up-encounter-extension named followUpEncounter 0..1 MS
+* extension[followUpEncounter] ^definition = "Encounter for following up on this matter of interest. Must be present if a follow-up date is known"
 * extension contains klgateway-care-finding-context-at-risk-extension named findingContextAtRisk 0..
 
 //Danish descriptions
