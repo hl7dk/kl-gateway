@@ -29,8 +29,6 @@
 
     carePlannedIntervention "*"-"0..1" encounter
 
-    matterOfInterestObservation "*"--"0..1" encounter
-
     carePlannedIntervention "*"--"0..1" careFollowUpObservation
     condition "*"--"0..1" careFollowUpObservation
 

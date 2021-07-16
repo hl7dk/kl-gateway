@@ -109,7 +109,7 @@ Free text information about area observations is not part of this reporting.
 - Matter of interest observations have a timestamp for the observation
 
 #### Encounters
-Information about the encounters referenced from conditions, care plans, and area observations to hold the follow-up dates. The encounter must contain the expected start date of the next follow-up.
+Information about the encounters referenced from conditions and care plans to hold the follow-up dates. The encounter must contain the expected start date of the next follow-up.
 
 All referenced encounters from other resources in a report must also be included.
 
