@@ -17,7 +17,6 @@ Description: "Detailed information about conditions."
 * verificationStatus MS
 * verificationStatus ^definition = "Shall be present if entered-in-error. Assumed to be confirmed if absent."
 * verificationStatus.coding 1..1
-* verificationStatus.coding.system ..0
 * verificationStatus.coding.version ..0
 * verificationStatus.coding.display ..0
 * verificationStatus.coding.userSelected ..0
@@ -78,6 +77,7 @@ Description: "Assessed ability for the test person to wash himself"
 * clinicalStatus = $ConditionClinical#active
 * category = $ConditionCategory#problem-list-item
 * severity = $KLTerminology#B2
+* verificationStatus.coding = $VerificationStatus#confirmed
 * code = $KLTerminology#J1.1
 * subject = Reference(TestPerson)
 * recordedDate = 2020-08-14

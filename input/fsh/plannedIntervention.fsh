@@ -81,6 +81,7 @@ Description: "Planned interventions for nursing and home care in Danish Municipa
 
 
 Alias: $KLTerminology = http://kl.dk/fhir/common/caresocial/CodeSystem/FSIII
+Alias: $LocalInterventions = http://gateway.kl.dk/1.0/CodeSystem/LocallyDefinedInterventions
 
 Instance: PersonligHygiejne
 InstanceOf: KLGatewayCarePlannedIntervention
@@ -90,6 +91,7 @@ Description: "Planned intervention doing personal hygiene according to FSIII on 
 * subject = Reference(TestPerson)
 * period.start = 2020-08-14
 * activity.detail.code.coding[level2] = $KLTerminology#H1.1
+* activity.detail.code.coding[level3] = $LocalInterventions#H1.1.1 "Speciel personlig pleje"
 * activity.detail.status = #in-progress
 
 Instance: Dialyse
