@@ -8,7 +8,6 @@ Id: klgateway-care-condition
 Title: "CareCondition"
 Description: "Detailed information about conditions."
 * identifier ..0
-* clinicalStatus 1..1
 * clinicalStatus.coding 1..1
 * clinicalStatus.coding.version ..0
 * clinicalStatus.coding.display ..0
