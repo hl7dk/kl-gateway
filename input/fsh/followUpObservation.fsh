@@ -9,7 +9,7 @@ Description: "Structured result or outcome of a follow up."
 * basedOn ..0
 * partOf ..0
 * category ..0
-* status = #final
+* status ^definition = "The status of the result value. Shall be final or entered-in-error."
 * code.coding 1..1
 * code.coding = $SnomedCT#712744002
 * subject only Reference(klgateway-care-citizen)
@@ -35,11 +35,17 @@ Description: "Structured result or outcome of a follow up."
 * hasMember 0..0
 * derivedFrom ..0
 * component ..0
+* obeys gateway-care-follow-up-1
 
 //Danish descriptions
 * subject ^short = "[DK] opfølgningsubjekt"
 * effective[x] ^short = "[DK] opfølgningstid"
 * status ^short = "[DK] opfølgningsstatus"
+
+Invariant: gateway-care-follow-up-1
+Description: "A follow-up observation resource shall have status final or entered-in-error"
+Severity: #error
+Expression: "status = 'final' or status = 'entered-in-error'"
 
 
 Instance: VaskeSigFortsaettes
