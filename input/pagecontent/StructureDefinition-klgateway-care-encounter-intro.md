@@ -1,7 +1,7 @@
 ### Scope and usage
 The Encounter may be instantiated whenever citizens and practitioners meet in a Danish municipality context. In this implementation guide it is only used for follow-up on conditions and interventions. The Encounter.type.coding attribute is thus the fixed code for "opfølgning".
 
-It is important in FSIII to be able to express follow-up encounters. In the planning state, these are documented by setting Encounter.status = "planned", and Encounter.type.coding = "opfølgning". When a followUp has been performed, the Encounter.status is changed to "finished".
+It is important in FSIII to be able to express follow-up encounters. In the planning state, these are documented by setting Encounter.status = "planned", and Encounter.type.coding = "opfølgning". Encounters which are finished should not be reported hence Encounters with Encounter.status = 'finished' should not be reported and can be omitted entirely.
 
 Encounter.class is mandatory in FHIR. In this implementation guide encounter have the fixed code 'HH' home health.
 
