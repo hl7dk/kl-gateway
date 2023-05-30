@@ -1,8 +1,8 @@
-id: hl7.fhir.dk.kl.gateway.care
-canonical: http://gateway.kl.dk/1.0
+id: kl.dk.fhir.gateway
+canonical: http://fhir.kl.dk/gateway
 name: KLGateway
 status: active
-version: "1.0.4"
+version: "1.1.0"
 fhirVersion: 4.0.1
 copyrightYear: 2021+
 releaseLabel: Build CI
@@ -15,7 +15,7 @@ dependencies:
   hl7.fhir.dk.core:
     uri: https://hl7.dk/fhir/core
     version: 1.1.0
-  dk.fhir.ig.kl.common.caresocial: current
+  kl.dk.fhir.term: 1.0.0
 
 menu:
   Home: index.html

@@ -1,4 +1,4 @@
-Alias: $KLTerminology = http://kl.dk/fhir/common/caresocial/CodeSystem/FSIII
+Alias: $KLTerminology = urn:oid:1.2.208.176.2.21
 
 ValueSet: KLGatewayCareMatterOfInterestValues
 Id: KLGatewayCareMatterOfInterestValues
