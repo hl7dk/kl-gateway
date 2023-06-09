@@ -18,9 +18,6 @@ Usage: #definition
 * format[+] = #json
 * format[+] = #application/x-turtle
 * format[+] = #ttl
-* format[+] = #html/json
-* format[+] = #html/xml
-* format[+] = #html/turtle
 * rest.mode = #server
 * rest.resource[0].type = #Bundle
 * rest.resource[=].profile = "http://gateway.kl.dk/1.0/StructureDefinition/klgateway-care-delivery-report"
