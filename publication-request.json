@@ -6,7 +6,7 @@
     "status" : "release",
     "sequence" : "Releases",
     "descmd": "@release-notes.md",
-    "title" : "KLCore",
+    "title" : "KL Gateway",
     "first" : true,
     "ci-build" : "https://build.fhir.org/ig/hl7dk/kl-gateway/branches/main/",
     "category" : "Clinical Registries",
