@@ -8,7 +8,7 @@
     "descmd": "@release-notes.md",
     "title" : "KL Gateway",
     "first" : true,
-    "ci-build" : "https://build.fhir.org/ig/hl7dk/kl-gateway/branches/main/",
+    "ci-build" : "https://build.fhir.org/ig/hl7dk/kl-gateway/branches/master/",
     "category" : "Clinical Registries",
     "introduction" : "This IG includes models for reporting nursing and home care data from Danish Municipalities for secondary purposes."
   }
