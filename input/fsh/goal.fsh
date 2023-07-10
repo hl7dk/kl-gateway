@@ -1,5 +1,5 @@
-Alias: $KLTerminology = http://kl.dk/fhir/common/caresocial/CodeSystem/FSIII
-Alias: $KLCommonCodes = http://kl.dk/fhir/common/caresocial/CodeSystem/KLCommonCareSocialCodes
+Alias: $KLTerminology = urn:oid:1.2.208.176.2.21
+Alias: $KLCommonCodes = http://fhir.kl.dk/term/CodeSystem/CareSocialCodes
 
 Profile: KLGatewayCareGoal
 Parent: Goal
@@ -9,7 +9,7 @@ Description: "Describes the intended or expected functional level for a conditio
 * identifier ..0
 * lifecycleStatus ^definition = "Shall be planned, entered-in-error, or fit the current lifecycle status of the goal"
 * category 1..1
-* category from http://kl.dk/fhir/common/caresocial/ValueSet/KLGoalTypeCodes
+* category from http://fhir.kl.dk/term/ValueSet/KLGoalTypeCodes
 * category.coding 1..1
 * category.coding = $KLCommonCodes#ca552020-6ed1-4cdc-b0d4-32697f1f27ad
 * category.coding.version ..0
@@ -26,7 +26,7 @@ Description: "Describes the intended or expected functional level for a conditio
 * start[x] only date
 * target 1..1
 * target.measure 1..1
-* target.measure from http://kl.dk/fhir/common/caresocial/ValueSet/KLTargetMeasureCodes
+* target.measure from http://fhir.kl.dk/term/ValueSet/KLTargetMeasureCodes
 * target.measure.coding 1..1
 * target.measure.coding = $KLCommonCodes#66959f77-6e2a-4574-8423-3ff097f8b9fa
 * target.measure.coding.version ..0
@@ -34,7 +34,7 @@ Description: "Describes the intended or expected functional level for a conditio
 * target.measure.coding.userSelected ..0
 * target.measure.text ..0
 * target.detail[x] only CodeableConcept
-* target.detail[x] from http://kl.dk/fhir/common/caresocial/ValueSet/KLSeveritiesFSIII
+* target.detail[x] from http://fhir.kl.dk/term/ValueSet/KLSeveritiesFSIII
 * statusDate ..0
 * statusReason ..0
 * expressedBy ..0
@@ -58,7 +58,7 @@ Description: "Describes the intended or expected functional level for a conditio
 Invariant: klgateway-adresses-must-be-home-care-condition
 Description: "The goal is only allowed to address home care conditions"
 Severity: #error
-Expression: "addresses.resolve().code.coding.memberOf('http://kl.dk/fhir/common/caresocial/ValueSet/KLConditionCodesHomeCare')"
+Expression: "addresses.resolve().code.coding.memberOf('http://fhir.kl.dk/term/ValueSet/KLConditionCodesHomeCare')"
 
 
 Instance: ForventetIngenBegraensninger

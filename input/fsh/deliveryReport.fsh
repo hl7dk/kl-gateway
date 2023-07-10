@@ -29,9 +29,9 @@ Invariant: gateway-care-report-1
 Description: "All observation resources shall conform to either klgateway-care-citizens-own-observation profile, klgateway-care-matter-of-interest-observation, or klgateway-care-follow-up-observation"
 Severity: #error
 Expression: "entry.ofType(Observation).all(
-    resource.conformsTo('http://gateway.kl.dk/1.0/StructureDefinition/klgateway-care-citizens-own-observation')
- or resource.conformsTo('http://gateway.kl.dk/1.0/StructureDefinition/klgateway-care-matter-of-interest-observation')
- or resource.conformsTo('http://gateway.kl.dk/1.0/StructureDefinition/klgateway-care-follow-up-observation'))"
+    resource.conformsTo('http://fhir.kl.dk/gateway/StructureDefinition/klgateway-care-citizens-own-observation')
+ or resource.conformsTo('http://fhir.kl.dk/gateway/StructureDefinition/klgateway-care-matter-of-interest-observation')
+ or resource.conformsTo('http://fhir.kl.dk/gateway/StructureDefinition/klgateway-care-follow-up-observation'))"
 
 
 Instance: TestPersonReport

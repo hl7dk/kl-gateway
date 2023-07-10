@@ -1,5 +1,5 @@
 Alias: $v3-ActCode = http://terminology.hl7.org/CodeSystem/v3-ActCode
-Alias: $KLCommonCodes = http://kl.dk/fhir/common/caresocial/CodeSystem/KLCommonCareSocialCodes
+Alias: $KLCommonCodes = http://fhir.kl.dk/term/CodeSystem/CareSocialCodes
 
 Profile: KLGatewayCareEncounter
 Parent: Encounter
@@ -14,7 +14,7 @@ Description: "Encounter for following up on conditions, care plans, or observati
 * class.userSelected ..0
 * classHistory ..0
 * type 1..1
-* type from http://kl.dk/fhir/common/caresocial/ValueSet/KLEncounterTypes (required)
+* type from http://fhir.kl.dk/term/ValueSet/KLEncounterTypes (required)
 * type.coding 1..1
 * type.coding = $KLCommonCodes#9f03dfbb-7a97-45a5-94db-d4c3501714a9
 * type.coding.version ..0

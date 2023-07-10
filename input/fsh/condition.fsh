@@ -30,7 +30,7 @@ Description: "Detailed information about conditions."
 * category.text ..0
 * severity 0..1
 * severity.coding 1..1
-* severity from http://kl.dk/fhir/common/caresocial/ValueSet/KLSeveritiesFSIII (required)
+* severity from http://fhir.kl.dk/term/ValueSet/KLSeveritiesFSIII (required)
 * code 1..1
 * code from FSIIICareConditions (required)
 * code.coding 1..1
@@ -64,11 +64,11 @@ Description: "Detailed information about conditions."
 Invariant: klgateway-severity-mandatory-in-home-care-not-allowed-in-nursing
 Description: "The severity is mandatory for home care and not allowed for nursing conditions"
 Severity: #error
-Expression: "(severity.exists() and code.coding.memberOf('http://kl.dk/fhir/common/caresocial/ValueSet/KLConditionCodesHomeCare'))
-          or (severity.empty() and code.coding.memberOf('http://kl.dk/fhir/common/caresocial/ValueSet/KLConditionCodesNursing'))"
+Expression: "(severity.exists() and code.coding.memberOf('http://fhir.kl.dk/term/ValueSet/KLConditionCodesHomeCare'))
+          or (severity.empty() and code.coding.memberOf('http://fhir.kl.dk/term/ValueSet/KLConditionCodesNursing'))"
 
 
-Alias: $KLTerminology = http://kl.dk/fhir/common/caresocial/CodeSystem/FSIII
+Alias: $KLTerminology = urn:oid:1.2.208.176.2.21
 
 Instance: VaskeSigLetteBegraensninger
 InstanceOf: KLGatewayCareCondition

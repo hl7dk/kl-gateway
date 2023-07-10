@@ -41,7 +41,7 @@ Description: "Matter or area of interest in relation to the care of the citizen.
 * status ^short = "[DK] oplysningsstatus"
 
 
-Alias: $KLTerminology = http://kl.dk/fhir/common/caresocial/CodeSystem/FSIII
+Alias: $KLTerminology = urn:oid:1.2.208.176.2.21
 
 Instance: EgensomsorgBegraensninger
 InstanceOf: KLGatewayCareMatterOfInterestObservation

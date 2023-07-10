@@ -9,7 +9,7 @@ Description: "Measurements and simple assertions made about a patient by the pat
 * category ..0
 * status ^definition = "The status of the result value. Will typically be final or entered-in-error."
 * code 1..1
-* code from http://kl.dk/fhir/common/caresocial/ValueSet/KLCitizenObservationCodesFSIII (required)
+* code from http://fhir.kl.dk/term/ValueSet/KLCitizenObservationCodesFSIII (required)
 * code.coding.version ..0
 * code.coding.display ..0
 * code.coding.userSelected ..0
@@ -24,7 +24,7 @@ Description: "Measurements and simple assertions made about a patient by the pat
 * effective[x] only dateTime
 * value[x] 1..1
 * value[x] only CodeableConcept
-* value[x] from http://kl.dk/fhir/common/caresocial/ValueSet/KLCitizenObservationResultCodesFSIII
+* value[x] from http://fhir.kl.dk/term/ValueSet/KLCitizenObservationResultCodesFSIII
 * value[x].coding.version ..0
 * value[x].coding.display ..0
 * value[x].coding.userSelected ..0
@@ -56,14 +56,14 @@ Description: "Measurements and simple assertions made about a patient by the pat
 Invariant: klgateway-citizen-observation-code-and-value-must-match
 Description: "The value of the observation shall be member of the valueset matching the code of the observation"
 Severity: #error
-Expression: "((code.coding.code = 'C') and (valueCodeableConcept.memberOf('http://kl.dk/fhir/common/caresocial/ValueSet/KLPerformanceLevelCodesFSIII')))
-          or ((code.coding.code = 'D') and (valueCodeableConcept.memberOf('http://kl.dk/fhir/common/caresocial/ValueSet/KLImportanceLevelCodesFSIII')))"
+Expression: "((code.coding.code = 'C') and (valueCodeableConcept.memberOf('http://fhir.kl.dk/term/ValueSet/KLPerformanceLevelCodesFSIII')))
+          or ((code.coding.code = 'D') and (valueCodeableConcept.memberOf('http://fhir.kl.dk/term/ValueSet/KLImportanceLevelCodesFSIII')))"
 
 Invariant: klgateway-focus-must-be-home-care-condition-or-area
 Description: "The focus shall be a home care condition or a home care matter of interest"
 Severity: #error
-Expression: "focus.resolve().code.coding.memberOf('http://kl.dk/fhir/common/caresocial/ValueSet/KLConditionCodesHomeCare')
-          or focus.resolve().code.coding.memberOf('http://kl.dk/fhir/common/caresocial/ValueSet/KLHomeCareAreasFSIII')"
+Expression: "focus.resolve().code.coding.memberOf('http://fhir.kl.dk/term/ValueSet/KLConditionCodesHomeCare')
+          or focus.resolve().code.coding.memberOf('http://fhir.kl.dk/term/ValueSet/KLHomeCareAreasFSIII')"
                                                    
 
 Instance: UdfoererSelvVaskeSig
