@@ -40,8 +40,8 @@ Description: "Planned interventions for nursing and home care in Danish Municipa
 * activity.detail.code.coding ^slicing.discriminator.path = "system"
 * activity.detail.code.coding ^slicing.rules = #closed
 * activity.detail.code.coding contains level2 1..1 and level3 0..1 MS
-* activity.detail.code.coding[level2].system = "urn:oid:1.2.208.176.2.21"
-* activity.detail.code.coding[level2] from FSIIICareInterventions
+//* activity.detail.code.coding[level2].system = "urn:oid:1.2.208.176.2.21"
+* activity.detail.code.coding[level2] from FSIIICareInterventions2
 * activity.detail.code.coding[level3].system = "http://fhir.kl.dk/gateway/CodeSystem/LocallyDefinedInterventions"
 * activity.detail.code.coding[level3].code 1..1
 * activity.detail.code.coding[level3].display 1..1

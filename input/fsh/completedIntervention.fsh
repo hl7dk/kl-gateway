@@ -15,12 +15,13 @@ Description: "Documentation for completed interventions (activities related to o
 * code.coding ^slicing.discriminator.path = "system"
 * code.coding ^slicing.rules = #closed
 * code.coding contains level2 1..1 and level3 0..1 MS
-* code.coding[level2].system = "urn:oid:1.2.208.176.2.21"
-* code.coding[level2] from FSIIICareInterventions
+//* code.coding[level2].system = "urn:oid:1.2.208.176.2.21"
+* code.coding[level2] from FSIIICareInterventions2
 * code.coding[level3].system = "http://fhir.kl.dk/gateway/CodeSystem/LocallyDefinedInterventions"
 * code.coding[level3].code 1..1
 * code.coding[level3].display 1..1
 * code.coding[level3] ^definition = "Shall contain locally defined code if it is a locally defined level 3 intervention"
+* extension contains klgateway-care-independent-work-extension  named independentWork 0..1 MS
 * subject only Reference(KLGatewayCareCitizen)
 * subject ^type.aggregation = #bundled
 * encounter ..0
