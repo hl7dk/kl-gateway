@@ -24,7 +24,8 @@ Description: "Documentation for completed interventions (activities related to o
 * extension contains klgateway-care-independent-work-extension  named independentWork 0..1 MS
 * subject only Reference(KLGatewayCareCitizen)
 * subject ^type.aggregation = #bundled
-* encounter ..0
+* encounter ..1
+* encounter only Reference(KLGatewayCareEncounter)
 * performed[x] only dateTime
 * performedDateTime 1..
 * recorder ..0

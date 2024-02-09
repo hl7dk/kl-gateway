@@ -13,7 +13,8 @@ Description: "Encounter for following up on conditions, care plans, or observati
 * class.display ..0
 * class.userSelected ..0
 * classHistory ..0
-* type 1..1
+//* type 0..0
+* type 0..1
 * type from http://fhir.kl.dk/term/ValueSet/KLEncounterTypes (required)
 * type.coding 1..1
 * type.coding = $KLCommonCodes#9f03dfbb-7a97-45a5-94db-d4c3501714a9
@@ -21,6 +22,9 @@ Description: "Encounter for following up on conditions, care plans, or observati
 * type.coding.display ..0
 * type.coding.userSelected ..0
 * type.text ..0
+* extension contains
+   BasedOnCarePlanExtension named basedOnCarePlan 0..1
+* extension[basedOnCarePlan].valueReference ^type.aggregation = #bundled
 * serviceType ..0
 * priority ..0
 * subject 1..1
@@ -50,6 +54,7 @@ Description: "Encounter for following up on conditions, care plans, or observati
 * period.end ^short = "[DK] kontaktslut"
 * subject ^short = "[DK] kontaktsubjekt"
 * class ^short = "[DK] kontaktklasse"
+* extension[basedOnCarePlan] ^short = "[DK] kontaktBaseretPå"
 
 
 Instance: bfa70a76-318d-453d-9abc-76982f8d13ca
