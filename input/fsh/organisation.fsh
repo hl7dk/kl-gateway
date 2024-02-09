@@ -1,7 +1,7 @@
 Profile: KLGatewayCareOrganization
 Parent: http://hl7.dk/fhir/core/StructureDefinition/dk-core-organization
 Id: klgateway-care-organization
-Title: "KLGateway140Organization"
+Title: "KLGatewayCareOrganization"
 Description: "Organization as expressed in KLGateway for rehabilitation."
 * identifier 1..1
 * identifier[EAN-ID] 0..0
