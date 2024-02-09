@@ -7,7 +7,7 @@ Description:    "Referal used to represent information about the actute care ref
 * requester only Reference(klgateway-care-organization) //organization used for people from the outside
 * requester ^type.aggregation = #bundled
 * code.coding from ServiceTypes
-* orderDetail 0..1
+* orderDetail 0..*
 * orderDetail from FSIIICareInterventions2
 * subject only Reference(klgateway-care-citizen)
 * subject ^type.aggregation = #bundled
