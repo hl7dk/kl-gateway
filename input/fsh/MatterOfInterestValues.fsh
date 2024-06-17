@@ -4,4 +4,5 @@ ValueSet: KLGatewayCareMatterOfInterestValues
 Id: KLGatewayCareMatterOfInterestValues
 Title: "KLGatewayCareMatterOfInterestValues"
 Description: "Values of Matters of Interests (areas)"
+* ^experimental = false
 * $KLTerminology#B6 "Ikke relevant"

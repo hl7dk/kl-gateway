@@ -45,8 +45,8 @@ InstanceOf: KLGatewayCareCompletedIntervention
 Description: "Completed intervention doing undersøgelse og måling af værdier for Peter Olsen"
 Usage: #inline
 * status = #completed
-* code.coding.system = "urn:oid:1.2.208.176.2.21"
-* code.coding.code = #G1.41 // Undersøgelse og måling af værdier
+* code.coding[level2].system = "urn:oid:1.2.208.176.2.21"
+* code.coding[level2].code = #G1.41 // Undersøgelse og måling af værdier
 * subject = Reference(4a45e179-ace1-4ace-9991-8276c0ba490a) // Peter Olsen
 * performedDateTime = 2021-02-10T13:00:00Z
 * reasonReference = Reference(a881788d-1b27-46e3-8b76-607bc49876fd) // Respirationsproblemer
@@ -56,8 +56,8 @@ InstanceOf: KLGatewayCareCompletedIntervention
 Description: "Completed intervention doing supplerende udredning for Peter Olsen"
 Usage: #inline
 * status = #completed
-* code.coding.system = "urn:oid:1.2.208.176.2.21"
-* code.coding.code = #G1.47 // Supplerende udredning
+* code.coding[level2].system = "urn:oid:1.2.208.176.2.21"
+* code.coding[level2].code = #G1.47 // Supplerende udredning
 * subject = Reference(4a45e179-ace1-4ace-9991-8276c0ba490a) // Peter Olsen
 * performedDateTime = 2021-02-10T13:00:00Z
 * reasonReference = Reference(a881788d-1b27-46e3-8b76-607bc49876fd) // Respirationsproblemer

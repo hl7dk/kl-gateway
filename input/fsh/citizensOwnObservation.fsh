@@ -56,8 +56,8 @@ Description: "Measurements and simple assertions made about a patient by the pat
 Invariant: klgateway-citizen-observation-code-and-value-must-match
 Description: "The value of the observation shall be member of the valueset matching the code of the observation"
 Severity: #error
-Expression: "((code.coding.code = 'C') and (valueCodeableConcept.memberOf('http://fhir.kl.dk/term/ValueSet/KLPerformanceLevelCodesFSIII')))
-          or ((code.coding.code = 'D') and (valueCodeableConcept.memberOf('http://fhir.kl.dk/term/ValueSet/KLImportanceLevelCodesFSIII')))"
+Expression: "((code.coding.code = 'C') and ((value.ofType(CodeableConcept)).memberOf('http://fhir.kl.dk/term/ValueSet/KLPerformanceLevelCodesFSIII')))
+          or ((code.coding.code = 'D') and ((value.ofType(CodeableConcept)).memberOf('http://fhir.kl.dk/term/ValueSet/KLImportanceLevelCodesFSIII')))"
 
 Invariant: klgateway-focus-must-be-home-care-condition-or-area
 Description: "The focus shall be a home care condition or a home care matter of interest"

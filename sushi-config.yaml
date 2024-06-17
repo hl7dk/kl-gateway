@@ -2,7 +2,7 @@ id: kl.dk.fhir.gateway
 canonical: http://fhir.kl.dk/gateway
 name: KLGateway
 status: active # draft # active
-version: "1.1.0"
+version: "1.2.0"
 fhirVersion: 4.0.1
 copyrightYear: 2021+
 releaseLabel: release # CI Build # release
@@ -12,10 +12,8 @@ publisher:
 jurisdiction: urn:iso:std:iso:3166#DK "Denmark"
 	
 dependencies:
-  hl7.fhir.dk.core:
-    uri: https://hl7.dk/fhir/core
-    version: 1.1.0
-  kl.dk.fhir.term: 1.0.0
+  hl7.fhir.dk.core: 3.2.0
+  kl.dk.fhir.term: 2.1.0
 
 menu:
   Home: index.html
@@ -26,5 +24,5 @@ menu:
 
 parameters:
   apply-contact: true
-  apply-juristiction: true
   apply-publisher: true
+#  apply-juristiction: true
