@@ -46,8 +46,8 @@ Description: "Detailed information about conditions."
 * stage ..0
 * evidence ..0
 * note ..0
-* extension contains klgateway-care-follow-up-encounter-extension named followUpEncounter 0..1 MS
-* extension[followUpEncounter] ^definition = "Encounter for following up on this condition. Must be present if a follow-up date is known"
+* extension contains klgateway-care-follow-up-encounter-extension named followUpEncounter 0..1
+* extension[followUpEncounter] ^definition = "Encounter for following up on this condition. Will be depricated October 2025"
 * obeys klgateway-severity-mandatory-in-home-care-not-allowed-in-nursing
 
 //Danish descriptions
@@ -68,26 +68,37 @@ Expression: "(severity.exists() and code.coding.memberOf('http://fhir.kl.dk/term
           or (severity.empty() and code.coding.memberOf('http://fhir.kl.dk/term/ValueSet/KLConditionCodesNursing'))"
 
 
-Alias: $KLTerminology = urn:oid:1.2.208.176.2.21
+Alias: $FSIII = urn:oid:1.2.208.176.2.21
 
 Instance: VaskeSigLetteBegraensninger
 InstanceOf: KLGatewayCareCondition
 Description: "Assessed ability for the test person to wash himself"
 * clinicalStatus = $ConditionClinical#active
 * category = $ConditionCategory#problem-list-item
-* severity = $KLTerminology#B2
+* severity = $FSIII#B2
 * verificationStatus.coding = $VerificationStatus#confirmed
-* code = $KLTerminology#J1.1
+* code = $FSIII#J1.1
 * subject = Reference(TestPerson)
 * recordedDate = 2020-08-14
 * extension[followUpEncounter].valueReference = Reference(bfa70a76-318d-453d-9abc-76982f8d13ca)
+
+Instance: VaskeSigLetteBegraensningerNy
+InstanceOf: KLGatewayCareCondition
+Description: "Assessed ability for the test person to wash himself - new way of defining followUp Encounter"
+* clinicalStatus = $ConditionClinical#active
+* category = $ConditionCategory#problem-list-item
+* severity = $FSIII#B2
+* verificationStatus.coding = $VerificationStatus#confirmed
+* code = $FSIII#J1.1
+* subject = Reference(TestPerson)
+* recordedDate = 2020-08-14
 
 Instance: ProblemerMedPersonligPleje
 InstanceOf: KLGatewayCareCondition
 Description: "Assessed ability for the test person to perform personal care"
 * clinicalStatus = $ConditionClinical#active
 * category = $ConditionCategory#problem-list-item
-* code = $KLTerminology#I1.1
+* code = $FSIII#I1.1
 * subject = Reference(TestPerson)
 * recordedDate = 2020-08-14
 * extension[followUpEncounter].valueReference = Reference(bfa70a76-318d-453d-9abc-76982f8d13ca)

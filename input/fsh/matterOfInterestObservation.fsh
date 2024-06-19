@@ -41,13 +41,13 @@ Description: "Matter or area of interest in relation to the care of the citizen.
 * status ^short = "[DK] oplysningsstatus"
 
 
-Alias: $KLTerminology = urn:oid:1.2.208.176.2.21
+Alias: $FSIII = urn:oid:1.2.208.176.2.21
 
 Instance: EgensomsorgBegraensninger
 InstanceOf: KLGatewayCareMatterOfInterestObservation
 Description: "An observation that self-care is an area that is a matter of interest regarding the test person"
 * status = #final
-* code.coding = $KLTerminology#J1
+* code.coding = $FSIII#J1
 * subject = Reference(TestPerson)
 * effectiveDateTime = 2020-08-14
 
@@ -55,7 +55,7 @@ Instance: EgensomsorgBegraensningerOmkringKropspleje
 InstanceOf: KLGatewayCareMatterOfInterestObservation
 Description: "An observation that self-care is an area that is a matter of interest regarding the test person with potential problems around bodily care"
 * status = #final
-* code.coding = $KLTerminology#J1
+* code.coding = $FSIII#J1
 * subject = Reference(TestPerson)
 * effectiveDateTime = 2020-08-14
-* extension[findingContextAtRisk].valueCoding = $KLTerminology#J1.2
+* extension[findingContextAtRisk].valueCoding = $FSIII#J1.2

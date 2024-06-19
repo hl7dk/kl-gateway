@@ -18,7 +18,8 @@ Description: "Deliver report to deliver for each citizen."
     KLGatewayCareEncounter or
     KLGatewayCareCitizensOwnObservation or
     KLGatewayCareMatterOfInterestObservation or
-    KLGatewayCareFollowUpObservation
+    KLGatewayCareFollowUpObservation or
+    klgateway-care-general-encounter
 * entry.resource ^short = "Content constrained to known profiles (see also constraint gateway-care-report-1)"
 * entry.search ..0
 * entry.request ..0
@@ -41,33 +42,33 @@ InstanceOf: KLGatewayCareDeliveryReport
 Description: "Example of a delivery report for the test person"
 * type = #collection
 * timestamp = 2020-08-14T00:00:00Z
-* entry[+].fullUrl = "Patient/TestPerson"
+* entry[+].fullUrl = "https://test.fhir.dk/Patient/TestPerson"
 * entry[=].resource = TestPerson
-* entry[+].fullUrl = "Condition/VaskeSigLetteBegraensninger"
+* entry[+].fullUrl = "https://test.fhir.dk/Condition/VaskeSigLetteBegraensninger"
 * entry[=].resource = VaskeSigLetteBegraensninger 
-* entry[+].fullUrl = "Goal/ForventetIngenBegraensninger"
+* entry[+].fullUrl = "https://test.fhir.dk/Goal/ForventetIngenBegraensninger"
 * entry[=].resource = ForventetIngenBegraensninger
-* entry[+].fullUrl = "Observation/OpleverIkkeBegraensningerMedVaskeSig"
+* entry[+].fullUrl = "https://test.fhir.dk/Observation/OpleverIkkeBegraensningerMedVaskeSig"
 * entry[=].resource = OpleverIkkeBegraensningerMedVaskeSig
-* entry[+].fullUrl = "Observation/UdfoererSelvVaskeSig"
+* entry[+].fullUrl = "https://test.fhir.dk/Observation/UdfoererSelvVaskeSig"
 * entry[=].resource = UdfoererSelvVaskeSig
-* entry[+].fullUrl = "Condition/ProblemerMedPersonligPleje"
+* entry[+].fullUrl = "https://test.fhir.dk/Condition/ProblemerMedPersonligPleje"
 * entry[=].resource = ProblemerMedPersonligPleje
-* entry[+].fullUrl = "CarePlan/PersonligHygiejne"
+* entry[+].fullUrl = "https://test.fhir.dk/CarePlan/PersonligHygiejne"
 * entry[=].resource = PersonligHygiejne
-* entry[+].fullUrl = "CarePlan/Dialyse"
+* entry[+].fullUrl = "https://test.fhir.dk/CarePlan/Dialyse"
 * entry[=].resource = Dialyse
-* entry[+].fullUrl = "Procedure/Saarbehandling"
+* entry[+].fullUrl = "https://test.fhir.dk/Procedure/Saarbehandling"
 * entry[=].resource = Saarbehandling    
-* entry[+].fullUrl = "Observation/EgensomsorgBegraensninger"
+* entry[+].fullUrl = "https://test.fhir.dk/Observation/EgensomsorgBegraensninger"
 * entry[=].resource = EgensomsorgBegraensninger
-* entry[+].fullUrl = "Encounter/bfa70a76-318d-453d-9abc-76982f8d13ca"
+* entry[+].fullUrl = "https://test.fhir.dk/Encounter/bfa70a76-318d-453d-9abc-76982f8d13ca"
 * entry[=].resource = bfa70a76-318d-453d-9abc-76982f8d13ca
-* entry[+].fullUrl = "Observation/VaskeSigFortsaettes"
+* entry[+].fullUrl = "https://test.fhir.dk/Observation/VaskeSigFortsaettes"
 * entry[=].resource = VaskeSigFortsaettes
-* entry[+].fullUrl = "Observation/PersonligPlejeFortsaettes"
+* entry[+].fullUrl = "https://test.fhir.dk/Observation/PersonligPlejeFortsaettes"
 * entry[=].resource = PersonligPlejeFortsaettes
-* entry[+].fullUrl = "Observation/PersonligHygiejneFortsaettes"
+* entry[+].fullUrl = "https://test.fhir.dk/Observation/PersonligHygiejneFortsaettes"
 * entry[=].resource = PersonligHygiejneFortsaettes
-* entry[+].fullUrl = "Observation/DialyseFortsaettes"
+* entry[+].fullUrl = "https://test.fhir.dk/Observation/DialyseFortsaettes"
 * entry[=].resource = DialyseFortsaettes

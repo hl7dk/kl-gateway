@@ -18,8 +18,10 @@ dependencies:
 menu:
   Home: index.html
   Artifacts: artifacts.html
-  Homecare Example: Homecare.html
-  Nursing Example: Nursing.html
+  Old Homecare Example: Homecare.html
+  Old Nursing Example: Nursing.html
+  New Homecare Example: HomecareNew.html
+  New Nursing Example: NursingNew.html
   Downloads: downloads.html
 
 parameters:

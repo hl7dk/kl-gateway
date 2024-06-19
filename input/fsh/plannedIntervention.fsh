@@ -80,7 +80,7 @@ Description: "Planned interventions for nursing and home care in Danish Municipa
 * activity.detail.status ^short = "[DK] indsatsAktivitetsstatus"
 
 
-Alias: $KLTerminology = urn:oid:1.2.208.176.2.21
+Alias: $FSIII = urn:oid:1.2.208.176.2.21
 Alias: $LocalInterventions = http://fhir.kl.dk/gateway/CodeSystem/LocallyDefinedInterventions
 
 Instance: PersonligHygiejne
@@ -90,7 +90,7 @@ Description: "Planned intervention doing personal hygiene according to FSIII on 
 * intent = #plan
 * subject = Reference(TestPerson)
 * period.start = 2020-08-14
-* activity.detail.code.coding[level2] = $KLTerminology#H1.1
+* activity.detail.code.coding[level2] = $FSIII#H1.1
 * activity.detail.code.coding[level3] = $LocalInterventions#H1.1.1 "Speciel personlig pleje"
 * activity.detail.status = #in-progress
 
@@ -101,5 +101,5 @@ Description: "Planned intervention doing dialysis according to FSIII on the test
 * intent = #plan
 * subject = Reference(TestPerson)
 * period.start = 2020-08-14
-* activity.detail.code.coding[level2] = $KLTerminology#G1.10
+* activity.detail.code.coding[level2] = $FSIII#G1.10
 * activity.detail.status = #in-progress

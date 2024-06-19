@@ -70,18 +70,18 @@ Instance: UdfoererSelvVaskeSig
 InstanceOf: KLGatewayCareCitizensOwnObservation
 Description: "Citizens own observation regarding abililty to wash himself"
 * status = #final
-* code = $KLTerminology#C
+* code = $FSIII#C
 * subject = Reference(TestPerson)
 * focus = Reference(VaskeSigLetteBegraensninger)
 * effectiveDateTime = 2020-08-14
-* valueCodeableConcept = $KLTerminology#C1
+* valueCodeableConcept = $FSIII#C1
 
 Instance: OpleverIkkeBegraensningerMedVaskeSig
 InstanceOf: KLGatewayCareCitizensOwnObservation
 Description: "Citizens own observation regarding the importance of the limitations on the ability to wash himself"
 * status = #final
-* code = $KLTerminology#D
+* code = $FSIII#D
 * subject = Reference(TestPerson)
 * focus = Reference(VaskeSigLetteBegraensninger)
 * effectiveDateTime = 2020-08-14
-* valueCodeableConcept = $KLTerminology#D1
+* valueCodeableConcept = $FSIII#D1
