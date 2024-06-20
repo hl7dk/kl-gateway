@@ -43,7 +43,7 @@ Det følgende, er et eksempel på en rapport fra d. 13. februar. For de øvrige 
 A delivery report is generated containing the citizen and three encounters from the 13th of february. The encounters reference the PlannedInterventions 'Personlig hygiejne', 'Hverdagens aktiviteter' and 'Mobilitet'. Consequently, these are added to the report as well even though they are unchanged. The PlannedInterventions reference three of the four Conditions, which are added as well.
 The report for this is found here: [DeliveryReport-JensHansen-InterventionDelivery](Bundle-832c69db-98b5-4aee-ab00-c24967e89d25.html) 
 
-<!-- ### Second Event February 15th, 2021
+### Second Event February 15th, 2021
 
 #### Story
 Ved hjemmebesøg tre dage efter udskrivelse, foretager visitator en fornyet funktionsevnevurdering.
@@ -56,22 +56,22 @@ Hjælpen efter § 83 fortsættes uden ændringer frem til myndighedsopfølgning,
 The previous FSIII documentation is unchanged, except that a follow-up observation is added and a new follow-up encounter is set to February 24th 2021. The previous follow-up encounter is marked as completed.
 
 #### Reporting
-A delivery report is generated containing the citizen, the 4 conditions referenced from the follow-up observation with a reference to a new follow-up encounter. The previous follow-up encounter is also included (marked as completed)
+A delivery report is generated containing the citizen, the follow-up observation, and the 4 conditions referenced from the follow-up observation. A new follow-up encounter, and the now completed follow-up encounter are also included (the latter is marked as finished. Note that it is not mandatory to report finished/completed follow-up encounters)
 
 The goals and planned interventions are unchanged and are thus not included in the report.
 
-The report for this is found here: [DeliveryReport-JensHansen-2](Bundle-b1c5348b-fe9f-4afc-96ff-8c42b6c6c7ff.html)
+The report for this is found here: [DeliveryReport-JensHansen-2](Bundle-8ec154f2-1429-4a41-aca7-f900e1d3bee2.html)
 
-### Third Encounter February 24th, 2021
+### Third Event February 24th, 2021
 
 #### Story
 Sosu-hjælperen der kommer hos Jens Hansen, observerer markante fremskridt d. 18. februar, altså allerede 10 dage efter udskrivelsen.
 I den afficerede højre side er der kommet flere kræfter og øget kontrol, hvilket betyder at Jens Hensen mere selvstændigt kan deltage/varetage flere aktiviteter.
 
-Sosu-hjælperen dokumenterer sin observationen og borgers egen meget positive opfattelse af sin situation. Hun dokumenterer det under generelle oplysninger i journalen.
+Sosu-hjælperen dokumenterer sin observationen og borgers egen meget positive opfattelse af sin situation.
 Da det er leverandørens ansvar at sikre, at oplysninger omkring borgeren er opdateret, kontakter hun ligeledes ’planlægger’ og foreslår, at terapeuten fra Team-Hverdagsrehabilitering kommer ud til Jens Hansen og vurderer træningspotentiale og behov for RH-indsatser.
 
-Da der er 6 dage til at myndighedsopfølgningen, skal ske kontakter terapeuten fra Team-Hverdagsrehabilitering visitator for at fortælle, at hun på baggrund af markante forbedringer i Jens Hansens funktionsevne vil foretage en vurdering i forhold til indsatser efter servicelovens § 83 a.
+Da der er 6 dage til at myndighedsopfølgningen skal ske kontakter terapeuten fra Team-Hverdagsrehabilitering visitator for at fortælle, at hun på baggrund af markante forbedringer i Jens Hansens funktionsevne vil foretage en vurdering i forhold til indsatser efter servicelovens § 83 a.
 
 Terapeuten vurderer de tidligere dokumenterede tilstande. Jens Hansen har potentiale til selv at kunne varetage dele af aktiviteterne, hvis han tilbydes et tidsafgrænset § 83 a Hverdagsrehabiliteringsforløb.
 
@@ -84,19 +84,16 @@ The previous FSIII documentation is updated with new severities and goals, and s
 {:class="grid"}
 | Condition | Severity | Goal | Intervention |
 | --------- | -------- | ---- | ------------ |
-|Af- og påklædning|2 - Moderate begrænsninger|0 - Ingen eller ubetydelige begrænsninger|RH - Personlig hygiejne|
-|Udføre daglige rutiner|2 - Moderate begrænsninger|0 - Ingen eller ubetydelige begrænsninger|RH - Hverdagens aktiviteter|
+|Personlig pleje|2 - Moderate begrænsninger|0 - Ingen eller ubetydelige begrænsninger|RH - Personlig hygiejne|
 |Lave mad|2 - Moderate begrænsninger|1- Lette begrænsninger|Madservice|
-|Lave husligt arbejde|2 - Moderate begrænsninger|1- Lette begrænsninger|Hverdagens aktiviteter and Rengøring|
-|Gå|2 - Moderate begrænsninger|0 - Ingen eller ubetydelige begrænsninger|RH - Mobilitet|
-|Bevæge sig omkring|2 - Moderate begrænsninger|0 - Ingen eller ubetydelige begrænsninger|RH - Mobilitet|
-|Muskelstyrke|2 - Moderate begrænsninger|0 - Ingen eller ubetydelige begrænsninger|RH - Mobilitet|
+|Lave husligt arbejde|2 - Moderate begrænsninger|1- Lette begrænsninger|Hverdagens aktiviteter, Rengøring|
+|Mobilitet og bevægelse|2 - Moderate begrænsninger|0 - Ingen eller ubetydelige begrænsninger|RH - Mobilitet|
+
+The follow-up observation is set to 'Revisitation'. The follow-up is marked as finished, and a new follow-up date is planned.
 
 #### Reporting
-A delivery report is generated containing the citizen, the 7 conditions with updated severities and a reference to a new follow-up encounter, the 7 updated goals, and a new follow-up observation.
-2 planned interventions are ended, and 1 planned intervention has one less reference to a condition.
-3 new planned interventions are added.
+A delivery report is generated containing the citizen and the 3 conditions with updated severities and the one condition which is not updated. (The latter is included because its goal and follow-up references it). The old and the new follow-up encounter references these conditions. The report also contain new goals, and a follow-up observation.
 
-2 planned interventions, the previous follow-up encounter and the follow-up observation are unchanged and are thus not included in the report.
+In addition, 2 planned interventions are ended (Personlig pleje, Mobilitet). 2 new planned interventions are added (RH - Personlig hygiejne, RH - Mobilitet). 3 planned interventions (Hverdagens aktiviteter, Rengøring, Madservice) are unchanged and are thus not included in the report.
 
-The report for this is found here: [DeliveryReport-JensHansen-3](Bundle-643c3e42-ab90-4354-9b98-f01b4740d3d9.html) -->
+The report for this is found here: [DeliveryReport-JensHansen-3](Bundle-89071c96-e053-40d5-8873-105b7bad40f9.html)

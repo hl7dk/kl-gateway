@@ -1,7 +1,9 @@
 This page describes three subsequent delivery reports for the citizen Peter Olsen.
 For each delivery report the story is told (in Danish), the FSIII documentation is listed, and the reporting example is given.
 
-### First Encounter February 10th, 2021 - Acute team 
+In this example, the GeneralEncounter ressource is used for follow up encounters, but no new usage is shown here. See the new home care example instead.
+
+### First Event February 10th, 2021 - Acute team 
 
 #### Story
 Gerda Olsen har ringet til praktiserende læge.
@@ -31,19 +33,19 @@ The following FSIII information is documented in the record system.
 {:class="grid"}
 | Condition | Intervention |
 | --------- | ------------ |
-|Respirationsproblemer|Undersøgelse og måling af værdier (akut) samt Supplerende udredning(akut)|
-|Problemer med mobilitet og bevægelse|Respirationsbehandling|
+|Respirationsproblemer|Undersøgelse og måling af værdier (akut), Supplerende udredning(akut)|
+|Respirationsproblemer, Problemer med mobilitet og bevægelse|Respirationsbehandling|
 
 #### Reporting
-A delivery report is generated containing the citizen, 2 conditions, 2 completed interventions, 1 planned interventions starting February 10th, and a follow-up encounter on February 12th for the conditions. The planned intervention reference the condition according to the table above.
+A delivery report is generated containing the citizen, 2 conditions, 2 completed interventions (Undersøgelse og måling af værdier, Supplerende udredning), 1 planned intervention (Respirationsbehandling) starting February 10th, and a follow-up encounter on February 12th for the conditions. The planned intervention reference the condition according to the table above.
 
-[DeliveryReport-PeterOlsen-1](Bundle-d54206de-c95b-4c53-9517-6eb155dca99a.html)
+[DeliveryReport-PeterOlsen-1](Bundle-c0c4566c-06b1-4707-b468-54e1a6e858b5.html)
 
-### Second Encounter February 12th, 2021 - Acute team
+### Second Event February 12th, 2021 - Acute team
 
 #### Story
 Akutteamet besøger Peter Olsen anden gang d. 12/2 til en opfølgning.
-Peters respirationsfrekvens er tæt på normaliseret og svimmelheden er aftagende. Akut teamet vurderer at fokus på respirationsproblemer og problemer med mobilitet og bevægelse fortsættes. Dette dokumenteres - se nedenstående. Opfølgning på tilstandene planlægges til den 14/2.
+Peters respirationsfrekvens er tæt på normaliseret og svimmelheden er aftagende. Akut teamet vurderer at der fortsat skal være fokus på respirationsproblemer og problemer med mobilitet og bevægelse. Se nedenstående. Opfølgning på tilstandene planlægges til den 14/2.
 
 #### FSIII Documentation
 The following FSIII information is documented in the record system.
@@ -51,20 +53,19 @@ The following FSIII information is documented in the record system.
 {:class="grid"}
 | Condition | Intervention |
 | --------- | ------------ |
-|Respirationsproblemer||
-|Problemer med mobilitet og bevægelse|Respirationsbehandling|
+|Respirationsproblemer, Problemer med mobilitet og bevægelse|Respirationsbehandling|
 
 #### Reporting
-A delivery report is generated containing the citizen, 2 conditions, a follow-up observation, and a follow-up encounter on February 14th for the conditions. The planned intervention is unchanged and thus not included in the report.
+A delivery report is generated containing the citizen, 2 conditions, and a follow-up encounter on February 14th for the conditions. The planned intervention is unchanged and thus not included in the report.
 
-[DeliveryReport-PeterOlsen-2](Bundle-abc81b1f-b3ba-41f0-9f4b-2fc4df5aaabb.html)
+[DeliveryReport-PeterOlsen-2](Bundle-4a563a4d-eefd-4111-85b8-b7de59cb929a.html)
 
 ### Third Encounter February 14th, 2021 - Acute team
 
 #### Story
-Akutteamet vurderer ved besøget d. 14/2, at Peter Olsen har god effekt af vejledning i vejrtrækningsteknikkerne og han bruger PEEP-fløjet, og opnår således en mere kontrolleret vejrtrækning. De dokumenterer at området Respiration og Cirkulation ikke længere er relevant for Peter.
+Akutteamet vurderer ved besøget d. 14/2, at Peter Olsen har god effekt af vejledning i vejrtrækningsteknikkerne og han bruger PEEP-fløjte, og opnår således en mere kontrolleret vejrtrækning. De dokumenterer at området Respiration og Cirkulation ikke længere er relevant for Peter.
 
-Ved samme opfølgning vurderes det at tilstanden Problemer med mobilitet og bevægelse med den tilhørende indsats Respirationsbehandling bør ændres inden for rammen, og at der er behov for en ny faglig planlægning og disponering.
+Ved samme opfølgning vurderes det, at tilstanden Problemer med mobilitet og bevægelse med den tilhørende indsats Respirationsbehandling bør ændres, og at der er behov for en ny faglig planlægning og disponering.
 Akutteamet afslutter og Peter Olsen overgår til hjemmesygeplejen.
 
 #### FSIII Documentation
@@ -76,7 +77,7 @@ The following FSIII information is documented in the record system.
 |Problemer med mobilitet og bevægelse|Respirationsbehandling|
 
 #### Reporting
-A delivery report is generated containing the citizen, 2 conditions, 1 matter of interest observation, 2 follow-up observations (afsluttes, fortsættes), and a follow-up encounter on February 15th for the conditions. The planned intervention is unchanged and thus not included in the report.
+A delivery report is generated containing the citizen, 2 conditions (one is closed), 1 matter of interest observation, and a follow-up encounter on February 15th for the conditions. The planned intervention is included to document that one of the conditions are no longer referenced.
 
 [DeliveryReport-PeterOlsen-3](Bundle-0c1112c3-77b5-4d85-965c-0c26228ec7ef.html)
 

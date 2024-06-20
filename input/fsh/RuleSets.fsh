@@ -41,6 +41,11 @@ RuleSet: EncounterEntry(instance)
 * entry[+].fullUrl = "https://test.fhir.dk/Encounter/{instance}"
 * entry[=].resource = {instance}
 
+// Assumes fake id <guid>-<version>
+RuleSet: EncounterEntryVersion(instance, version)
+* entry[+].fullUrl = "https://test.fhir.dk/Encounter/{instance}"
+* entry[=].resource = {instance}-{version}
+
 RuleSet: FollowUpObservationEntry(instance)
 * entry[+].fullUrl = "https://test.fhir.dk/Observation/{instance}"
 * entry[=].resource = {instance}

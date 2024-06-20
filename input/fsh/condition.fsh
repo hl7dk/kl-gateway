@@ -68,8 +68,6 @@ Expression: "(severity.exists() and code.coding.memberOf('http://fhir.kl.dk/term
           or (severity.empty() and code.coding.memberOf('http://fhir.kl.dk/term/ValueSet/KLConditionCodesNursing'))"
 
 
-Alias: $FSIII = urn:oid:1.2.208.176.2.21
-
 Instance: VaskeSigLetteBegraensninger
 InstanceOf: KLGatewayCareCondition
 Description: "Assessed ability for the test person to wash himself"

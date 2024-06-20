@@ -71,7 +71,7 @@ Usage: #inline
 * intent = #plan
 * subject = Reference(4a45e179-ace1-4ace-9991-8276c0ba490a) // Peter Olsen
 * period.start = 2021-02-10
-* activity.detail.code.coding[level2] = $FSIII#G1.30 // Respirationsbehandling
+* activity.detail.code.coding[level2] = $FSIII#G1.29 // Respirationsbehandling
 * activity.detail.status = #in-progress
 * activity.detail.reasonReference = Reference(ad506910-9030-4ddb-b8ce-7bb6a69d808e) // Problemer med mobilitet og bevægelse
 
