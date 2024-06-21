@@ -39,7 +39,7 @@ The following FSIII information is documented in the record system.
 #### Reporting
 A delivery report is generated containing the citizen, 2 conditions, 2 completed interventions (Undersøgelse og måling af værdier, Supplerende udredning), 1 planned intervention (Respirationsbehandling) starting February 10th, and a follow-up encounter on February 12th for the conditions. The planned intervention reference the condition according to the table above.
 
-[DeliveryReport-PeterOlsen-1](Bundle-c0c4566c-06b1-4707-b468-54e1a6e858b5.html)
+[DeliveryReport-PeterOlsen-1](Bundle-4768772b-67f3-4468-9a2f-ee9a0254a323.html)
 
 ### Second Event February 12th, 2021 - Acute team
 
@@ -58,15 +58,14 @@ The following FSIII information is documented in the record system.
 #### Reporting
 A delivery report is generated containing the citizen, 2 conditions, and a follow-up encounter on February 14th for the conditions. The planned intervention is unchanged and thus not included in the report.
 
-[DeliveryReport-PeterOlsen-2](Bundle-4a563a4d-eefd-4111-85b8-b7de59cb929a.html)
+[DeliveryReport-PeterOlsen-2](Bundle-bad12c80-85ff-4b36-8396-414a1b58cd0d.html)
 
-### Third Encounter February 14th, 2021 - Acute team
+### Third Event February 14th, 2021 - Acute team
 
 #### Story
-Akutteamet vurderer ved besøget d. 14/2, at Peter Olsen har god effekt af vejledning i vejrtrækningsteknikkerne og han bruger PEEP-fløjte, og opnår således en mere kontrolleret vejrtrækning. De dokumenterer at området Respiration og Cirkulation ikke længere er relevant for Peter.
+Akutteamet vurderer ved besøget d. 14/2, at Peter Olsen har god effekt af vejledning i vejrtrækningsteknikkerne og han bruger PEEP-fløjte, og opnår således en mere kontrolleret vejrtrækning. De dokumenterer at området Respiration og Cirkulation ikke længere er relevant for Peter. Akutteamet vurderer at det er på tide, at lade Peter Olsen overgår til hjemmesygeplejen.
 
-Ved samme opfølgning vurderes det, at tilstanden Problemer med mobilitet og bevægelse med den tilhørende indsats Respirationsbehandling bør ændres, og at der er behov for en ny faglig planlægning og disponering.
-Akutteamet afslutter og Peter Olsen overgår til hjemmesygeplejen.
+Ved samme opfølgning vurderes det, at tilstanden Problemer med mobilitet og bevægelse med den tilhørende indsats Respirationsbehandling bør ændres, og at der er behov for en ny faglig planlægning og disponering. Derfor sættes opfølgningsdatoen til dagen efter, hvor hjemmesygeplejen kan komme og vurdere hvad der videre skal ske.
 
 #### FSIII Documentation
 The following FSIII information is documented in the record system.
@@ -77,11 +76,11 @@ The following FSIII information is documented in the record system.
 |Problemer med mobilitet og bevægelse|Respirationsbehandling|
 
 #### Reporting
-A delivery report is generated containing the citizen, 2 conditions (one is closed), 1 matter of interest observation, and a follow-up encounter on February 15th for the conditions. The planned intervention is included to document that one of the conditions are no longer referenced.
+A delivery report is generated containing the citizen, 2 conditions (one is closed), 1 matter of interest observation (Respiration og Cirkulation marked as not relevant. Note that this is not mandatory), and a follow-up encounter on February 15th for the conditions. The planned intervention is included as well to document that one of the conditions is no longer referenced.
 
-[DeliveryReport-PeterOlsen-3](Bundle-0c1112c3-77b5-4d85-965c-0c26228ec7ef.html)
+[DeliveryReport-PeterOlsen-3](Bundle-3c4919f9-aec9-485f-808a-3f9ff6c95786.html)
 
-### Fourth Encounter February 15th, 2021 - Nursing team
+### Fourth Event February 15th, 2021 - Nursing team
 
 #### Story
 Hjemmesygeplejen aflægger hjemmebesøg den efterfølgende dag 15/2. De vurderer her at Peter Olsen kunne have glæde af genoptræning efter servicelovens § 86 stk. 2. Hjemmesygeplejen planlægger opfølgning til d. 17/2, og Peter Olsen bliver indkaldt til det lokale træningscenter d. 18/2 med en opfølgningsdato den 6/4.
@@ -93,14 +92,14 @@ The following FSIII information is documented in the record system.
 | Condition | Severity | Goal | Intervention |
 | --------- | -------- | ---- | ------------ |
 |Problemer med mobilitet og bevægelse|||Respirationsbehandling|
-|Gå (servicelov)|1 - Lette begrænsninger|0 - Ingen eller ubetydlige begrænsninger|Vedligehold af færdigheder|
+|Mobilitet og bevægelse (servicelov)|1 - Lette begrænsninger|0 - Ingen eller ubetydlige begrænsninger|Vedligehold af færdigheder|
 
 #### Reporting
-A delivery report is generated containing the citizen, 1 previous and 1 new condition, 1 goal, and 2 follow-up encounters on February 17th and April 6th for each of the conditions.
+A delivery report is generated containing the citizen, 1 previous and 1 new condition, 1 goal, and 2 follow-up encounters on February 17th and April 6th for each of the conditions respectively.
 
-[DeliveryReport-PeterOlsen-4](Bundle-374484d0-00cb-4b63-94d1-a0d984afc339.html)
+[DeliveryReport-PeterOlsen-4](Bundle-d85460fb-b39e-4cf7-9750-12be44417dfd.html)
 
-### Fifth Encounter February 17th, 2021 - Nursing team
+### Fifth Event February 17th, 2021 - Nursing team
 
 #### Story
 I hjemmesygeplejen noteres det i Peter Olsens journal, at han nu er tilbage i habitualtilstanden med sin kroniske sygdom og har fortsat glæde af PEEP-fløjten, og der er ikke aktuelle tilstande eller indsatser.
@@ -112,35 +111,15 @@ Han har både i forløbet og efterfølgende umiddelbart virket meget positiv.
 Imidlertid har Peter Olsen ved nogle aftenbesøg oplyst, at han sover skidt om natten og at han har været lidt ked af det hele.
 
 #### FSIII Documentation
-The following FSIII information is documented in the record system.
+The following FSIII information is in the record system.
 
 {:class="grid"}
 | Condition | Severity | Goal | Intervention |
 | --------- | -------- | ---- | ------------ |
-|Gå (servicelov)|1 - Lette begrænsninger|0 - Ingen eller ubetydlige begrænsninger|Vedligehold af færdigheder|
+|Mobilitet og bevægelse|1 - Lette begrænsninger|0 - Ingen eller ubetydlige begrænsninger|Vedligehold af færdigheder|
 
 #### Reporting
-A delivery report is generated containing the citizen, 1 previous condition, 1 previous intervention, 2 matter of interest observations, and a follow-up observation.
+A delivery report is generated containing the citizen, 1 condition (closing nursing condition), 1 intervention(closing nursing intervention), 2 matter of interest observations (potential conditions, this is not mandatory). The home care condition and intervention are not reported because there are no changes.
 
-[DeliveryReport-PeterOlsen-5](Bundle-cc93afc5-7849-4895-84eb-00bb5c129c0b.html)
+[DeliveryReport-PeterOlsen-5](Bundle-616ce3ef-b7e8-46e1-aefc-ff5bde81b153.html)
 
-### Sixth Encounter February 18th, 2021 - Training
-
-#### Story
-I træningscenterets udredning efter serviceloven spørges Peters om sin egne vurdering i forhold til udførelse og betydning af de forskellige aktiviteter.
-Efter at have deltaget i vedligeholdelsestræningen føler Peter Olsen sig sikker på benene igen og han vurdere selv at ’det går som det gjorde før indlæggelsen’.
-
-Træningscenteret dokumenterer, at Peter udfører selv og ikke oplever begrænsninger i at gå.
-
-#### FSIII Documentation
-The following FSIII information is documented in the record system.
-
-{:class="grid"}
-| Condition | Severity | Goal | Intervention |
-| --------- | -------- | ---- | ------------ |
-|Gå (servicelov)|1 - Lette begrænsninger|0 - Ingen eller ubetydlige begrænsninger|Vedligehold af færdigheder|
-
-#### Reporting
-A delivery report is generated containing the citizen, 1 condition, 2 citizens own observations, and a follow-up encounter on 6th of April.
-
-[DeliveryReport-PeterOlsen-6](Bundle-1652f2a9-510a-4cd3-8fc4-8b69d0ffedae.html)

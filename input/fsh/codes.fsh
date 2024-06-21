@@ -44,7 +44,8 @@ Id: KLGatewayCareMatterOfInterestValues
 Title: "KLGatewayCareMatterOfInterestValues"
 Description: "Values of Matters of Interests (areas)"
 * ^experimental = false
-* $FSIII#B6 "Ikke relevant"
+* $FSIII#B6
+* $FSIII#d7ff926a-4955-478f-b300-0b0ec0785013
 
 ValueSet: EncounterClassCodes
 Title: "KontaktKlasseKoder"

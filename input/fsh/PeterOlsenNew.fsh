@@ -1,4 +1,4 @@
-Instance: c0c4566c-06b1-4707-b468-54e1a6e858b5
+Instance: 4768772b-67f3-4468-9a2f-ee9a0254a323
 InstanceOf: KLGatewayCareDeliveryReport
 Title: "DeliveryReport-PeterOlsen-1"
 Description: "Reporting of Peter Olsen after first encounter with the Acute Team"
@@ -86,7 +86,7 @@ Usage: #inline
 * reasonReference[+] = Reference(9c818a37-6525-49bb-bcea-5fe5df01f6f4) // Mobilitet og bevægelse
 // ------------------------------------------------------------------------------------------------
 
-Instance: 4a563a4d-eefd-4111-85b8-b7de59cb929a
+Instance: bad12c80-85ff-4b36-8396-414a1b58cd0d
 InstanceOf: KLGatewayCareDeliveryReport
 Title: "DeliveryReport-PeterOlsen-2"
 Description: "Reporting of Peter Olsen after second encounter with the Acute Team"
@@ -106,295 +106,212 @@ Description: "Encounter for a follow-up for Peter Olsen on February 14th, 2021"
 Usage: #inline
 * status = #planned
 * class = $v3-ActCode#HH
-* type = $KLCommonCodes#9f03dfbb-7a97-45a5-94db-d4c3501714a9
+* type = $KLCommonCodes#9f03dfbb-7a97-45a5-94db-d4c3501714a9 "opfølgning"
 * subject = Reference(17911a9f-69ff-4041-8dd0-6fc96864d04b) // Peter Olsen
 * period.start = 2021-02-14
 * reasonReference[+] = Reference(f8a70023-0688-4a93-9b74-21e5089dc365) // Respirationsproblem
 * reasonReference[+] = Reference(9c818a37-6525-49bb-bcea-5fe5df01f6f4) // Mobilitet og bevægelse
 // // ------------------------------------------------------------------------------------------------
-// OBS - HUSK indsatsen skal med - den smider en tilstand
-// Instance: 0c1112c3-77b5-4d85-965c-0c26228ec7ef
-// InstanceOf: KLGatewayCareDeliveryReport
-// Title: "DeliveryReport-PeterOlsen-3"
-// Description: "Reporting of Peter Olsen after third encounter with the Acute Team"
-// * type = #collection
-// * timestamp = 2021-02-14T15:23:12Z
-// * insert CitizenEntry(17911a9f-69ff-4041-8dd0-6fc96864d04b) // Peter Olsen
-// * insert ConditionEntryVersion(a881788d-1b27-46e3-8b76-607bc49876fd, v3) // Respirationsproblemer
-// * insert ConditionEntryVersion(ad506910-9030-4ddb-b8ce-7bb6a69d808e, v3) // // Problemer med mobilitet og bevægelse
-// * insert MatterOfInterestEntry(c9c93481-f170-4653-b837-6e8eacd716ca) // Respiration og cirkulation
-// * insert FollowUpObservationEntry(c0e46d1a-bcd2-4b4f-bc74-db1237157d4e) // Afsluttes
-// * insert FollowUpObservationEntry(4c160af3-dc6f-4405-a52a-b93447e06b68) // Ændres inden for rammen
-// * insert EncounterEntry(1fb0990d-aac7-4661-b976-874e051c5ae6) // 15/2-2021
+// 
+Instance: 3c4919f9-aec9-485f-808a-3f9ff6c95786
+InstanceOf: KLGatewayCareDeliveryReport
+Title: "DeliveryReport-PeterOlsen-3"
+Description: "Reporting of Peter Olsen after third encounter with the Acute Team"
+* type = #collection
+* timestamp = 2021-02-14T15:23:12Z
+* insert CitizenEntry(17911a9f-69ff-4041-8dd0-6fc96864d04b) // Peter Olsen
+* insert ConditionEntryVersion(f8a70023-0688-4a93-9b74-21e5089dc365, v2) // Respirationsproblemer
+* insert ConditionEntry(9c818a37-6525-49bb-bcea-5fe5df01f6f4) // // Problemer med mobilitet og bevægelse
+* insert MatterOfInterestEntry(388a4c08-42a2-4ad9-a6bb-41b26a7c5e28) // Respiration og cirkulation
+* insert EncounterEntry(1d2b1282-23fb-4238-930b-4d10b13e735a) // 15/2-2021
+* insert PlannedInterventionEntryVersion(9a07e8ad-4e71-42c7-a67f-96f5944f51a6, v2)
 
-// // Conditions
-// Instance: a881788d-1b27-46e3-8b76-607bc49876fd-v3 // Fake id
-// InstanceOf: KLGatewayCareCondition
-// Description: "Respirationsproblemer for Peter Olsen"
-// Usage: #inline
-// * id = "a881788d-1b27-46e3-8b76-607bc49876fd" // Real id
-// * clinicalStatus = $ConditionClinical#inactive
-// * code = $FSIII#I7.1 // Respirationsproblemer
-// * subject = Reference(17911a9f-69ff-4041-8dd0-6fc96864d04b) // Peter Olsen
-// * recordedDate = 2021-02-10
+// Conditions
+Instance: f8a70023-0688-4a93-9b74-21e5089dc365-v2 // Fake id
+InstanceOf: KLGatewayCareCondition
+Description: "Respirationsproblemer for Peter Olsen"
+Usage: #inline
+* id = "f8a70023-0688-4a93-9b74-21e5089dc365" // Real id
+* clinicalStatus = $ConditionClinical#inactive
+* code = $FSIII#dae40f60-8dab-4bd3-ab72-b07d0f278692 "Respirationsproblemer"
+* subject = Reference(17911a9f-69ff-4041-8dd0-6fc96864d04b) // Peter Olsen
+* recordedDate = 2021-02-10
 
-// Instance: ad506910-9030-4ddb-b8ce-7bb6a69d808e-v3 // Fake id
-// InstanceOf: KLGatewayCareCondition
-// Description: "Problemer med mobilitet og bevægelse for Peter Olsen"
-// Usage: #inline
-// * id = "ad506910-9030-4ddb-b8ce-7bb6a69d808e" // Real id
-// * clinicalStatus = $ConditionClinical#active
-// * category = $ConditionCategory#problem-list-item
-// * code = $FSIII#I2.1 // Problemer med mobilitet og bevægelse
-// * subject = Reference(17911a9f-69ff-4041-8dd0-6fc96864d04b) // Peter Olsen
-// * recordedDate = 2021-02-10
-// * extension[followUpEncounter].valueReference = Reference(1fb0990d-aac7-4661-b976-874e051c5ae6) // 15/2-2021
+// Matter of interest observations
+Instance: 388a4c08-42a2-4ad9-a6bb-41b26a7c5e28
+InstanceOf: KLGatewayCareMatterOfInterestObservation
+Description: "Respiration og cirkulation area is not relevant for Peter Olsen"
+Usage: #inline
+* status = #final
+* code.coding = $FSIII#01150cdb-6098-48ce-bb61-60967f6bcc37 "Respiration og cirkulation"
+* subject = Reference(17911a9f-69ff-4041-8dd0-6fc96864d04b) // Peter Olsen
+* effectiveDateTime = 2021-02-15
+* valueCodeableConcept = $FSIII#d7ff926a-4955-478f-b300-0b0ec0785013 "9"
 
-// // Matter of interest observations
-// Instance: c9c93481-f170-4653-b837-6e8eacd716ca
-// InstanceOf: KLGatewayCareMatterOfInterestObservation
-// Description: "Respiration og cirkulation area is not relevant for Peter Olsen"
-// Usage: #inline
-// * status = #final
-// * code.coding = $FSIII#I7 // Respiration og cirkulation
-// * subject = Reference(17911a9f-69ff-4041-8dd0-6fc96864d04b) // Peter Olsen
-// * effectiveDateTime = 2021-02-15
-// * valueCodeableConcept = $FSIII#B6 // Ikke relevant
+// Followup encounters
+Instance: 1d2b1282-23fb-4238-930b-4d10b13e735a
+InstanceOf: klgateway-care-general-encounter
+Description: "Encounter for a follow-up for Peter Olsen on February 15th, 2021"
+Usage: #inline
+* status = #planned
+* class = $v3-ActCode#HH
+* type = $KLCommonCodes#9f03dfbb-7a97-45a5-94db-d4c3501714a9 "opfølgning"
+* subject = Reference(17911a9f-69ff-4041-8dd0-6fc96864d04b) // Peter Olsen
+* period.start = 2021-02-15
+* reasonReference[+] = Reference(9c818a37-6525-49bb-bcea-5fe5df01f6f4) // Mobilitet og bevægelse
 
-// // Follow-up observations
-// Instance: c0e46d1a-bcd2-4b4f-bc74-db1237157d4e
-// InstanceOf: KLGatewayCareFollowUpObservation
-// Description: "Follow-up observation documenting that focus on respirationsproblemer should be continued unchanged for Jens Hansen"
-// Usage: #inline
-// * status = #final
-// * code = $SnomedCT#712744002
-// * subject = Reference(17911a9f-69ff-4041-8dd0-6fc96864d04b) // Peter Olsen
-// * focus[+] = Reference(a881788d-1b27-46e3-8b76-607bc49876fd) // Respirationsproblemer
-// * effectiveDateTime = 2021-02-12
-// * valueCodeableConcept = $FSIII#E3 // Afsluttes
-
-// Instance: 4c160af3-dc6f-4405-a52a-b93447e06b68
-// InstanceOf: KLGatewayCareFollowUpObservation
-// Description: "Follow-up observation documenting that focus on respirationsproblemer should be changed (inden for rammen) for Jens Hansen"
-// Usage: #inline
-// * status = #final
-// * code = $SnomedCT#712744002
-// * subject = Reference(17911a9f-69ff-4041-8dd0-6fc96864d04b) // Peter Olsen
-// * focus[+] = Reference(ad506910-9030-4ddb-b8ce-7bb6a69d808e) // Problemer med mobilitet og bevægelse
-// * effectiveDateTime = 2021-02-14
-// * valueCodeableConcept = $FSIII#E2 // Ændres inden for rammen
-
-
-// // Followup encounters
-// Instance: 1fb0990d-aac7-4661-b976-874e051c5ae6
-// InstanceOf: KLGatewayCareEncounter
-// Description: "Encounter for a follow-up for Peter Olsen on February 15th, 2021"
-// Usage: #inline
-// * status = #planned
-// * class = $v3-ActCode#HH
-// * type = $KLCommonCodes#9f03dfbb-7a97-45a5-94db-d4c3501714a9
-// * subject = Reference(17911a9f-69ff-4041-8dd0-6fc96864d04b) // Peter Olsen
-// * period.start = 2021-02-15
+// Planned interventions
+Instance: 9a07e8ad-4e71-42c7-a67f-96f5944f51a6-v2
+InstanceOf: KLGatewayCarePlannedIntervention
+Description: "Planned intervention doing respirationsbehandling for Peter Olsen"
+Usage: #inline
+* id = "9a07e8ad-4e71-42c7-a67f-96f5944f51a6"
+* status = #active
+* intent = #plan
+* subject = Reference(17911a9f-69ff-4041-8dd0-6fc96864d04b) // Peter Olsen
+* period.start = 2021-02-10
+* activity.detail.code.coding[level2] = $FSIII#3198a6ba-879c-4d2e-914b-560ba1e0d63a "Respirationsbehandling"
+* activity.detail.status = #in-progress
+* activity.detail.reasonReference = Reference(9c818a37-6525-49bb-bcea-5fe5df01f6f4) // Problemer med mobilitet og bevægelse
 
 // // ------------------------------------------------------------------------------------------------
 
-// Instance: 374484d0-00cb-4b63-94d1-a0d984afc339
-// InstanceOf: KLGatewayCareDeliveryReport
-// Title: "DeliveryReport-PeterOlsen-4"
-// Description: "Reporting of Peter Olsen after first encounter with home nursing"
-// * type = #collection
-// * timestamp = 2021-02-15T08:17:19Z
-// * insert CitizenEntry(17911a9f-69ff-4041-8dd0-6fc96864d04b) // Peter Olsen
-// * insert ConditionEntryVersion(ad506910-9030-4ddb-b8ce-7bb6a69d808e, v4) // Problemer med mobilitet og bevægelse
-// * insert ConditionEntry(39869f95-3b5f-4cbf-9af9-79d1344791f6) // Gå
-// * insert GoalEntry(08c1aa9d-ab60-423d-900b-1fc2eba0a2a7) // Ingen begrænsninger i at gå
-// * insert PlannedInterventionEntry(36ac2e9c-cbe4-4f2d-978e-7cccaf6750c2) // Vedligehold af færdigheder 
-// * insert EncounterEntry(99e5f54d-f9cd-44ea-9901-b6b5d6bf9285) // 17/2-2021
-// * insert EncounterEntry(f5b962ec-f815-4f12-a1d8-bbd504db79ed) // 6/4-2021
+Instance: d85460fb-b39e-4cf7-9750-12be44417dfd
+InstanceOf: KLGatewayCareDeliveryReport
+Title: "DeliveryReport-PeterOlsen-4"
+Description: "Reporting of Peter Olsen after first encounter with home nursing"
+* type = #collection
+* timestamp = 2021-02-15T08:17:19Z
+* insert CitizenEntry(17911a9f-69ff-4041-8dd0-6fc96864d04b) // Peter Olsen
+* insert ConditionEntry(9c818a37-6525-49bb-bcea-5fe5df01f6f4) // Problemer med mobilitet og bevægelse
+* insert ConditionEntry(0031b906-9fec-44c9-bcf1-fd06aa41ab6d) // Mobilitet og bevægelse
+* insert GoalEntry(222f728f-e484-4986-b00c-642b54354dae) // Ingen begrænsninger i at gå
+* insert PlannedInterventionEntry(231ebab6-5e80-4ae7-82aa-f4e0dda9efce) // Vedligehold af færdigheder 
+* insert EncounterEntry(712d1188-2704-4df1-8c48-c381c46e7bd2) // 17/2-2021
+* insert EncounterEntry(23dbe07d-ddbd-4da5-b5d8-5defa7451c74) // 6/4-2021
 
-// // Conditions
-// Instance: ad506910-9030-4ddb-b8ce-7bb6a69d808e-v4 // Fake id
-// InstanceOf: KLGatewayCareCondition
-// Description: "Problemer med mobilitet og bevægelse for Peter Olsen"
-// Usage: #inline
-// * id = "ad506910-9030-4ddb-b8ce-7bb6a69d808e" // Real id
-// * clinicalStatus = $ConditionClinical#active
-// * category = $ConditionCategory#problem-list-item
-// * code = $FSIII#I2.1 // Problemer med mobilitet og bevægelse
-// * subject = Reference(17911a9f-69ff-4041-8dd0-6fc96864d04b) // Peter Olsen
-// * recordedDate = 2021-02-10
-// * extension[followUpEncounter].valueReference = Reference(99e5f54d-f9cd-44ea-9901-b6b5d6bf9285) // 17/2-2021
+// Conditions
 
-// Instance: 39869f95-3b5f-4cbf-9af9-79d1344791f6
-// InstanceOf: KLGatewayCareCondition
-// Description: "Gå, lette begrænsninger for Peter Olsen"
-// Usage: #inline
-// * clinicalStatus = $ConditionClinical#active
-// * category = $ConditionCategory#problem-list-item
-// * severity = $FSIII#B2 // Lette begrænsninger
-// * code = $FSIII#J3.8 // Gå
-// * subject = Reference(17911a9f-69ff-4041-8dd0-6fc96864d04b) // Peter Olsen
-// * recordedDate = 2021-02-15
-// * extension[followUpEncounter].valueReference = Reference(f5b962ec-f815-4f12-a1d8-bbd504db79ed) // 6/4-2021
+Instance: 0031b906-9fec-44c9-bcf1-fd06aa41ab6d
+InstanceOf: KLGatewayCareCondition
+Description: "Mobilitet og bevægelse, lette begrænsninger for Peter Olsen"
+Usage: #inline
+* clinicalStatus = $ConditionClinical#active
+* category = $ConditionCategory#problem-list-item
+* severity = $FSIII#fcc16cb1-41f0-4832-b834-110fba0aaabe "1"
+* code = $FSIII#d8aa5f09-cd9c-4996-a853-1c95ee98f25c "Mobilitet og bevægelse"
+* subject = Reference(17911a9f-69ff-4041-8dd0-6fc96864d04b) // Peter Olsen
+* recordedDate = 2021-02-15
 
-// // Goals
-// Instance: 08c1aa9d-ab60-423d-900b-1fc2eba0a2a7
-// InstanceOf: KLGatewayCareGoal
-// Description: "Forventet tilstand, ingen eller ubetydelige begrænsninger i at gå for Peter Olsen"
-// Usage: #inline
-// * lifecycleStatus = #planned
-// * category = $KLCommonCodes#ca552020-6ed1-4cdc-b0d4-32697f1f27ad
-// * description = $FSIII#e182c5dc-9f91-474a-92e8-f62be3d498f4
-// * subject = Reference(17911a9f-69ff-4041-8dd0-6fc96864d04b) // Peter Olsen
-// * startDate = 2021-02-15
-// * target.measure = $KLCommonCodes#66959f77-6e2a-4574-8423-3ff097f8b9fa
-// * target.detailCodeableConcept = $FSIII#B1 // Ingen eller ubetydelige begrænsninger
-// * addresses = Reference(39869f95-3b5f-4cbf-9af9-79d1344791f6) // Gå 
+// Goals
+Instance: 222f728f-e484-4986-b00c-642b54354dae
+InstanceOf: KLGatewayCareGoal
+Description: "Forventet tilstand, ingen eller ubetydelige begrænsninger i mobilitet og bevægelse for Peter Olsen"
+Usage: #inline
+* lifecycleStatus = #planned
+* category = $KLCommonCodes#ca552020-6ed1-4cdc-b0d4-32697f1f27ad "FSIII tilstandsmål"
+* description = $FSIII#e182c5dc-9f91-474a-92e8-f62be3d498f4 "Tilstand forsvinder, mindskes eller forbliver uændret"
+* target.measure = $KLCommonCodes#66959f77-6e2a-4574-8423-3ff097f8b9fa "funktionsevneniveau"
+* subject = Reference(17911a9f-69ff-4041-8dd0-6fc96864d04b) // Peter Olsen
+* startDate = 2021-02-15
+* target.detailCodeableConcept = $FSIII#9c5cfb57-a498-40e5-98a7-792bf5fb205b "0"
+* addresses = Reference(0031b906-9fec-44c9-bcf1-fd06aa41ab6d) // Mobilitet og bevægelse 
 
-// // Planned interventions
-// Instance: 36ac2e9c-cbe4-4f2d-978e-7cccaf6750c2
-// InstanceOf: KLGatewayCarePlannedIntervention
-// Description: "Planned intervention doing vedligehold af færdigheder for Peter Olsen"
-// Usage: #inline
-// * status = #completed
-// * intent = #plan
-// * subject = Reference(17911a9f-69ff-4041-8dd0-6fc96864d04b) // Peter Olsen
-// * period.start = 2021-02-18
-// * activity.detail.code.coding[level2] = $FSIII#H6.1 // Vedligehold af færdigheder
-// * activity.detail.status = #completed
-// * activity.detail.reasonReference = Reference(39869f95-3b5f-4cbf-9af9-79d1344791f6) // Gå
+// Planned interventions
+Instance: 231ebab6-5e80-4ae7-82aa-f4e0dda9efce
+InstanceOf: KLGatewayCarePlannedIntervention
+Description: "Planned intervention doing vedligehold af færdigheder for Peter Olsen"
+Usage: #inline
+* status = #active
+* intent = #plan
+* subject = Reference(17911a9f-69ff-4041-8dd0-6fc96864d04b) // Peter Olsen
+* period.start = 2021-02-18
+* activity.detail.code.coding[level2] = $FSIII#c7d79b23-a53d-4ad5-a536-24d7c7fe8e18 "Vedligehold af færdigheder"
+* activity.detail.status = #in-progress
+* activity.detail.reasonReference = Reference(0031b906-9fec-44c9-bcf1-fd06aa41ab6d) // Mobilitet og bevægelse, hjemmepleje
 
-// // Followup encounters
-// Instance: 99e5f54d-f9cd-44ea-9901-b6b5d6bf9285
-// InstanceOf: KLGatewayCareEncounter
-// Description: "Encounter for a follow-up for Peter Olsen on February 17th, 2021"
-// Usage: #inline
-// * status = #planned
-// * class = $v3-ActCode#HH
-// * type = $KLCommonCodes#9f03dfbb-7a97-45a5-94db-d4c3501714a9
-// * subject = Reference(17911a9f-69ff-4041-8dd0-6fc96864d04b) // Peter Olsen
-// * period.start = 2021-02-17
+// Followup encounters
+Instance: 712d1188-2704-4df1-8c48-c381c46e7bd2
+InstanceOf: klgateway-care-general-encounter
+Description: "Encounter for a follow-up for Peter Olsen on February 17th, 2021"
+Usage: #inline
+* status = #planned
+* class = $v3-ActCode#HH
+* type = $KLCommonCodes#9f03dfbb-7a97-45a5-94db-d4c3501714a9 "opfølgning"
+* subject = Reference(17911a9f-69ff-4041-8dd0-6fc96864d04b) // Peter Olsen
+* period.start = 2021-02-17
+* reasonReference[+] = Reference(9c818a37-6525-49bb-bcea-5fe5df01f6f4) // Mobilitet og bevægelse, sygepleje
 
-// Instance: f5b962ec-f815-4f12-a1d8-bbd504db79ed
-// InstanceOf: KLGatewayCareEncounter
-// Description: "Encounter for a follow-up for Peter Olsen on April 6th, 2021"
-// Usage: #inline
-// * status = #planned
-// * class = $v3-ActCode#HH
-// * type = $KLCommonCodes#9f03dfbb-7a97-45a5-94db-d4c3501714a9
-// * subject = Reference(17911a9f-69ff-4041-8dd0-6fc96864d04b) // Peter Olsen
-// * period.start = 2021-04-06
+
+Instance: 23dbe07d-ddbd-4da5-b5d8-5defa7451c74
+InstanceOf: klgateway-care-general-encounter
+Description: "Encounter for a follow-up for Peter Olsen on April 6th, 2021"
+Usage: #inline
+* status = #planned
+* class = $v3-ActCode#HH
+* type = $KLCommonCodes#9f03dfbb-7a97-45a5-94db-d4c3501714a9 "opfølgning"
+* subject = Reference(17911a9f-69ff-4041-8dd0-6fc96864d04b) // Peter Olsen
+* period.start = 2021-04-06
+* reasonReference[+] = Reference(0031b906-9fec-44c9-bcf1-fd06aa41ab6d) // Mobilitet og bevægelse, hjemmepleje
 
 // // ------------------------------------------------------------------------------------------------
 
-// Instance: cc93afc5-7849-4895-84eb-00bb5c129c0b // End nursing condition and intervention
-// InstanceOf: KLGatewayCareDeliveryReport
-// Title: "DeliveryReport-PeterOlsen-5"
-// Description: "Reporting of Peter Olsen after second encounter with home nursing"
-// * type = #collection
-// * timestamp = 2021-02-17T11:51:44Z
-// * insert CitizenEntry(17911a9f-69ff-4041-8dd0-6fc96864d04b) // Peter Olsen
-// * insert ConditionEntryVersion(ad506910-9030-4ddb-b8ce-7bb6a69d808e, v5) // Problemer med mobilitet og bevægelse
-// * insert PlannedInterventionEntryVersion(f99b219d-8b70-4423-a32f-d7e97d553305, v5) // Respirationsbehandling
-// * insert MatterOfInterestEntry(357d2a34-8a4d-4302-988d-de69c4bfe0de) // Psykosociale forhold
-// * insert MatterOfInterestEntry(f5c24a73-fac8-44c8-972e-7b4aa13c1c40) // Søvn og hvile
-// * insert FollowUpObservationEntry(d54367e4-c2c5-49f6-bd28-a154af029b36) // Afsluttes
+Instance: 616ce3ef-b7e8-46e1-aefc-ff5bde81b153 // End nursing condition and intervention
+InstanceOf: KLGatewayCareDeliveryReport
+Title: "DeliveryReport-PeterOlsen-5"
+Description: "Reporting of Peter Olsen after second encounter with home nursing"
+* type = #collection
+* timestamp = 2021-02-17T11:51:44Z
+* insert CitizenEntry(17911a9f-69ff-4041-8dd0-6fc96864d04b) // Peter Olsen
+* insert ConditionEntryVersion(9c818a37-6525-49bb-bcea-5fe5df01f6f4, v2) // Problemer med mobilitet og bevægelse
+* insert PlannedInterventionEntryVersion(9a07e8ad-4e71-42c7-a67f-96f5944f51a6, v3) // Respirationsbehandling
+* insert MatterOfInterestEntry(dcd2273d-426d-421a-b82e-155ce7cc7173) // Psykosociale forhold
+* insert MatterOfInterestEntry(b2cff9f0-7b03-4f03-a443-70c17b1cd623) // Søvn og hvile
 
-// // Conditions
-// Instance: ad506910-9030-4ddb-b8ce-7bb6a69d808e-v5 // Fake id
-// InstanceOf: KLGatewayCareCondition
-// Description: "Problemer med mobilitet og bevægelse for Peter Olsen"
-// Usage: #inline
-// * id = "ad506910-9030-4ddb-b8ce-7bb6a69d808e" // Real id
-// * clinicalStatus = $ConditionClinical#inactive
-// * code = $FSIII#I2.1 // Problemer med mobilitet og bevægelse
-// * subject = Reference(17911a9f-69ff-4041-8dd0-6fc96864d04b) // Peter Olsen
-// * recordedDate = 2021-02-15
+// Conditions
+Instance: 9c818a37-6525-49bb-bcea-5fe5df01f6f4-v2 // Fake id
+InstanceOf: KLGatewayCareCondition
+Description: "Problemer med mobilitet og bevægelse for Peter Olsen"
+Usage: #inline
+* id = "9c818a37-6525-49bb-bcea-5fe5df01f6f4" // Real id
+* clinicalStatus = $ConditionClinical#inactive
+* code = $FSIII#92caace8-60e3-4861-80ac-6e372a700e1d "Problemer med mobilitet og bevægelse" // Problemer med mobilitet og bevægelse
+* subject = Reference(17911a9f-69ff-4041-8dd0-6fc96864d04b) // Peter Olsen
+* recordedDate = 2021-02-15
 
-// // Planned interventions
-// Instance: f99b219d-8b70-4423-a32f-d7e97d553305-v5 // Fake id
-// InstanceOf: KLGatewayCarePlannedIntervention
-// Description: "Planned intervention doing respirationsbehandling for Peter Olsen"
-// Usage: #inline
-// * id = "f99b219d-8b70-4423-a32f-d7e97d553305" // Real id
-// * status = #completed
-// * intent = #plan
-// * subject = Reference(17911a9f-69ff-4041-8dd0-6fc96864d04b) // Peter Olsen
-// * period.start = 2021-02-10
-// * period.end = 2021-02-17
-// * activity.detail.code.coding[level2] = $FSIII#G1.30 // Respirationsbehandling
-// * activity.detail.status = #in-progress
-// * activity.detail.reasonReference = Reference(ad506910-9030-4ddb-b8ce-7bb6a69d808e) // Problemer med mobilitet og bevægelse
+// Planned interventions
+Instance: 9a07e8ad-4e71-42c7-a67f-96f5944f51a6-v3 // Fake id
+InstanceOf: KLGatewayCarePlannedIntervention
+Description: "Planned intervention doing respirationsbehandling for Peter Olsen"
+Usage: #inline
+* id = "9a07e8ad-4e71-42c7-a67f-96f5944f51a6" // Real id
+* status = #completed
+* intent = #plan
+* subject = Reference(17911a9f-69ff-4041-8dd0-6fc96864d04b) // Peter Olsen
+* period.start = 2021-02-10
+* period.end = 2021-02-17
+* activity.detail.code.coding[level2] = $FSIII#3198a6ba-879c-4d2e-914b-560ba1e0d63a "Respirationsbehandling"
+* activity.detail.status = #in-progress
+* activity.detail.reasonReference = Reference(9c818a37-6525-49bb-bcea-5fe5df01f6f4) // Problemer med mobilitet og bevægelse
 
-// // Matter of interest observations
-// Instance: 357d2a34-8a4d-4302-988d-de69c4bfe0de
-// InstanceOf: KLGatewayCareMatterOfInterestObservation
-// Description: "Psykosociale forhold area is a potential problem for Peter Olsen"
-// Usage: #inline
-// * status = #final
-// * code.coding = $FSIII#I6 // Psykosociale forhold
-// * subject = Reference(17911a9f-69ff-4041-8dd0-6fc96864d04b) // Peter Olsen
-// * effectiveDateTime = 2021-02-17
+// Matter of interest observations
+Instance: dcd2273d-426d-421a-b82e-155ce7cc7173
+InstanceOf: KLGatewayCareMatterOfInterestObservation
+Description: "Psykosociale forhold area is a potential problem for Peter Olsen"
+Usage: #inline
+* status = #final
+* code.coding = $FSIII#5bfe4bda-2358-41da-946e-1fdaa33d5fe8 // Psykosociale forhold
+* subject = Reference(17911a9f-69ff-4041-8dd0-6fc96864d04b) // Peter Olsen
+* effectiveDateTime = 2021-02-17
 
-// Instance: f5c24a73-fac8-44c8-972e-7b4aa13c1c40
-// InstanceOf: KLGatewayCareMatterOfInterestObservation
-// Description: "Søvn og hvile area is a potential problem for Peter Olsen"
-// Usage: #inline
-// * status = #final
-// * code.coding = $FSIII#I10 // Søvn og hvile
-// * subject = Reference(17911a9f-69ff-4041-8dd0-6fc96864d04b) // Peter Olsen
-// * effectiveDateTime = 2021-02-17
-
-// // Follow-up observations
-// Instance: d54367e4-c2c5-49f6-bd28-a154af029b36
-// InstanceOf: KLGatewayCareFollowUpObservation
-// Description: "Follow-up observation documenting that focus on problemer med mobilitet og bevægelse afsluttes for Peter Olsen"
-// Usage: #inline
-// * status = #final
-// * code = $SnomedCT#712744002
-// * subject = Reference(17911a9f-69ff-4041-8dd0-6fc96864d04b) // Peter Olsen
-// * focus[+] = Reference(ad506910-9030-4ddb-b8ce-7bb6a69d808e) // Problemer med mobilitet og bevægelse
-// * effectiveDateTime = 2021-02-17
-// * valueCodeableConcept = $FSIII#E3 // Afsluttes
-
-// // ------------------------------------------------------------------------------------------------
-
-// Instance: 1652f2a9-510a-4cd3-8fc4-8b69d0ffedae
-// InstanceOf: KLGatewayCareDeliveryReport
-// Title: "DeliveryReport-PeterOlsen-6"
-// Description: "Reporting of Peter Olsen after first encounter with training"
-// * type = #collection
-// * timestamp = 2021-02-18T09:11:29Z
-// * insert CitizenEntry(17911a9f-69ff-4041-8dd0-6fc96864d04b) // Peter Olsen
-// * insert ConditionEntry(39869f95-3b5f-4cbf-9af9-79d1344791f6) // Gå
-// * insert CitizensOwnObservationEntry(2d5aab71-9c3f-49b2-92e0-07619ae321e5) // Udfører selv
-// * insert CitizensOwnObservationEntry(f35aa1be-0ed2-4d86-8d62-178a7d20c923) // Oplever ikke begrænsninger
-// * insert EncounterEntry(f5b962ec-f815-4f12-a1d8-bbd504db79ed) // 6/4-2021
-
-// // Citizens own observations
-// Instance: 2d5aab71-9c3f-49b2-92e0-07619ae321e5
-// InstanceOf: KLGatewayCareCitizensOwnObservation
-// Description: "Peter Olsen udfører selv at gå"
-// Usage: #inline
-// * status = #final
-// * code = $FSIII#C // Udførelse
-// * subject = Reference(17911a9f-69ff-4041-8dd0-6fc96864d04b) // Peter Olsen
-// * focus = Reference(39869f95-3b5f-4cbf-9af9-79d1344791f6) // Gå
-// * effectiveDateTime = 2020-08-21
-// * valueCodeableConcept = $FSIII#C1 // Udfører selv
-
-// Instance: f35aa1be-0ed2-4d86-8d62-178a7d20c923
-// InstanceOf: KLGatewayCareCitizensOwnObservation
-// Description: "Peter Olsen oplever ikke begrænsninger i at gå"
-// Usage: #inline
-// * status = #final
-// * code = $FSIII#D // Betydning
-// * subject = Reference(17911a9f-69ff-4041-8dd0-6fc96864d04b) // Peter Olsen
-// * focus = Reference(39869f95-3b5f-4cbf-9af9-79d1344791f6) // Gå
-// * effectiveDateTime = 2020-08-21
-// * valueCodeableConcept = $FSIII#D1 // Oplever ikke begrænsninger
-
-// // ------------------------------------------------------------------------------------------------
+Instance: b2cff9f0-7b03-4f03-a443-70c17b1cd623
+InstanceOf: KLGatewayCareMatterOfInterestObservation
+Description: "Søvn og hvile area is a potential problem for Peter Olsen"
+Usage: #inline
+* status = #final
+* code.coding = $FSIII#8c539fd9-7f31-4b4e-8b30-8298c8ab640f // Søvn og hvile
+* subject = Reference(17911a9f-69ff-4041-8dd0-6fc96864d04b) // Peter Olsen
+* effectiveDateTime = 2021-02-17
 
 // Citizen
 Instance: 17911a9f-69ff-4041-8dd0-6fc96864d04b
