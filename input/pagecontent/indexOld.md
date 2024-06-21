@@ -1,18 +1,6 @@
-This implementation guide describes the delivery of health and eldercare data to FK Gateway. The reporting aims for compliance with the Danish core profiles and the current work on a shared information model (FKI) for data in the Danish municipalities.
+This implementation guide describes the delivery of health and eldercare data to the KL Gateway. The reporting aims for compliance with the Danish core profiles and the current work on a shared information model (FKI) for data in the Danish municipalities.
 
-The profiles for the reporting are restricted to allow only the information that is required to report to the FK Gateway. This is only a subset of information described in FSIII and FKI.
-
-Note that this is a transitional version, designed to allow a smooth implementation of the FSIII simplicfication. This front page now describes the reporting, as it will look after the simplification, but the old way is still possible, and is described on the page "Old home". Be aware, that it is also possible, to report to FK Gateway using a hybrid of old and new profiles and terminology. This will help to allow users to still have content in their records that uses the old FSIII, while new content is documented using the simplified FSIII.
-
-The specific changes to the FSIII terminology will not be described here, as they are documented elsewhere, and FK-klassifikation holds the authoritative copy. However, be aware of the following:
-* Both the FSIII codes valid before the simplification and after the simplification are accepted in this IG. After the transition, only new codes will be accepted.
-* In the transition period, FK Gateway accepts old FSIII displays and legacy codes (brugervendte nøgler). After the transistion, only UUID's and only current titles/displays from FSIII as defined by FK-klassifikation will be accepted in reporting.
-Other changes include:
-* A new encounter called GeneralEncounter has been designed. GeneralEncounter will superseed Encounter after the transition period. GeneralEncounter can be used to report the planned follow-up encounters, as well as completed encounters that have delivered interventions. GeneralEncounter uses more values for the class-attribute. This means that the mode of delivery can be repported e.g. home visit, screen visit etc. GeneralEncounter can reference both conditions (on which it is a follow-up) and interventions (on which it is a delivery). Consequently the Condition profile, will no longer need the FollowUpEncounterExtension. So this will be depricated after the transistion as well.
-* CitizensOwnObservation will be depricated after the transition period.
-* FollowUpObservation will only be used in home care, not in nursing, after the transition.
-* The citizen profile has two new attributes. Patient.active and Patient.deceased. Patient.active is optional, and used for error-reporting. Patient.deceased is optional in the transition, and is used to state whether the citizen is alive or dead. A warning will be thrown, if data is reported about dead citizens. Patient.deseased will be mandatory after the transition, and reporting about dead citizens will not be accepted and result in an error.
-* Error-reporting documentation have been updated. Read it here (in Danish): 
+The profiles for the reporting are restricted to allow only the information that is required to report to the KL Gateway. This will not be compliant with the shared information model for data in the Danish municipalities and FSII as it describes a subset where not all mandatory data is allowed.
 
 ### Content
 
