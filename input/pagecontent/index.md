@@ -23,9 +23,8 @@ In addition to being structured as a report, relationships exist between the pro
 
 <img alt="ClassDiagram" src="./ClassDiagramGateway.png" style="float:none; display:block; margin-left:auto; margin-right:auto;" />
 
-The Class diagram shows that all profiles refer to Citizen. Other than that, the documentation is centered aroung Conditions. The PlannedInterventions and CompletedInterventions can reference the Condition to document why these activities are carried out. A goal (forvented tilstand) always focuses on a certain Condition. A followUpObservation typically references the Condition which it follow up on. However, it may also reference an Intervention, but this is not mandatory.
-The GeneralEncounter can be used to report a planned follow up date for Conditions, which is mandatory. It can also be used to report planned follow-up on PlannedInterventions and delivery of PlannedInterventions, which is optional.
-MatterOfInterest only references the Citizen. Its use is optional, but is can be used to document a potential conditions and areas (tilstandsområder) which are considered as not being relevant.
+The Class diagram shows that all profiles refer to Citizen. Other than that, the documentation is centered aroung Conditions. The PlannedInterventions and CompletedInterventions can reference the Condition to document why these activities are carried out. A goal (forvented tilstand) always focuses on a certain Condition. A followUpObservation references the Condition which it follow up on.
+The GeneralEncounter can be used to report a planned follow up date for Conditions, which is mandatory. It can also be used to report the delivery of PlannedInterventions, which is optional.
 
 The content of the DeliveryReport is described in more detail in the following:
 
@@ -69,7 +68,7 @@ Free text information about the goals is not part of this reporting.
 - The target of a goal is a valid severity code according to FSIII (Funktionsniveau - forventet tilstand)
 
 #### Planned Intervention
-Information about the planned interventions (FSIII indsatser) that the municipality has granted to address the conditions of the citizen. A planned intervention represents one type of care given to the citizen. It must contain the level 2 code for the intervention, the start time, the end time if ended, references to the conditions the intervention addresses if known, and a reference to an encounter with the follow-up date of the intervention if known.
+Information about the planned interventions (FSIII indsatser) that the municipality has granted to address the conditions of the citizen. A planned intervention represents one type of care given to the citizen. It must contain the level 2 code for the intervention, the start time, the end time if ended, references to the conditions that the intervention addresses if known.
 
 A citizen may be granted several level 3 interventions for the same level 2 intervention. Level 3 interventions are reported using both the level 2 code and the locally defined level 3 code. Interventions are allowed to be overlapping to support this.
 
@@ -111,7 +110,7 @@ Free text information about encounters is not part of this reporting.
 
 ##### Validation
 - Encounters refer to the citizen included in the report
-- Encounters have a start date (Opfølgningsdato eller starttidspunkt)
+- Encounters have a start date (opfølgningsdato eller starttidspunkt)
 - Encounter have a type, that state whether it is a follow-up or a delivery of an intervention.
 
 #### Follow-up Observations
