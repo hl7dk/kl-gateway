@@ -51,6 +51,8 @@ Description: "Documentation for completed interventions (activities related to o
 * subject ^short = "[DK] leveretIndsatsSubjekt"
 * code.coding ^short = "[DK] leveretIndsatsKode"
 * performedDateTime ^short = "[DK] leveretIndsatsStart"
+* reasonReference ^short = "[DK] leveretIndsatsbegrundelse"
+* encounter ^short = "[DK] leveretIndsatsKontakt"
 
 
 Instance: Saarbehandling

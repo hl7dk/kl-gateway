@@ -17,12 +17,12 @@ dependencies:
 
 menu:
   Home: index.html
-  Old Home: indexOld.md
+  Old Home: indexOld.html
   Artifacts: artifacts.html
-  Old Homecare Example: Homecare.html
-  Old Nursing Example: Nursing.html
-  New Homecare Example: HomecareNew.html
-  New Nursing Example: NursingNew.html
+  Old Homecare Ex: Homecare.html
+  Old Nursing Ex: Nursing.html
+  New Homecare Ex: HomecareNew.html
+  New Nursing Ex: NursingNew.html
   Downloads: downloads.html
 
 parameters:

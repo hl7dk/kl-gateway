@@ -16,9 +16,9 @@ Conditions are related to a professional context (through its code). These are t
 
 Condition.category is, in this implementation, used as a way to determine whether the condition is in focus in a professional context. In focus means that this condition is solely or partially the reason why interventions are performed in the professional context. If a condition is "in focus" Condition.category is populated with the value "problem-list-item". An empty Condition.category means that the focus have not been considered (if it is the first version of a condition). If the latter is the case, it might be difficult to determine whether a condition have been ended.
 
-Ending a condition means that the condition falls out of focus in a professional context e.g. if the citizen moves, or another professional group takes over the care for the citizen. This does not necessarily means the citizen no longer has the condition. When a condition is ended, the Condition.category looses its "problem-list-item" flag. The idea is to state that from a citizen viewpoint the condition has not changed, but in this professional context it is no longer in focus.
+Ending a condition means that the condition falls out of focus in a professional context e.g. if the citizen moves, or another professional group takes over the care for the citizen. This does not necessarily mean that the citizen no longer has the condition. When a condition is ended, the Condition.category looses its "problem-list-item" flag. The idea is to state that from a citizen viewpoint the condition has not nessesarily changed, but in this professional context it is no longer in focus. It follows that it is valid to close a condition with Condition.clinicalStatus = active and an empty Condition.category.
 
-Condition follow-up is documented using Condition.extension:followUpEncounter, which points to a future encounter, with Encounter.type= "opfølgning".
+Condition follow-up is documented using Condition.extension:followUpEncounter, which points to a future encounter, with Encounter.type = "opfølgning". However, the followUpEncounter-extension will be depricated in the next version of this implementation guide. In the new version, GeneralEncounter holds a reference to the Condition.
 
 ### Conversions between Danish information model and FHIR-profile
 
