@@ -63,7 +63,7 @@ A delivery report is generated containing the citizen, 2 conditions, and a follo
 ### Third Event February 14th, 2021 - Acute team
 
 #### Story
-Akutteamet vurderer ved besøget d. 14/2, at Peter Olsen har god effekt af vejledning i vejrtrækningsteknikkerne og han bruger PEEP-fløjte, og opnår således en mere kontrolleret vejrtrækning. De dokumenterer at området Respiration og Cirkulation ikke længere er relevant for Peter. Akutteamet vurderer at det er på tide, at lade Peter Olsen overgår til hjemmesygeplejen.
+Akutteamet vurderer ved besøget d. 14/2, at Peter Olsen har god effekt af vejledning i vejrtrækningsteknikkerne og han bruger PEEP-fløjte, og opnår således en mere kontrolleret vejrtrækning. De dokumenterer at Peter ikke længere har tilstanden 'Respirationsproblemer'. Akutteamet vurderer at det er på tide, at lade Peter Olsen overgår til hjemmesygeplejen.
 
 Ved samme opfølgning vurderes det, at tilstanden Problemer med mobilitet og bevægelse med den tilhørende indsats Respirationsbehandling bør ændres, og at der er behov for en ny faglig planlægning og disponering. Derfor sættes opfølgningsdatoen til dagen efter, hvor hjemmesygeplejen kan komme og vurdere hvad der videre skal ske.
 
@@ -76,7 +76,7 @@ The following FSIII information is documented in the record system.
 |Problemer med mobilitet og bevægelse|Respirationsbehandling|
 
 #### Reporting
-A delivery report is generated containing the citizen, 2 conditions (one is closed), 1 matter of interest observation (Respiration og Cirkulation marked as not relevant. Note that this is not mandatory), and a follow-up encounter on February 15th for the conditions. The planned intervention is included as well to document that one of the conditions is no longer referenced.
+A delivery report is generated containing the citizen, 2 conditions (one is closed), and a follow-up encounter on February 15th for the conditions. The planned intervention is included as well to document that one of the conditions is no longer referenced.
 
 [DeliveryReport-PeterOlsen-3](Bundle-3c4919f9-aec9-485f-808a-3f9ff6c95786.html)
 
@@ -104,11 +104,7 @@ A delivery report is generated containing the citizen, 1 previous and 1 new cond
 #### Story
 I hjemmesygeplejen noteres det i Peter Olsens journal, at han nu er tilbage i habitualtilstanden med sin kroniske sygdom og har fortsat glæde af PEEP-fløjten, og der er ikke aktuelle tilstande eller indsatser.
 Peter er selv tilfreds, men han har reduceret lungekapacitet grundet exacerbationer.
-Imidlertid har hele forløbet været en ’hård omgang’ og parret (Gerda er meget usikker på om Peter nu også selv kan mærke om det går godt!).
-
-Derfor dokumenteres det på Problemområderne - Psykosociale forhold samt Søvn og hvile, at der bør være fokus på Peter Olsens habitus.
-Han har både i forløbet og efterfølgende umiddelbart virket meget positiv.
-Imidlertid har Peter Olsen ved nogle aftenbesøg oplyst, at han sover skidt om natten og at han har været lidt ked af det hele.
+Imidlertid har hele forløbet været en ’hård omgang’ og parret (Gerda er meget usikker på om Peter nu også selv kan mærke om det går godt!). Derfor dokumenteres det på Problemområderne - Psykosociale forhold samt Søvn og hvile, at der bør være fokus på Peter Olsens habitus. (Dokumentationen på problemområderne indberettes dog ikke efter forenklingen)
 
 #### FSIII Documentation
 The following FSIII information is in the record system.
@@ -119,7 +115,7 @@ The following FSIII information is in the record system.
 |Mobilitet og bevægelse|1 - Lette begrænsninger|0 - Ingen eller ubetydlige begrænsninger|Vedligehold af færdigheder|
 
 #### Reporting
-A delivery report is generated containing the citizen, 1 condition (closing nursing condition), 1 intervention(closing nursing intervention), 2 matter of interest observations (potential conditions, this is not mandatory). The home care condition and intervention are not reported because there are no changes.
+A delivery report is generated containing the citizen, 1 condition (closing nursing condition), 1 intervention(closing nursing intervention). The home care condition and intervention are not reported because there are no changes.
 
 [DeliveryReport-PeterOlsen-5](Bundle-616ce3ef-b7e8-46e1-aefc-ff5bde81b153.html)
 

@@ -159,7 +159,6 @@ Description: "Reporting of Peter Olsen after third encounter with the Acute Team
 * insert CitizenEntry(4a45e179-ace1-4ace-9991-8276c0ba490a) // Peter Olsen
 * insert ConditionEntryVersion(a881788d-1b27-46e3-8b76-607bc49876fd, v3) // Respirationsproblemer
 * insert ConditionEntryVersion(ad506910-9030-4ddb-b8ce-7bb6a69d808e, v3) // // Problemer med mobilitet og bevægelse
-* insert MatterOfInterestEntry(c9c93481-f170-4653-b837-6e8eacd716ca) // Respiration og cirkulation
 * insert FollowUpObservationEntry(c0e46d1a-bcd2-4b4f-bc74-db1237157d4e) // Afsluttes
 * insert FollowUpObservationEntry(4c160af3-dc6f-4405-a52a-b93447e06b68) // Ændres inden for rammen
 * insert EncounterEntry(1fb0990d-aac7-4661-b976-874e051c5ae6) // 15/2-2021
@@ -186,17 +185,6 @@ Usage: #inline
 * subject = Reference(4a45e179-ace1-4ace-9991-8276c0ba490a) // Peter Olsen
 * recordedDate = 2021-02-10
 * extension[followUpEncounter].valueReference = Reference(1fb0990d-aac7-4661-b976-874e051c5ae6) // 15/2-2021
-
-// Matter of interest observations
-Instance: c9c93481-f170-4653-b837-6e8eacd716ca
-InstanceOf: KLGatewayCareMatterOfInterestObservation
-Description: "Respiration og cirkulation area is not relevant for Peter Olsen"
-Usage: #inline
-* status = #final
-* code.coding = $FSIII#I7 // Respiration og cirkulation
-* subject = Reference(4a45e179-ace1-4ace-9991-8276c0ba490a) // Peter Olsen
-* effectiveDateTime = 2021-02-15
-* valueCodeableConcept = $FSIII#B6 // Ikke relevant
 
 // Follow-up observations
 Instance: c0e46d1a-bcd2-4b4f-bc74-db1237157d4e
@@ -333,8 +321,6 @@ Description: "Reporting of Peter Olsen after second encounter with home nursing"
 * insert CitizenEntry(4a45e179-ace1-4ace-9991-8276c0ba490a) // Peter Olsen
 * insert ConditionEntryVersion(ad506910-9030-4ddb-b8ce-7bb6a69d808e, v5) // Problemer med mobilitet og bevægelse
 * insert PlannedInterventionEntryVersion(f99b219d-8b70-4423-a32f-d7e97d553305, v5) // Respirationsbehandling
-* insert MatterOfInterestEntry(357d2a34-8a4d-4302-988d-de69c4bfe0de) // Psykosociale forhold
-* insert MatterOfInterestEntry(f5c24a73-fac8-44c8-972e-7b4aa13c1c40) // Søvn og hvile
 * insert FollowUpObservationEntry(d54367e4-c2c5-49f6-bd28-a154af029b36) // Afsluttes
 
 // Conditions
@@ -362,25 +348,6 @@ Usage: #inline
 * activity.detail.code.coding[level2] = $FSIII#G1.30 // Respirationsbehandling
 * activity.detail.status = #in-progress
 * activity.detail.reasonReference = Reference(ad506910-9030-4ddb-b8ce-7bb6a69d808e) // Problemer med mobilitet og bevægelse
-
-// Matter of interest observations
-Instance: 357d2a34-8a4d-4302-988d-de69c4bfe0de
-InstanceOf: KLGatewayCareMatterOfInterestObservation
-Description: "Psykosociale forhold area is a potential problem for Peter Olsen"
-Usage: #inline
-* status = #final
-* code.coding = $FSIII#I6 // Psykosociale forhold
-* subject = Reference(4a45e179-ace1-4ace-9991-8276c0ba490a) // Peter Olsen
-* effectiveDateTime = 2021-02-17
-
-Instance: f5c24a73-fac8-44c8-972e-7b4aa13c1c40
-InstanceOf: KLGatewayCareMatterOfInterestObservation
-Description: "Søvn og hvile area is a potential problem for Peter Olsen"
-Usage: #inline
-* status = #final
-* code.coding = $FSIII#I10 // Søvn og hvile
-* subject = Reference(4a45e179-ace1-4ace-9991-8276c0ba490a) // Peter Olsen
-* effectiveDateTime = 2021-02-17
 
 // Follow-up observations
 Instance: d54367e4-c2c5-49f6-bd28-a154af029b36

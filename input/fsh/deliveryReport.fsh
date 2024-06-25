@@ -15,26 +15,31 @@ Description: "Deliver report to deliver for each citizen."
     KLGatewayCareGoal or
     KLGatewayCarePlannedIntervention or
     KLGatewayCareCompletedIntervention or
-    KLGatewayCareEncounter or
-    KLGatewayCareCitizensOwnObservation or
-    KLGatewayCareMatterOfInterestObservation or
-    KLGatewayCareFollowUpObservation or
-    klgateway-care-general-encounter
+    Observation or // KLGatewayCareCitizensOwnObservation or KLGatewayCareMatterOfInterestObservation or  KLGatewayCareFollowUpObservation
+    Encounter or //klgateway-care-general-encounter, KLGatewayCareEncounter
 * entry.resource ^short = "Content constrained to known profiles (see also constraint gateway-care-report-1)"
 * entry.search ..0
 * entry.request ..0
 * entry.response ..0
 * signature ..0
-// * obeys gateway-care-report-1
+* obeys gateway-care-report-1
+* obeys gateway-care-report-2
 
 
-// Invariant: gateway-care-report-1
-// Description: "All observation resources shall conform to either klgateway-care-citizens-own-observation profile, klgateway-care-matter-of-interest-observation, or klgateway-care-follow-up-observation"
-// Severity: #error
-// Expression: "entry.ofType(Observation).all(
-//     resource.conformsTo('http://fhir.kl.dk/gateway/StructureDefinition/klgateway-care-citizens-own-observation')
-//  or resource.conformsTo('http://fhir.kl.dk/gateway/StructureDefinition/klgateway-care-matter-of-interest-observation')
-//  or resource.conformsTo('http://fhir.kl.dk/gateway/StructureDefinition/klgateway-care-follow-up-observation'))"
+Invariant: gateway-care-report-1
+Description: "All observation resources shall conform to either klgateway-care-citizens-own-observation profile, klgateway-care-matter-of-interest-observation, or klgateway-care-follow-up-observation"
+Severity: #error
+Expression: "entry.ofType(Observation).all(
+    resource.conformsTo('http://fhir.kl.dk/gateway/StructureDefinition/klgateway-care-citizens-own-observation')
+    or resource.conformsTo('http://fhir.kl.dk/gateway/StructureDefinition/klgateway-care-matter-of-interest-observation')
+    or resource.conformsTo('http://fhir.kl.dk/gateway/StructureDefinition/klgateway-care-follow-up-observation'))"
+
+Invariant: gateway-care-report-2
+Description: "All Encounter resources shall conform to profiles in this implementation guide"
+Severity: #error
+Expression: "entry.ofType(Observation).all(
+    resource.conformsTo('http://fhir.kl.dk/gateway/StructureDefinition/klgateway-care-general-encounter')
+    or resource.conformsTo('http://fhir.kl.dk/gateway/StructureDefinition/klgateway-care-encounter'))"
 
 
 Instance: TestPersonReport

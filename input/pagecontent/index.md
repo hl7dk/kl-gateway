@@ -9,8 +9,8 @@ The specific changes to the FSIII terminology will not be described here, as the
 * In the transition period, FK Gateway accepts old FSIII displays and legacy codes (brugervendte nøgler). After the transistion, only UUID's and only current titles/displays from FSIII as defined by FK-klassifikation will be accepted in reporting.
 Other changes include:
 * A new encounter called GeneralEncounter has been designed. GeneralEncounter will superseed Encounter after the transition period. GeneralEncounter can be used to report the planned follow-up encounters, as well as completed encounters that have delivered interventions. GeneralEncounter uses more values for the class-attribute. This means that the mode of delivery can be repported e.g. home visit, screen visit etc. GeneralEncounter can reference both conditions (on which it is a follow-up) and interventions (on which it is a delivery). Consequently the Condition profile, will no longer need the FollowUpEncounterExtension. So this will be depricated after the transistion as well.
-* CitizensOwnObservation will be depricated after the transition period.
-* FollowUpObservation will only be used in home care, not in nursing, after the transition.
+* CitizensOwnObservation and MatterOfInterestObservation will be depricated after the transition period.
+* FollowUpObservation will only be used in home care, not in nursing, after the transition. After the transistion, FollowUpObservation will only be allowed to reference Condition in the focus-attribute. Right now, both Condition and PlannedIntervention can be referenced.
 * The citizen profile has two new attributes. Patient.active and Patient.deceased. Patient.active is optional, and used for error-reporting. Patient.deceased is optional in the transition, and is used to state whether the citizen is alive or dead. A warning will be thrown, if data is reported about dead citizens. Patient.deseased will be mandatory after the transition, and reporting about dead citizens will not be accepted and result in an error.
 * Error-reporting documentation have been updated. Read it here [here](./FejlrettelseNotatKLGateway.pdf) (in Danish): 
 
@@ -98,22 +98,10 @@ Free text information about care plans is not part of this reporting.
 - Completed interventions have a valid home care or nursing intervention code according to FSIII (Servicelov/sundhedslovlov indsats)
 - Planned interventions refer to zero or more health care or nursing conditions included in the report as reason for intervention
 
-#### Matter of Interest Observation
-Information about matters of interest for home care or nursing condition areas (FSIII tilstandsområder). It can either be a potential condition, or state that an area is not relevant. A matter of interest observation must contain the condition area, either home care or nursing, and the time of the observation. Matter of Interest Observation is optional to report.
-
-All changes to the matter of interest observations since the last reporting must be included in a new report, including referenced follow-up encounters.
-
-Free text information about area observations is not part of this reporting.
-
-##### Validation
-- Matter of interest observations refer to the citizen included in the report
-- Matter of interest observations have a valid matter of interest code according to FSIII (Funktionsevneområde eller helbredsområde)
-- Matter of interest observations have a timestamp for the observation
-
 #### General Encounters
-GeneralEncounter can be used to report a planned follow up date for Conditions, which is mandatory. It can also be used to report planned follow-up on PlannedInterventions and delivery of PlannedInterventions, which is optional. The encounter references the relevant Conditions and PlannedInterventions.
+GeneralEncounter can be used to report a planned follow-up date for Conditions, which is mandatory. It can also be used to report delivered PlannedInterventions, which is optional. The encounter references the relevant Conditions and PlannedInterventions.
 
-The type of the encounter can be reported as a "follow-up" or a "delivery of an intervention". The encounter references the relevant
+The type of the encounter can be reported as a follow-up or a delivery of an intervention.
 
 The encounter must contain the expected start date or the actual start time.
 
@@ -127,7 +115,7 @@ Free text information about encounters is not part of this reporting.
 - Encounter have a type, that state whether it is a follow-up or a delivery of an intervention.
 
 #### Follow-up Observations
-Information about the outcome of a follow-up encounter. The follow-up observations must contain the coding for the outcome (FSIII resultat af opfølgning) and a reference to one or more condition or intervention about which the observation is made.
+Information about the outcome of a follow-up encounter. The follow-up observations must contain the coding for the outcome (FSIII resultat af opfølgning) and a reference to one or more conditions about which the observation is made.
 
 All changes to the follow-up observations since the last reporting must be included in a new report, including the conditions and interventions referenced by the observations.
 
@@ -135,7 +123,7 @@ Free text information about the follow-up outcome is not part of this reporting.
 
 ##### Validation
 - Follow-up observations refer to the citizen included in the report
-- Follow-up observations refer to one or more conditions or planned interventions included in the report
+- Follow-up observations refer to one or more conditions included in the report
 - Follow-up observations have a timestamp for the observation
 - Follow-up observations have a valid follow-up code according to FSIII (Resultat af opfølgning)
 

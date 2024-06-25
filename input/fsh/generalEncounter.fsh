@@ -4,7 +4,7 @@ Alias: $KLCommonCodes = http://fhir.kl.dk/term/CodeSystem/CareSocialCodes
 Profile: KLGatewayCareGeneralEncounter
 Parent: Encounter
 Id: klgateway-care-general-encounter
-Title: "GeneralCareEncounter"
+Title: "CareGeneralEncounter"
 Description: "Encounter for planned and completed meetings between citizens and care staff."
 * identifier ..0
 * statusHistory ..0

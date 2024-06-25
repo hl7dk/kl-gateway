@@ -15,7 +15,7 @@ Description: "Structured result or outcome of a follow up."
 * subject only Reference(klgateway-care-citizen)
 * subject ^type.aggregation = #bundled
 * focus 1..
-* focus only Reference(KLGatewayCareCondition or KLGatewayCarePlannedIntervention) 
+* focus only Reference(KLGatewayCareCondition or KLGatewayCarePlannedIntervention) // after transistion only condition
 * encounter 0..0
 * effective[x] 1..1
 * effective[x] only dateTime

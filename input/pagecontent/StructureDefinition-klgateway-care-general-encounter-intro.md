@@ -1,9 +1,9 @@
 ### Scope and usage
 The Encounter may be instantiated whenever citizens and practitioners meet in a Danish municipality context.
 
-It is important in FSIII to be able to express follow-up encounters. In the planning state, these are documented by setting Encounter.status = "planned", and Encounter.type.coding = "opfølgning". 
+It is mandatory in FSIII to be able to express follow-up encounters on Conditions. In the planning state, these are documented by setting Encounter.status = 'planned', and Encounter.type.coding = 'opfølgning'. 
 
-Encounters which are finished may reported. This can be especially relevant for Encounter.type.coding = "opfølgning" and Encounter.type.coding = "udførelse af planlagt indsats". Use Encounter.status 'finished'.
+Encounters which are finished may also be reported. This can be especially relevant for Encounter.type.coding = 'opfølgning' and Encounter.type.coding = 'udførelse af planlagt indsats'. Use Encounter.status 'finished'. Reporting on finished encounters is optional.
 
 To report errors use status 'entered-in-error'
 
@@ -13,7 +13,7 @@ Encounter.class is mandatory in FHIR. In Danish municipalities the values are us
 * Encounters delivered as a screen visit should be registered as 'Skærmbesøg'.
 * Encounters delivered using a phone should be registered as 'Telefonisk'
 
-The time of the encounter is documented in Encounter.period.start and Encounter.periode.end, and both Encounter.period.start is mandatory. Only planned time is mandatory to report. There is no expectation that the staff update the time if they finish a little earlier or a little later. Time of day is also not mandatory. Encounter.periode.end and time of day is encouraged when reporting on finished Encounters.
+The time of the encounter is documented in Encounter.period.start and Encounter.periode.end, and Encounter.period.start is mandatory. Only planned time is mandatory to report. There is no expectation that the staff update the time if they finish a little earlier or a little later. Time of day is also not mandatory. Encounter.periode.end and time of day is encouraged when reporting on finished Encounters.
 
 Encounters can be related to the PlannedIntervention on which they are a delivery. Use Encounter.extension[basedOnCarePlan]. Encounters can also be related to the condition or conditions which are the reason for having the encounter. This is used for documenting the condition follow-up encounter. Use Encounter.reasonReference
 
