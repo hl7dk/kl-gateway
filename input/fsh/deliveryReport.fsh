@@ -16,7 +16,7 @@ Description: "Deliver report to deliver for each citizen."
     KLGatewayCarePlannedIntervention or
     KLGatewayCareCompletedIntervention or
     Observation or // KLGatewayCareCitizensOwnObservation or KLGatewayCareMatterOfInterestObservation or  KLGatewayCareFollowUpObservation
-    Encounter or //klgateway-care-general-encounter, KLGatewayCareEncounter
+    Encounter //klgateway-care-general-encounter, KLGatewayCareEncounter
 * entry.resource ^short = "Content constrained to known profiles (see also constraint gateway-care-report-1)"
 * entry.search ..0
 * entry.request ..0
