@@ -8,7 +8,7 @@ In this example, the GeneralEncounter ressource is used for follow up encounters
 #### Story
 Gerda Olsen har ringet til praktiserende læge.
 Hendes mand Peter har det ikke godt.
-Peter er udskrevet fra sygehuset, for tre dage siden, efter en akut exacerbationer (midlertidig forværring) af hans KOL.
+Peter er udskrevet fra sygehuset for tre dage siden efter en akut exacerbationer (midlertidig forværring) af hans KOL.
 Han har egentlig været i bedring, men her sidst på dagen fik han feber, hovedpine og øget vejrtrækningsfrekvens. 
 
 Peter og Gerda fik besked på sygehuset om at holde øje med almentilstanden og kontakte egen læge ved forværringer.
@@ -18,13 +18,13 @@ Gerda er derfor meget nervøs for Peter og vil gerne have at egen læge vil indl
 Egen læge aftaler i stedet med Gerda, at der kommer en sygeplejerske hjem og kigger til Peter.
 
 Herefter kontakter egen læge det kommunale akutteam og oplyser at Peter Olsen oplever forværring i almentilstanden – blandt andet feber, hovedpine og øget vejrtrækningsfrekvens.
-Han ønsker derfor at akutteamet skal besøge Peter og foretage nogle målinger og vurdere tilstanden.
+Han ønsker derfor, at akutteamet skal besøge Peter og foretage nogle målinger og vurdere tilstanden.
 
 Akutteamet besøger Peter Olsen første gang d. 10/2 og foretager de undersøgelser og målinger som egen læge har anmodet om.
 Peter har øget respirationsfrekvens med udpræget svimmelhed til følge.
 Peter har øget mængde sekret og kan ikke hoste frit, så de foretager en supplerende udredning (sekret test til dyrkning).
 
-Desuden er Peter er præget af insufficient iltning og har problemer med at gå på sikker vis, så de planlægger de en respirationsbehandling (vejledning i vejrtrækningsteknikker og PEEP-fløjte) for at afhjælpe problemer med mobilitet og bevægelse.
+Desuden er Peter præget af insufficient iltning og har problemer med at gå på sikker vis, så de planlægger en respirationsbehandling (vejledning i vejrtrækningsteknikker og PEEP-fløjte) for at afhjælpe problemer med mobilitet og bevægelse.
 Dette dokumenteres - se nedenstående. Opfølgning på tilstandene planlægges til den 12/2.
 
 #### FSIII Documentation
@@ -63,9 +63,9 @@ A delivery report is generated containing the citizen, 2 conditions, and a follo
 ### Third Event February 14th, 2021 - Acute team
 
 #### Story
-Akutteamet vurderer ved besøget d. 14/2, at Peter Olsen har god effekt af vejledning i vejrtrækningsteknikkerne og han bruger PEEP-fløjte, og opnår således en mere kontrolleret vejrtrækning. De dokumenterer at Peter ikke længere har tilstanden 'Respirationsproblemer'. Akutteamet vurderer at det er på tide, at lade Peter Olsen overgår til hjemmesygeplejen.
+Akutteamet vurderer ved besøget d. 14/2, at Peter Olsen har god effekt af vejledning i vejrtrækningsteknikkerne og han bruger PEEP-fløjte, og opnår således en mere kontrolleret vejrtrækning. De dokumenterer at Peter ikke længere har tilstanden 'Respirationsproblemer'. Akutteamet vurderer, at det er på tide at lade Peter Olsen overgå til hjemmesygeplejen.
 
-Ved samme opfølgning vurderes det, at tilstanden Problemer med mobilitet og bevægelse med den tilhørende indsats Respirationsbehandling bør ændres, og at der er behov for en ny faglig planlægning og disponering. Derfor sættes opfølgningsdatoen til dagen efter, hvor hjemmesygeplejen kan komme og vurdere hvad der videre skal ske.
+Ved samme opfølgning vurderes det, at tilstanden Problemer med mobilitet og bevægelse med den tilhørende indsats Respirationsbehandling bør ændres, og at der er behov for en ny faglig planlægning og disponering. Hjemmesygeplejen skal dagen efter komme og vurdere, hvad der videre skal ske.
 
 #### FSIII Documentation
 The following FSIII information is documented in the record system.
@@ -83,7 +83,7 @@ A delivery report is generated containing the citizen, 2 conditions (one is clos
 ### Fourth Event February 15th, 2021 - Nursing team
 
 #### Story
-Hjemmesygeplejen aflægger hjemmebesøg den efterfølgende dag 15/2. De vurderer her at Peter Olsen kunne have glæde af genoptræning efter servicelovens § 86 stk. 2. Hjemmesygeplejen planlægger opfølgning til d. 17/2, og Peter Olsen bliver indkaldt til det lokale træningscenter d. 18/2 med en opfølgningsdato den 6/4.
+Hjemmesygeplejen aflægger hjemmebesøg den efterfølgende dag 15/2. De vurderer her, at Peter Olsen kunne have glæde af genoptræning efter Servicelovens § 86 stk. 2. Hjemmesygeplejen planlægger opfølgning til d. 17/2, og Peter Olsen bliver indkaldt til det lokale træningscenter d. 18/2 med en opfølgningsdato den 6/4.
 
 #### FSIII Documentation
 The following FSIII information is documented in the record system.
@@ -104,7 +104,7 @@ A delivery report is generated containing the citizen, 1 previous and 1 new cond
 #### Story
 I hjemmesygeplejen noteres det i Peter Olsens journal, at han nu er tilbage i habitualtilstanden med sin kroniske sygdom og har fortsat glæde af PEEP-fløjten, og der er ikke aktuelle tilstande eller indsatser.
 Peter er selv tilfreds, men han har reduceret lungekapacitet grundet exacerbationer.
-Imidlertid har hele forløbet været en ’hård omgang’ og parret (Gerda er meget usikker på om Peter nu også selv kan mærke om det går godt!). Derfor dokumenteres det på Problemområderne - Psykosociale forhold samt Søvn og hvile, at der bør være fokus på Peter Olsens habitus. (Dokumentationen på problemområderne indberettes dog ikke efter forenklingen)
+Forløbet har været hårdt for parret, og der er usikkerhed omkring, hvorvidt Peter selv kan mærke om, der er en forværring på vej. Derfor dokumenteres det på Problemområderne - Psykosociale forhold samt Søvn og hvile, at der bør være fokus på Peter Olsens habitus. (Dokumentationen på problemområderne indberettes dog ikke efter forenklingen)
 
 #### FSIII Documentation
 The following FSIII information is in the record system.

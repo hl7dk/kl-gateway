@@ -12,7 +12,7 @@ Description: "Encounter for planned and completed meetings between citizens and 
 * class from EncounterClassCodes (required)
 * class.userSelected ..0
 * classHistory ..0
-* type 1..1
+* type 1..*
 * type from http://fhir.kl.dk/term/ValueSet/KLEncounterTypes (required)
 * type.coding 1..1
 * type.coding.version ..0
@@ -53,6 +53,11 @@ Description: "Encounter for planned and completed meetings between citizens and 
 * extension[basedOnIntervention] ^short = "[DK] kontaktIndsats"
 * reasonReference ^short = "[DK] kontaktTilstand"
 
+Invariant: klgateway-follow-up-references-condition
+Description: "The severity is mandatory for home care and not allowed for nursing conditions"
+Severity: #error
+Expression: "type.coding.exists(code = '9f03dfbb-7a97-45a5-94db-d4c3501714a9') implies reasonReference.exists()"
+       
 Extension: BasedOnInterventionExtension
 Title:     "basedOnInterventionExtension"
 Description: "Extension for pointing to the intervention describing why this encounter is taking place (will be part of R5 and comming FHIR versions without needing the extension)"
