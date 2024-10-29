@@ -29,17 +29,17 @@ Description: "Deliver report to deliver for each citizen."
 Invariant: gateway-care-report-1
 Description: "All observation resources shall conform to either klgateway-care-citizens-own-observation profile, klgateway-care-matter-of-interest-observation, or klgateway-care-follow-up-observation"
 Severity: #error
-Expression: "entry.ofType(Observation).all(
-    resource.conformsTo('http://fhir.kl.dk/gateway/StructureDefinition/klgateway-care-citizens-own-observation')
-    or resource.conformsTo('http://fhir.kl.dk/gateway/StructureDefinition/klgateway-care-matter-of-interest-observation')
-    or resource.conformsTo('http://fhir.kl.dk/gateway/StructureDefinition/klgateway-care-follow-up-observation'))"
+Expression: "entry.select(resource as Observation).all(
+    $this.conformsTo('http://fhir.kl.dk/gateway/StructureDefinition/klgateway-care-citizens-own-observation')
+    or $this.conformsTo('http://fhir.kl.dk/gateway/StructureDefinition/klgateway-care-matter-of-interest-observation')
+    or $this.conformsTo('http://fhir.kl.dk/gateway/StructureDefinition/klgateway-care-follow-up-observation'))"
 
 Invariant: gateway-care-report-2
 Description: "All Encounter resources shall conform to profiles in this implementation guide"
 Severity: #error
-Expression: "entry.ofType(Observation).all(
-    resource.conformsTo('http://fhir.kl.dk/gateway/StructureDefinition/klgateway-care-general-encounter')
-    or resource.conformsTo('http://fhir.kl.dk/gateway/StructureDefinition/klgateway-care-encounter'))"
+Expression: "entry.select(resource as Encounter).all(
+    $this.conformsTo('http://fhir.kl.dk/gateway/StructureDefinition/klgateway-care-general-encounter')
+    or $this.conformsTo('http://fhir.kl.dk/gateway/StructureDefinition/klgateway-care-encounter'))"
 
 
 Instance: TestPersonReport
@@ -67,8 +67,8 @@ Description: "Example of a delivery report for the test person"
 * entry[=].resource = Saarbehandling    
 * entry[+].fullUrl = "https://test.fhir.dk/Observation/EgensomsorgBegraensninger"
 * entry[=].resource = EgensomsorgBegraensninger
-* entry[+].fullUrl = "https://test.fhir.dk/Encounter/bfa70a76-318d-453d-9abc-76982f8d13ca"
-* entry[=].resource = bfa70a76-318d-453d-9abc-76982f8d13ca
+* entry[+].fullUrl = "https://test.fhir.dk/Encounter/NaesteOpfoelgningsdato"
+* entry[=].resource = NaesteOpfoelgningsdato
 * entry[+].fullUrl = "https://test.fhir.dk/Observation/VaskeSigFortsaettes"
 * entry[=].resource = VaskeSigFortsaettes
 * entry[+].fullUrl = "https://test.fhir.dk/Observation/PersonligPlejeFortsaettes"

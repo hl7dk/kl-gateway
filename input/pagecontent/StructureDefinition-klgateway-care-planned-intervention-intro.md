@@ -13,6 +13,8 @@ CarePlan:extension.FollowUpEncounter can be used to explicitely state when follo
 
 CarePlan.activity.detail.reasonReference holds the link between conditions and interventions which are mandatory is FSIII, but optional in this context to allow reporting of interventions not yet linked to a reason.
 
+CarePlan.activity.detail:extension.deliveryType can be used to state, how interventions are delivered. Valid values are 'individual', 'group based', 'delivered using a robot' 'delivered using digital solutions'. Note that more than one code may apply to one intervention e.g. cleaning may be done partially by a robot vacuum cleaner, and partially by a person. In this case, use both 'individual' and 'delivered using a robot'.
+
 ### Conversions between Danish information model and FHIR-profile
 
 Nedenstående tabel oversætter mellem de attributter der er defineret i den fælleskommunale informationsmodel (FKI), definerer kort den enkelte attribut på dansk og specificerer hvilke af FHIR-profilens attributter der skal bruges til specifikation af indholdet

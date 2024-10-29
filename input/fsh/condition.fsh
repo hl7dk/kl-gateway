@@ -78,7 +78,7 @@ Description: "Assessed ability for the test person to wash himself"
 * code = $FSIII#J1.1
 * subject = Reference(TestPerson)
 * recordedDate = 2020-08-14
-* extension[followUpEncounter].valueReference = Reference(bfa70a76-318d-453d-9abc-76982f8d13ca)
+* extension[followUpEncounter].valueReference = Reference(NaesteOpfoelgningsdato)
 
 Instance: VaskeSigLetteBegraensningerNy
 InstanceOf: KLGatewayCareCondition
@@ -99,4 +99,4 @@ Description: "Assessed ability for the test person to perform personal care"
 * code = $FSIII#I1.1
 * subject = Reference(TestPerson)
 * recordedDate = 2020-08-14
-* extension[followUpEncounter].valueReference = Reference(bfa70a76-318d-453d-9abc-76982f8d13ca)
+* extension[followUpEncounter].valueReference = Reference(NaesteOpfoelgningsdato)

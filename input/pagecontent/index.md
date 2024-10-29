@@ -147,3 +147,15 @@ The gateway is not able to validate immediately whether the reported data confli
 The implementation guide contains a number of examples for each profile used in a delivery report. See [Delivery report example](Bundle-TestPersonReport.html) for an example of a complete delivery report.
 
 __Note:__ Must support markers are used according to the FHIR specification and means that it shall be included in the report if the information is available. A precise definition of what available means in each case is described in the definition of the element.
+
+## Dependencies
+{% include dependency-table.xhtml %}
+
+## Cross Version Analysis
+{% include cross-version-analysis.xhtml %}
+
+## Global Profiles
+{% include globals-table.xhtml %}
+
+## IP Statements
+{% include ip-statements.xhtml %}

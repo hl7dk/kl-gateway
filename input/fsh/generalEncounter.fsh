@@ -66,7 +66,7 @@ Description: "Extension for pointing to the intervention describing why this enc
 * ^context.type = http://hl7.org/fhir/extension-context-type#element
 * ^context.expression = "Encounter"
 
-Instance: 24d69cec-9e2b-49d2-bf16-bbb229db9d41
+Instance: NaesteOpfoelgning
 InstanceOf: klgateway-care-general-encounter
 Description: "General encounter used to document the next date for a follow-up"
 * status = http://hl7.org/fhir/encounter-status#planned
@@ -76,7 +76,7 @@ Description: "General encounter used to document the next date for a follow-up"
 * period.start = 2020-08-14
 * reasonReference[+] = Reference(VaskeSigLetteBegraensningerNy)
 
-Instance: 9fe2cf67-7a0a-49f9-ad23-cb48167927d4
+Instance: LeveringAfDialyse
 InstanceOf: klgateway-care-general-encounter
 Description: "General encounter used to document delivery of an intervention"
 * status = http://hl7.org/fhir/encounter-status#finished

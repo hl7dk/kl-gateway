@@ -56,7 +56,7 @@ Hjælpen efter § 83 fortsættes uden ændringer frem til myndighedsopfølgning,
 The previous FSIII documentation is unchanged, except that a follow-up observation is added and a new follow-up encounter is set to February 24th 2021. The previous follow-up encounter is marked as completed.
 
 #### Reporting
-A delivery report is generated containing the citizen, the follow-up observation, and the 4 conditions referenced from the follow-up observation. A new follow-up encounter, and the now completed follow-up encounter are also included (the latter is marked as finished. Note that it is not mandatory to report finished/completed follow-up encounters)
+A delivery report is generated containing the citizen, the follow-up observation, and the 4 conditions referenced from the follow-up observation. A new follow-up encounter, and the now completed follow-up encounter are also included (the latter is marked as finished. Note that it is not mandatory to report finished/completed follow-up encounters, neither is it mandatory to report follow-up observations.)
 
 The goals and planned interventions are unchanged and are thus not included in the report.
 
@@ -89,7 +89,7 @@ The previous FSIII documentation is updated with new severities and goals, and s
 |Lave husligt arbejde|2 - Moderate begrænsninger|1- Lette begrænsninger|Hverdagens aktiviteter, Rengøring|
 |Mobilitet og bevægelse|2 - Moderate begrænsninger|0 - Ingen eller ubetydelige begrænsninger|RH - Mobilitet|
 
-The follow-up observation is set to 'Revisitation'. The follow-up is marked as finished, and a new follow-up date is planned.
+The follow-up observation is set to 'Revisitation'. The follow-up is marked as finished, and a new follow-up date is planned. Note that follow-up observations are not mandatory. Follow-up dates are still mandatory.
 
 #### Reporting
 A delivery report is generated containing the citizen and the 3 conditions with updated severities and the one condition which is not updated. (The latter is included because its goal and follow-up references it). The old and the new follow-up encounter references these conditions. The report also contain new goals, and a follow-up observation.

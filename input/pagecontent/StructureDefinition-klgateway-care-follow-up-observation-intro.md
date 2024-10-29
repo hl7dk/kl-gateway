@@ -1,5 +1,5 @@
 ### Scope and usage
-FollowUpObservation is used for documenting the result of a follow-up procedure, as documented by FSIII. Follow-ups are documented using this profile, whether they are documented by suppliers during an intervention, or documented by autorities, at planned follow-ups.
+FollowUpObservation is optional. It is used to document the result of a follow-up procedure, as described by FSIII. Follow-ups are documented using this profile, whether they are documented by suppliers during an intervention, or documented by autorities, at planned follow-ups.
 
 The profile has the Follow-up result in Observation.valueCodeableConcept.coding
 
