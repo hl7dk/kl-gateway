@@ -1,4 +1,4 @@
-Alias: $KLTerminology = urn:oid:1.2.208.176.2.21
+Alias: $FSIII = urn:oid:1.2.208.176.2.21
 
 // ------------------------------------------------------------------------------------------------
 
@@ -37,8 +37,8 @@ Description: "Af- og påklædning, svære begrænsninger for Jens Hansen"
 Usage: #inline
 * clinicalStatus = $ConditionClinical#active
 * category = $ConditionCategory#problem-list-item
-* severity = $KLTerminology#B4 // Svære begrænsninger
-* code = $KLTerminology#J1.3 // Af- og påklædning
+* severity = $FSIII#B4 // Svære begrænsninger
+* code = $FSIII#J1.3 // Af- og påklædning
 * subject = Reference(eec9e8e9-221d-4eae-a54d-cdd403661def) // Jens Hansen
 * recordedDate = 2021-02-10 
 * extension[followUpEncounter].valueReference = Reference(4ca8acfb-1fd0-41b3-8a82-cac79ff9db51) // 15/2-2021
@@ -49,8 +49,8 @@ Description: "Udføre daglige rutiner, svære begrænsninger for Jens Hansen"
 Usage: #inline
 * clinicalStatus = $ConditionClinical#active
 * category = $ConditionCategory#problem-list-item
-* severity = $KLTerminology#B4 // Svære begrænsninger
-* code = $KLTerminology#J2.3 // Udføre daglige rutiner
+* severity = $FSIII#B4 // Svære begrænsninger
+* code = $FSIII#J2.3 // Udføre daglige rutiner
 * subject = Reference(eec9e8e9-221d-4eae-a54d-cdd403661def) // Jens Hansen
 * recordedDate = 2021-02-10
 * extension[followUpEncounter].valueReference = Reference(4ca8acfb-1fd0-41b3-8a82-cac79ff9db51) // 15/2-2021
@@ -61,8 +61,8 @@ Description: "Lave mad, svære begrænsninger for Jens Hansen"
 Usage: #inline
 * clinicalStatus = $ConditionClinical#active
 * category = $ConditionCategory#problem-list-item
-* severity = $KLTerminology#B4 // Svære begrænsninger
-* code = $KLTerminology#J2.2 // Lave mad
+* severity = $FSIII#B4 // Svære begrænsninger
+* code = $FSIII#J2.2 // Lave mad
 * subject = Reference(eec9e8e9-221d-4eae-a54d-cdd403661def) // Jens Hansen
 * recordedDate = 2021-02-10
 * extension[followUpEncounter].valueReference = Reference(4ca8acfb-1fd0-41b3-8a82-cac79ff9db51) // 15/2-2021
@@ -73,8 +73,8 @@ Description: "Lave husligt arbejde, svære begrænsninger for Jens Hansen"
 Usage: #inline
 * clinicalStatus = $ConditionClinical#active
 * category = $ConditionCategory#problem-list-item
-* severity = $KLTerminology#B4 // Svære begrænsninger
-* code = $KLTerminology#J2.1 // Lave husligt arbejde
+* severity = $FSIII#B4 // Svære begrænsninger
+* code = $FSIII#J2.1 // Lave husligt arbejde
 * subject = Reference(eec9e8e9-221d-4eae-a54d-cdd403661def) // Jens Hansen
 * recordedDate = 2021-02-10
 * extension[followUpEncounter].valueReference = Reference(4ca8acfb-1fd0-41b3-8a82-cac79ff9db51) // 15/2-2021
@@ -85,8 +85,8 @@ Description: "Gå, moderate begrænsninger for Jens Hansen"
 Usage: #inline
 * clinicalStatus = $ConditionClinical#active
 * category = $ConditionCategory#problem-list-item
-* severity = $KLTerminology#B3 // Moderate begrænsninger
-* code = $KLTerminology#J3.8 // Gå
+* severity = $FSIII#B3 // Moderate begrænsninger
+* code = $FSIII#J3.8 // Gå
 * subject = Reference(eec9e8e9-221d-4eae-a54d-cdd403661def) // Jens Hansen
 * recordedDate = 2021-02-10
 * extension[followUpEncounter].valueReference = Reference(4ca8acfb-1fd0-41b3-8a82-cac79ff9db51) // 15/2-2021
@@ -97,8 +97,8 @@ Description: "Bevæge sig omkring, moderate begrænsninger for Jens Hansen"
 Usage: #inline
 * clinicalStatus = $ConditionClinical#active
 * category = $ConditionCategory#problem-list-item
-* severity = $KLTerminology#B3 // Moderate begrænsninger
-* code = $KLTerminology#J3.2 // Bevæge sig omkring
+* severity = $FSIII#B3 // Moderate begrænsninger
+* code = $FSIII#J3.2 // Bevæge sig omkring
 * subject = Reference(eec9e8e9-221d-4eae-a54d-cdd403661def) // Jens Hansen
 * recordedDate = 2021-02-10
 * extension[followUpEncounter].valueReference = Reference(4ca8acfb-1fd0-41b3-8a82-cac79ff9db51) // 15/2-2021
@@ -109,8 +109,8 @@ Description: "Muskelstyrke, svære begrænsninger for Jens Hansen"
 Usage: #inline
 * clinicalStatus = $ConditionClinical#active
 * category = $ConditionCategory#problem-list-item
-* severity = $KLTerminology#B4 // Svære begrænsninger
-* code = $KLTerminology#J3.7 // Muskelstyrke
+* severity = $FSIII#B4 // Svære begrænsninger
+* code = $FSIII#J3.7 // Muskelstyrke
 * subject = Reference(eec9e8e9-221d-4eae-a54d-cdd403661def) // Jens Hansen
 * recordedDate = 2021-02-10
 * extension[followUpEncounter].valueReference = Reference(4ca8acfb-1fd0-41b3-8a82-cac79ff9db51) // 15/2-2021
@@ -122,11 +122,11 @@ Description: "Forventet tilstand, moderate begrænsninger i af- og påklædning 
 Usage: #inline
 * lifecycleStatus = #planned
 * category = $KLCommonCodes#ca552020-6ed1-4cdc-b0d4-32697f1f27ad
-* description = $KLTerminology#e182c5dc-9f91-474a-92e8-f62be3d498f4
+* description = $FSIII#e182c5dc-9f91-474a-92e8-f62be3d498f4
 * subject = Reference(eec9e8e9-221d-4eae-a54d-cdd403661def) // Jens Hansen
 * startDate = 2021-02-10
 * target.measure = $KLCommonCodes#66959f77-6e2a-4574-8423-3ff097f8b9fa
-* target.detailCodeableConcept = $KLTerminology#B3 // Moderate begrænsninger
+* target.detailCodeableConcept = $FSIII#B3 // Moderate begrænsninger
 * addresses = Reference(d45b02d1-be76-4968-812b-6b32338ad8ad) // Af- og påklædning
 
 Instance: 33cd1262-c00f-440a-9e30-620166ff6b7a
@@ -135,11 +135,11 @@ Description: "Forventet tilstand, moderate begrænsninger i at udføre daglige r
 Usage: #inline
 * lifecycleStatus = #planned
 * category = $KLCommonCodes#ca552020-6ed1-4cdc-b0d4-32697f1f27ad
-* description = $KLTerminology#e182c5dc-9f91-474a-92e8-f62be3d498f4
+* description = $FSIII#e182c5dc-9f91-474a-92e8-f62be3d498f4
 * subject = Reference(eec9e8e9-221d-4eae-a54d-cdd403661def) // Jens Hansen
 * startDate = 2021-02-10
 * target.measure = $KLCommonCodes#66959f77-6e2a-4574-8423-3ff097f8b9fa
-* target.detailCodeableConcept = $KLTerminology#B3 // Moderate begrænsninger
+* target.detailCodeableConcept = $FSIII#B3 // Moderate begrænsninger
 * addresses = Reference(34665f6d-7573-46fb-8b4d-72f30641284b) // Udføre daglige rutiner
 
 Instance: a638744a-c6a9-49c5-940e-e16f94e806b9
@@ -148,11 +148,11 @@ Description: "Forventet tilstand, moderate begrænsninger i at lave mad for Jens
 Usage: #inline
 * lifecycleStatus = #planned
 * category = $KLCommonCodes#ca552020-6ed1-4cdc-b0d4-32697f1f27ad
-* description = $KLTerminology#e182c5dc-9f91-474a-92e8-f62be3d498f4
+* description = $FSIII#e182c5dc-9f91-474a-92e8-f62be3d498f4
 * subject = Reference(eec9e8e9-221d-4eae-a54d-cdd403661def) // Jens Hansen
 * startDate = 2021-02-10
 * target.measure = $KLCommonCodes#66959f77-6e2a-4574-8423-3ff097f8b9fa
-* target.detailCodeableConcept = $KLTerminology#B3 // Moderate begrænsninger
+* target.detailCodeableConcept = $FSIII#B3 // Moderate begrænsninger
 * addresses = Reference(067e0542-1d8a-404d-b6db-f2bfa6a03c2e) // Lave mad
 
 Instance: 1c62dbc4-91f7-4ad8-86be-783b7158c475
@@ -161,11 +161,11 @@ Description: "Forventet tilstand, moderate begrænsninger i at lave husligt arbe
 Usage: #inline
 * lifecycleStatus = #planned
 * category = $KLCommonCodes#ca552020-6ed1-4cdc-b0d4-32697f1f27ad
-* description = $KLTerminology#e182c5dc-9f91-474a-92e8-f62be3d498f4
+* description = $FSIII#e182c5dc-9f91-474a-92e8-f62be3d498f4
 * subject = Reference(eec9e8e9-221d-4eae-a54d-cdd403661def) // Jens Hansen
 * startDate = 2021-02-10
 * target.measure = $KLCommonCodes#66959f77-6e2a-4574-8423-3ff097f8b9fa
-* target.detailCodeableConcept = $KLTerminology#B3 // Moderate begrænsninger
+* target.detailCodeableConcept = $FSIII#B3 // Moderate begrænsninger
 * addresses = Reference(cd8643fd-8a42-4ef8-81b4-bf5ec2253f14) // Lave husligt arbejde
 
 Instance: cc6288f9-48d4-4aac-b640-b750a2dfeb0d
@@ -174,11 +174,11 @@ Description: "Forventet tilstand, lette begrænsninger i at gå for Jens Hansen"
 Usage: #inline
 * lifecycleStatus = #planned
 * category = $KLCommonCodes#ca552020-6ed1-4cdc-b0d4-32697f1f27ad
-* description = $KLTerminology#e182c5dc-9f91-474a-92e8-f62be3d498f4
+* description = $FSIII#e182c5dc-9f91-474a-92e8-f62be3d498f4
 * subject = Reference(eec9e8e9-221d-4eae-a54d-cdd403661def) // Jens Hansen
 * startDate = 2021-02-10
 * target.measure = $KLCommonCodes#66959f77-6e2a-4574-8423-3ff097f8b9fa
-* target.detailCodeableConcept = $KLTerminology#B2 // Lette begrænsninger
+* target.detailCodeableConcept = $FSIII#B2 // Lette begrænsninger
 * addresses = Reference(806d1cf8-5a4a-4c0d-a020-8a3bb3eacebd) // Gå 
 
 Instance: dc40bf0d-4411-4317-b424-9bad5045836e
@@ -187,11 +187,11 @@ Description: "Forventet tilstand, lette begrænsninger i at bevæge sig omkring 
 Usage: #inline
 * lifecycleStatus = #planned
 * category = $KLCommonCodes#ca552020-6ed1-4cdc-b0d4-32697f1f27ad
-* description = $KLTerminology#e182c5dc-9f91-474a-92e8-f62be3d498f4
+* description = $FSIII#e182c5dc-9f91-474a-92e8-f62be3d498f4
 * subject = Reference(eec9e8e9-221d-4eae-a54d-cdd403661def) // Jens Hansen
 * startDate = 2021-02-10
 * target.measure = $KLCommonCodes#66959f77-6e2a-4574-8423-3ff097f8b9fa
-* target.detailCodeableConcept = $KLTerminology#B2 // Lette begrænsninger
+* target.detailCodeableConcept = $FSIII#B2 // Lette begrænsninger
 * addresses = Reference(5ad5649a-6317-41de-8cc4-364b9bafd298) // Bevæge sig omkring
 
 Instance: 1efb9aec-4e79-4ead-8502-50168f569a18
@@ -200,11 +200,11 @@ Description: "Forventet tilstand, moderate begrænsninger i muskelstyrke for Jen
 Usage: #inline
 * lifecycleStatus = #planned
 * category = $KLCommonCodes#ca552020-6ed1-4cdc-b0d4-32697f1f27ad
-* description = $KLTerminology#e182c5dc-9f91-474a-92e8-f62be3d498f4
+* description = $FSIII#e182c5dc-9f91-474a-92e8-f62be3d498f4
 * subject = Reference(eec9e8e9-221d-4eae-a54d-cdd403661def) // Jens Hansen
 * startDate = 2021-02-10
 * target.measure = $KLCommonCodes#66959f77-6e2a-4574-8423-3ff097f8b9fa
-* target.detailCodeableConcept = $KLTerminology#B3 // Moderate begrænsninger
+* target.detailCodeableConcept = $FSIII#B3 // Moderate begrænsninger
 * addresses = Reference(fcc4040a-1803-434f-b633-8b354c5fbfb4) // Muskelstyrke
 
 // Planned interventions
@@ -216,7 +216,7 @@ Usage: #inline
 * intent = #plan
 * subject = Reference(eec9e8e9-221d-4eae-a54d-cdd403661def) // Jens Hansen
 * period.start = 2021-02-12
-* activity.detail.code.coding[level2] = $KLTerminology#H1.1 // Personlig hygiejne
+* activity.detail.code.coding[level2] = $FSIII#H1.1 // Personlig hygiejne
 * activity.detail.status = #in-progress
 * activity.detail.reasonReference = Reference(d45b02d1-be76-4968-812b-6b32338ad8ad) // Af- og påklædning
 
@@ -228,7 +228,7 @@ Usage: #inline
 * intent = #plan
 * subject = Reference(eec9e8e9-221d-4eae-a54d-cdd403661def) // Jens Hansen
 * period.start = 2021-02-12
-* activity.detail.code.coding[level2] = $KLTerminology#H1.5 // Hverdagens aktiviteter
+* activity.detail.code.coding[level2] = $FSIII#H1.5 // Hverdagens aktiviteter
 * activity.detail.status = #in-progress
 * activity.detail.reasonReference[+] = Reference(34665f6d-7573-46fb-8b4d-72f30641284b) // Udføre daglige rutiner
 * activity.detail.reasonReference[+] = Reference(cd8643fd-8a42-4ef8-81b4-bf5ec2253f14) // Lave husligt arbejde
@@ -241,7 +241,7 @@ Usage: #inline
 * intent = #plan
 * subject = Reference(eec9e8e9-221d-4eae-a54d-cdd403661def) // Jens Hansen
 * period.start = 2021-02-12
-* activity.detail.code.coding[level2] = $KLTerminology#H1.11 // Madservice
+* activity.detail.code.coding[level2] = $FSIII#H1.11 // Madservice
 * activity.detail.status = #in-progress
 * activity.detail.reasonReference[+] = Reference(067e0542-1d8a-404d-b6db-f2bfa6a03c2e) // Lave mad
 
@@ -253,7 +253,7 @@ Usage: #inline
 * intent = #plan
 * subject = Reference(eec9e8e9-221d-4eae-a54d-cdd403661def) // Jens Hansen
 * period.start = 2021-02-12
-* activity.detail.code.coding[level2] = $KLTerminology#H1.8 // Rengøring
+* activity.detail.code.coding[level2] = $FSIII#H1.8 // Rengøring
 * activity.detail.status = #in-progress
 * activity.detail.reasonReference[+] = Reference(cd8643fd-8a42-4ef8-81b4-bf5ec2253f14) // Lave husligt arbejde
 
@@ -265,7 +265,7 @@ Usage: #inline
 * intent = #plan
 * subject = Reference(eec9e8e9-221d-4eae-a54d-cdd403661def) // Jens Hansen
 * period.start = 2021-02-12
-* activity.detail.code.coding[level2] = $KLTerminology#H1.4 // Mobilitet
+* activity.detail.code.coding[level2] = $FSIII#H1.4 // Mobilitet
 * activity.detail.status = #in-progress
 * activity.detail.reasonReference[+] = Reference(806d1cf8-5a4a-4c0d-a020-8a3bb3eacebd) // Gå
 * activity.detail.reasonReference[+] = Reference(5ad5649a-6317-41de-8cc4-364b9bafd298) // Bevæge sig omkring
@@ -308,8 +308,8 @@ Usage: #inline
 * id = "d45b02d1-be76-4968-812b-6b32338ad8ad" // Real id
 * clinicalStatus = $ConditionClinical#active
 * category = $ConditionCategory#problem-list-item
-* severity = $KLTerminology#B4 // Svære begrænsninger
-* code = $KLTerminology#J1.3 // Af- og påklædning
+* severity = $FSIII#B4 // Svære begrænsninger
+* code = $FSIII#J1.3 // Af- og påklædning
 * subject = Reference(eec9e8e9-221d-4eae-a54d-cdd403661def) // Jens Hansen
 * recordedDate = 2021-02-10
 * extension[followUpEncounter].valueReference = Reference(56c8d2c3-5da1-4a33-a358-d3ecfb67ef3b) // 24/2-2021
@@ -321,8 +321,8 @@ Usage: #inline
 * id = "34665f6d-7573-46fb-8b4d-72f30641284b" // Real id
 * clinicalStatus = $ConditionClinical#active
 * category = $ConditionCategory#problem-list-item
-* severity = $KLTerminology#B4 // Svære begrænsninger
-* code = $KLTerminology#J2.3 // Udføre daglige rutiner
+* severity = $FSIII#B4 // Svære begrænsninger
+* code = $FSIII#J2.3 // Udføre daglige rutiner
 * subject = Reference(eec9e8e9-221d-4eae-a54d-cdd403661def) // Jens Hansen
 * recordedDate = 2021-02-10
 * extension[followUpEncounter].valueReference = Reference(56c8d2c3-5da1-4a33-a358-d3ecfb67ef3b) // 24/2-2021
@@ -334,8 +334,8 @@ Usage: #inline
 * id = "067e0542-1d8a-404d-b6db-f2bfa6a03c2e" // Real id
 * clinicalStatus = $ConditionClinical#active
 * category = $ConditionCategory#problem-list-item
-* severity = $KLTerminology#B4 // Svære begrænsninger
-* code = $KLTerminology#J2.2 // Lave mad
+* severity = $FSIII#B4 // Svære begrænsninger
+* code = $FSIII#J2.2 // Lave mad
 * subject = Reference(eec9e8e9-221d-4eae-a54d-cdd403661def) // Jens Hansen
 * recordedDate = 2021-02-10
 * extension[followUpEncounter].valueReference = Reference(56c8d2c3-5da1-4a33-a358-d3ecfb67ef3b) // 24/2-2021
@@ -347,8 +347,8 @@ Usage: #inline
 * id = "cd8643fd-8a42-4ef8-81b4-bf5ec2253f14" // Real id
 * clinicalStatus = $ConditionClinical#active
 * category = $ConditionCategory#problem-list-item
-* severity = $KLTerminology#B4 // Svære begrænsninger
-* code = $KLTerminology#J2.1 // Lave husligt arbejde
+* severity = $FSIII#B4 // Svære begrænsninger
+* code = $FSIII#J2.1 // Lave husligt arbejde
 * subject = Reference(eec9e8e9-221d-4eae-a54d-cdd403661def) // Jens Hansen
 * recordedDate = 2021-02-10
 * extension[followUpEncounter].valueReference = Reference(56c8d2c3-5da1-4a33-a358-d3ecfb67ef3b) // 24/2-2021
@@ -360,8 +360,8 @@ Usage: #inline
 * id = "806d1cf8-5a4a-4c0d-a020-8a3bb3eacebd" // Real id
 * clinicalStatus = $ConditionClinical#active
 * category = $ConditionCategory#problem-list-item
-* severity = $KLTerminology#B3 // Moderate begrænsninger
-* code = $KLTerminology#J3.8 // Gå
+* severity = $FSIII#B3 // Moderate begrænsninger
+* code = $FSIII#J3.8 // Gå
 * subject = Reference(eec9e8e9-221d-4eae-a54d-cdd403661def) // Jens Hansen
 * recordedDate = 2021-02-10
 * extension[followUpEncounter].valueReference = Reference(56c8d2c3-5da1-4a33-a358-d3ecfb67ef3b) // 24/2-2021
@@ -373,8 +373,8 @@ Usage: #inline
 * id = "5ad5649a-6317-41de-8cc4-364b9bafd298" // Real id
 * clinicalStatus = $ConditionClinical#active
 * category = $ConditionCategory#problem-list-item
-* severity = $KLTerminology#B3 // Moderate begrænsninger
-* code = $KLTerminology#J3.2 // Bevæge sig omkring
+* severity = $FSIII#B3 // Moderate begrænsninger
+* code = $FSIII#J3.2 // Bevæge sig omkring
 * subject = Reference(eec9e8e9-221d-4eae-a54d-cdd403661def) // Jens Hansen
 * recordedDate = 2021-02-10
 * extension[followUpEncounter].valueReference = Reference(56c8d2c3-5da1-4a33-a358-d3ecfb67ef3b) // 24/2-2021
@@ -386,8 +386,8 @@ Usage: #inline
 * id = "fcc4040a-1803-434f-b633-8b354c5fbfb4" // Real id
 * clinicalStatus = $ConditionClinical#active
 * category = $ConditionCategory#problem-list-item
-* severity = $KLTerminology#B4 // Svære begrænsninger
-* code = $KLTerminology#J3.7 // Muskelstyrke
+* severity = $FSIII#B4 // Svære begrænsninger
+* code = $FSIII#J3.7 // Muskelstyrke
 * subject = Reference(eec9e8e9-221d-4eae-a54d-cdd403661def) // Jens Hansen
 * recordedDate = 2021-02-10
 * extension[followUpEncounter].valueReference = Reference(56c8d2c3-5da1-4a33-a358-d3ecfb67ef3b) // 24/2-2021
@@ -419,7 +419,7 @@ Usage: #inline
 * focus[+] = Reference(5ad5649a-6317-41de-8cc4-364b9bafd298) // Bevæge sig omkring
 * focus[+] = Reference(fcc4040a-1803-434f-b633-8b354c5fbfb4) // Muskelstyrke
 * effectiveDateTime = 2021-02-15
-* valueCodeableConcept = $KLTerminology#E1 // Fortsættes uændret
+* valueCodeableConcept = $FSIII#E1 // Fortsættes uændret
 
 
 // ------------------------------------------------------------------------------------------------
@@ -463,8 +463,8 @@ Usage: #inline
 * id = "d45b02d1-be76-4968-812b-6b32338ad8ad" // Real id
 * clinicalStatus = $ConditionClinical#active
 * category = $ConditionCategory#problem-list-item
-* severity = $KLTerminology#B3 // Moderate begrænsninger
-* code = $KLTerminology#J1.3 // Af- og påklædning
+* severity = $FSIII#B3 // Moderate begrænsninger
+* code = $FSIII#J1.3 // Af- og påklædning
 * subject = Reference(eec9e8e9-221d-4eae-a54d-cdd403661def) // Jens Hansen
 * recordedDate = 2021-02-10 
 * extension[followUpEncounter].valueReference = Reference(fbf243bb-9d70-489d-875d-87e14c980d7c) // 10/3-2021
@@ -476,8 +476,8 @@ Usage: #inline
 * id = "34665f6d-7573-46fb-8b4d-72f30641284b" // Real id
 * clinicalStatus = $ConditionClinical#active
 * category = $ConditionCategory#problem-list-item
-* severity = $KLTerminology#B3 // Moderate begrænsninger
-* code = $KLTerminology#J2.3 // Udføre daglige rutiner
+* severity = $FSIII#B3 // Moderate begrænsninger
+* code = $FSIII#J2.3 // Udføre daglige rutiner
 * subject = Reference(eec9e8e9-221d-4eae-a54d-cdd403661def) // Jens Hansen
 * recordedDate = 2021-02-10
 * extension[followUpEncounter].valueReference = Reference(fbf243bb-9d70-489d-875d-87e14c980d7c) // 10/3-2021
@@ -489,8 +489,8 @@ Usage: #inline
 * id = "067e0542-1d8a-404d-b6db-f2bfa6a03c2e" // Real id
 * clinicalStatus = $ConditionClinical#active
 * category = $ConditionCategory#problem-list-item
-* severity = $KLTerminology#B3 // Moderate begrænsninger
-* code = $KLTerminology#J2.2 // Lave mad
+* severity = $FSIII#B3 // Moderate begrænsninger
+* code = $FSIII#J2.2 // Lave mad
 * subject = Reference(eec9e8e9-221d-4eae-a54d-cdd403661def) // Jens Hansen
 * recordedDate = 2021-02-10
 * extension[followUpEncounter].valueReference = Reference(fbf243bb-9d70-489d-875d-87e14c980d7c) // 10/3-2021
@@ -502,8 +502,8 @@ Usage: #inline
 * id = "cd8643fd-8a42-4ef8-81b4-bf5ec2253f14" // Real id
 * clinicalStatus = $ConditionClinical#active
 * category = $ConditionCategory#problem-list-item
-* severity = $KLTerminology#B3 // Moderate begrænsninger
-* code = $KLTerminology#J2.1 // Lave husligt arbejde
+* severity = $FSIII#B3 // Moderate begrænsninger
+* code = $FSIII#J2.1 // Lave husligt arbejde
 * subject = Reference(eec9e8e9-221d-4eae-a54d-cdd403661def) // Jens Hansen
 * recordedDate = 2021-02-10
 * extension[followUpEncounter].valueReference = Reference(fbf243bb-9d70-489d-875d-87e14c980d7c) // 10/3-2021
@@ -515,8 +515,8 @@ Usage: #inline
 * id = "806d1cf8-5a4a-4c0d-a020-8a3bb3eacebd" // Real id
 * clinicalStatus = $ConditionClinical#active
 * category = $ConditionCategory#problem-list-item
-* severity = $KLTerminology#B3 // Moderate begrænsninger
-* code = $KLTerminology#J3.8 // Gå
+* severity = $FSIII#B3 // Moderate begrænsninger
+* code = $FSIII#J3.8 // Gå
 * subject = Reference(eec9e8e9-221d-4eae-a54d-cdd403661def) // Jens Hansen
 * recordedDate = 2021-02-10
 * extension[followUpEncounter].valueReference = Reference(fbf243bb-9d70-489d-875d-87e14c980d7c) // 10/3-2021
@@ -528,8 +528,8 @@ Usage: #inline
 * id = "5ad5649a-6317-41de-8cc4-364b9bafd298" // Real id
 * clinicalStatus = $ConditionClinical#active
 * category = $ConditionCategory#problem-list-item
-* severity = $KLTerminology#B3 // Moderate begrænsninger
-* code = $KLTerminology#J3.2 // Bevæge sig omkring
+* severity = $FSIII#B3 // Moderate begrænsninger
+* code = $FSIII#J3.2 // Bevæge sig omkring
 * subject = Reference(eec9e8e9-221d-4eae-a54d-cdd403661def) // Jens Hansen
 * recordedDate = 2021-02-10
 * extension[followUpEncounter].valueReference = Reference(fbf243bb-9d70-489d-875d-87e14c980d7c) // 10/3-2021
@@ -541,8 +541,8 @@ Usage: #inline
 * id = "fcc4040a-1803-434f-b633-8b354c5fbfb4" // Real id
 * clinicalStatus = $ConditionClinical#active
 * category = $ConditionCategory#problem-list-item
-* severity = $KLTerminology#B3 // Moderate begrænsninger
-* code = $KLTerminology#J3.7 // Muskelstyrke
+* severity = $FSIII#B3 // Moderate begrænsninger
+* code = $FSIII#J3.7 // Muskelstyrke
 * subject = Reference(eec9e8e9-221d-4eae-a54d-cdd403661def) // Jens Hansen
 * recordedDate = 2021-02-10
 * extension[followUpEncounter].valueReference = Reference(fbf243bb-9d70-489d-875d-87e14c980d7c) // 10/3-2021
@@ -555,11 +555,11 @@ Usage: #inline
 * id = "91bed89f-4365-4878-849c-61554de55248" // Real id
 * lifecycleStatus = #planned
 * category = $KLCommonCodes#ca552020-6ed1-4cdc-b0d4-32697f1f27ad
-* description = $KLTerminology#e182c5dc-9f91-474a-92e8-f62be3d498f4
+* description = $FSIII#e182c5dc-9f91-474a-92e8-f62be3d498f4
 * subject = Reference(eec9e8e9-221d-4eae-a54d-cdd403661def) // Jens Hansen
 * startDate = 2021-02-10
 * target.measure = $KLCommonCodes#66959f77-6e2a-4574-8423-3ff097f8b9fa
-* target.detailCodeableConcept = $KLTerminology#B1 // Ingen begrænsninger
+* target.detailCodeableConcept = $FSIII#B1 // Ingen begrænsninger
 * addresses = Reference(d45b02d1-be76-4968-812b-6b32338ad8ad) // Af- og påklædning
 
 Instance: 33cd1262-c00f-440a-9e30-620166ff6b7a-v3 // Fake id
@@ -569,11 +569,11 @@ Usage: #inline
 * id = "33cd1262-c00f-440a-9e30-620166ff6b7a" // Real id
 * lifecycleStatus = #planned
 * category = $KLCommonCodes#ca552020-6ed1-4cdc-b0d4-32697f1f27ad
-* description = $KLTerminology#e182c5dc-9f91-474a-92e8-f62be3d498f4
+* description = $FSIII#e182c5dc-9f91-474a-92e8-f62be3d498f4
 * subject = Reference(eec9e8e9-221d-4eae-a54d-cdd403661def) // Jens Hansen
 * startDate = 2021-02-10
 * target.measure = $KLCommonCodes#66959f77-6e2a-4574-8423-3ff097f8b9fa
-* target.detailCodeableConcept = $KLTerminology#B1 // Ingen begrænsninger
+* target.detailCodeableConcept = $FSIII#B1 // Ingen begrænsninger
 * addresses = Reference(34665f6d-7573-46fb-8b4d-72f30641284b) // Udføre daglige rutiner
 
 Instance: a638744a-c6a9-49c5-940e-e16f94e806b9-v3 // Fake id
@@ -583,11 +583,11 @@ Usage: #inline
 * id = "a638744a-c6a9-49c5-940e-e16f94e806b9" // Real id
 * lifecycleStatus = #planned
 * category = $KLCommonCodes#ca552020-6ed1-4cdc-b0d4-32697f1f27ad
-* description = $KLTerminology#e182c5dc-9f91-474a-92e8-f62be3d498f4
+* description = $FSIII#e182c5dc-9f91-474a-92e8-f62be3d498f4
 * subject = Reference(eec9e8e9-221d-4eae-a54d-cdd403661def) // Jens Hansen
 * startDate = 2021-02-10
 * target.measure = $KLCommonCodes#66959f77-6e2a-4574-8423-3ff097f8b9fa
-* target.detailCodeableConcept = $KLTerminology#B2 // Lette begrænsninger
+* target.detailCodeableConcept = $FSIII#B2 // Lette begrænsninger
 * addresses = Reference(067e0542-1d8a-404d-b6db-f2bfa6a03c2e) // Lave mad
 
 Instance: 1c62dbc4-91f7-4ad8-86be-783b7158c475-v3 // Fake id
@@ -597,11 +597,11 @@ Usage: #inline
 * id = "1c62dbc4-91f7-4ad8-86be-783b7158c475" // Real id
 * lifecycleStatus = #planned
 * category = $KLCommonCodes#ca552020-6ed1-4cdc-b0d4-32697f1f27ad
-* description = $KLTerminology#e182c5dc-9f91-474a-92e8-f62be3d498f4
+* description = $FSIII#e182c5dc-9f91-474a-92e8-f62be3d498f4
 * subject = Reference(eec9e8e9-221d-4eae-a54d-cdd403661def) // Jens Hansen
 * startDate = 2021-02-10
 * target.measure = $KLCommonCodes#66959f77-6e2a-4574-8423-3ff097f8b9fa
-* target.detailCodeableConcept = $KLTerminology#B2 // Lette begrænsninger
+* target.detailCodeableConcept = $FSIII#B2 // Lette begrænsninger
 * addresses = Reference(cd8643fd-8a42-4ef8-81b4-bf5ec2253f14) // Lave husligt arbejde
 
 Instance: cc6288f9-48d4-4aac-b640-b750a2dfeb0d-v3 // Fake id
@@ -611,11 +611,11 @@ Usage: #inline
 * id = "cc6288f9-48d4-4aac-b640-b750a2dfeb0d" // Real id
 * lifecycleStatus = #planned
 * category = $KLCommonCodes#ca552020-6ed1-4cdc-b0d4-32697f1f27ad
-* description = $KLTerminology#e182c5dc-9f91-474a-92e8-f62be3d498f4
+* description = $FSIII#e182c5dc-9f91-474a-92e8-f62be3d498f4
 * subject = Reference(eec9e8e9-221d-4eae-a54d-cdd403661def) // Jens Hansen
 * startDate = 2021-02-10
 * target.measure = $KLCommonCodes#66959f77-6e2a-4574-8423-3ff097f8b9fa
-* target.detailCodeableConcept = $KLTerminology#B1 // Ingen begrænsninger
+* target.detailCodeableConcept = $FSIII#B1 // Ingen begrænsninger
 * addresses = Reference(806d1cf8-5a4a-4c0d-a020-8a3bb3eacebd) // Gå 
 
 Instance: dc40bf0d-4411-4317-b424-9bad5045836e-v3 // Fake id
@@ -625,11 +625,11 @@ Usage: #inline
 * id = "dc40bf0d-4411-4317-b424-9bad5045836e" // Real id
 * lifecycleStatus = #planned
 * category = $KLCommonCodes#ca552020-6ed1-4cdc-b0d4-32697f1f27ad
-* description = $KLTerminology#e182c5dc-9f91-474a-92e8-f62be3d498f4
+* description = $FSIII#e182c5dc-9f91-474a-92e8-f62be3d498f4
 * subject = Reference(eec9e8e9-221d-4eae-a54d-cdd403661def) // Jens Hansen
 * startDate = 2021-02-10
 * target.measure = $KLCommonCodes#66959f77-6e2a-4574-8423-3ff097f8b9fa
-* target.detailCodeableConcept = $KLTerminology#B1 // Ingen begrænsninger
+* target.detailCodeableConcept = $FSIII#B1 // Ingen begrænsninger
 * addresses = Reference(5ad5649a-6317-41de-8cc4-364b9bafd298) // Bevæge sig omkring
 
 Instance: 1efb9aec-4e79-4ead-8502-50168f569a18-v3 // Fake id
@@ -639,11 +639,11 @@ Usage: #inline
 * id = "1efb9aec-4e79-4ead-8502-50168f569a18" // Real id
 * lifecycleStatus = #planned
 * category = $KLCommonCodes#ca552020-6ed1-4cdc-b0d4-32697f1f27ad
-* description = $KLTerminology#e182c5dc-9f91-474a-92e8-f62be3d498f4
+* description = $FSIII#e182c5dc-9f91-474a-92e8-f62be3d498f4
 * subject = Reference(eec9e8e9-221d-4eae-a54d-cdd403661def) // Jens Hansen
 * startDate = 2021-02-10
 * target.measure = $KLCommonCodes#66959f77-6e2a-4574-8423-3ff097f8b9fa
-* target.detailCodeableConcept = $KLTerminology#B1 // Ingen begrænsninger
+* target.detailCodeableConcept = $FSIII#B1 // Ingen begrænsninger
 * addresses = Reference(fcc4040a-1803-434f-b633-8b354c5fbfb4) // Muskelstyrke
 
 // Planned interventions
@@ -657,7 +657,7 @@ Usage: #inline
 * subject = Reference(eec9e8e9-221d-4eae-a54d-cdd403661def) // Jens Hansen
 * period.start = 2021-02-12
 * period.end = 2021-02-24
-* activity.detail.code.coding[level2] = $KLTerminology#H1.1 // Personlig hygiejne
+* activity.detail.code.coding[level2] = $FSIII#H1.1 // Personlig hygiejne
 * activity.detail.status = #in-progress
 * activity.detail.reasonReference = Reference(d45b02d1-be76-4968-812b-6b32338ad8ad) // Af- og påklædning
 
@@ -665,12 +665,12 @@ Instance: 4f325b94-99fe-4781-9e05-97e27279f8ec-v3 // Fake id
 InstanceOf: KLGatewayCarePlannedIntervention
 Description: "Planned intervention doing hverdagens aktiviteter for Jens Hansen"
 Usage: #inline
-* id = "9ace0320-a6bd-4d90-bfed-b6e5d219dba3" // Real id
+* id = "4f325b94-99fe-4781-9e05-97e27279f8ec" // Real id
 * status = #active
 * intent = #plan
 * subject = Reference(eec9e8e9-221d-4eae-a54d-cdd403661def) // Jens Hansen
 * period.start = 2021-02-12
-* activity.detail.code.coding[level2] = $KLTerminology#H1.5 // Hverdagens aktiviteter
+* activity.detail.code.coding[level2] = $FSIII#H1.5 // Hverdagens aktiviteter
 * activity.detail.status = #in-progress
 * activity.detail.reasonReference[+] = Reference(cd8643fd-8a42-4ef8-81b4-bf5ec2253f14) // Lave husligt arbejde
 
@@ -678,13 +678,13 @@ Instance: d8130c0c-d8a1-47c7-acdf-d32f23c58db9-v3 // Fake id
 InstanceOf: KLGatewayCarePlannedIntervention
 Description: "Planned intervention doing mobilitet for Jens Hansen"
 Usage: #inline
-* id = "9ace0320-a6bd-4d90-bfed-b6e5d219dba3" // Real id
+* id = "d8130c0c-d8a1-47c7-acdf-d32f23c58db9" // Real id
 * status = #completed
 * intent = #plan
 * subject = Reference(eec9e8e9-221d-4eae-a54d-cdd403661def) // Jens Hansen
 * period.start = 2021-02-12
 * period.end = 2021-02-24
-* activity.detail.code.coding[level2] = $KLTerminology#H1.4 // Mobilitet
+* activity.detail.code.coding[level2] = $FSIII#H1.4 // Mobilitet
 * activity.detail.status = #in-progress
 * activity.detail.reasonReference[+] = Reference(806d1cf8-5a4a-4c0d-a020-8a3bb3eacebd) // Gå
 * activity.detail.reasonReference[+] = Reference(5ad5649a-6317-41de-8cc4-364b9bafd298) // Bevæge sig omkring
@@ -698,7 +698,7 @@ Usage: #inline
 * intent = #plan
 * subject = Reference(eec9e8e9-221d-4eae-a54d-cdd403661def) // Jens Hansen
 * period.start = 2021-02-25
-* activity.detail.code.coding[level2] = $KLTerminology#H2.5 // RH Personlig hygiejne
+* activity.detail.code.coding[level2] = $FSIII#H2.5 // RH Personlig hygiejne
 * activity.detail.status = #in-progress
 * activity.detail.reasonReference = Reference(d45b02d1-be76-4968-812b-6b32338ad8ad) // Af- og påklædning
 
@@ -710,7 +710,7 @@ Usage: #inline
 * intent = #plan
 * subject = Reference(eec9e8e9-221d-4eae-a54d-cdd403661def) // Jens Hansen
 * period.start = 2021-02-25
-* activity.detail.code.coding[level2] = $KLTerminology#H2.2 // RH Hverdagens aktiviteter
+* activity.detail.code.coding[level2] = $FSIII#H2.2 // RH Hverdagens aktiviteter
 * activity.detail.status = #in-progress
 * activity.detail.reasonReference = Reference(34665f6d-7573-46fb-8b4d-72f30641284b) // Udføre daglige rutiner
 
@@ -722,7 +722,7 @@ Usage: #inline
 * intent = #plan
 * subject = Reference(eec9e8e9-221d-4eae-a54d-cdd403661def) // Jens Hansen
 * period.start = 2021-02-25
-* activity.detail.code.coding[level2] = $KLTerminology#H2.4 // RH Mobilitet
+* activity.detail.code.coding[level2] = $FSIII#H2.4 // RH Mobilitet
 * activity.detail.status = #in-progress
 * activity.detail.reasonReference[+] = Reference(806d1cf8-5a4a-4c0d-a020-8a3bb3eacebd) // Gå
 * activity.detail.reasonReference[+] = Reference(5ad5649a-6317-41de-8cc4-364b9bafd298) // Bevæge sig omkring
@@ -755,7 +755,7 @@ Usage: #inline
 * focus[+] = Reference(5ad5649a-6317-41de-8cc4-364b9bafd298) // Bevæge sig omkring
 * focus[+] = Reference(fcc4040a-1803-434f-b633-8b354c5fbfb4) // Muskelstyrke
 * effectiveDateTime = 2021-02-24
-* valueCodeableConcept = $KLTerminology#E4 // Revisitation
+* valueCodeableConcept = $FSIII#E4 // Revisitation
 
 // ------------------------------------------------------------------------------------------------
 

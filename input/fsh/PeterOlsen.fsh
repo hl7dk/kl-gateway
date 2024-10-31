@@ -1,4 +1,4 @@
-Alias: $KLTerminology = urn:oid:1.2.208.176.2.21
+Alias: $FSIII = urn:oid:1.2.208.176.2.21
 
 // ------------------------------------------------------------------------------------------------
 
@@ -23,7 +23,7 @@ Description: "Respirationsproblemer for Peter Olsen"
 Usage: #inline
 * clinicalStatus = $ConditionClinical#active
 * category = $ConditionCategory#problem-list-item
-* code = $KLTerminology#I7.1 // Respirationsproblemer
+* code = $FSIII#I7.1 // Respirationsproblemer
 * subject = Reference(4a45e179-ace1-4ace-9991-8276c0ba490a) // Peter Olsen
 * recordedDate = 2021-02-10
 * extension[followUpEncounter].valueReference = Reference(0c4469c9-a8c2-4691-9994-d8493217f564) // 12/2-2021
@@ -34,7 +34,7 @@ Description: "Problemer med mobilitet og bevægelse for Peter Olsen"
 Usage: #inline
 * clinicalStatus = $ConditionClinical#active
 * category = $ConditionCategory#problem-list-item
-* code = $KLTerminology#I2.1 // Problemer med mobilitet og bevægelse
+* code = $FSIII#I2.1 // Problemer med mobilitet og bevægelse
 * subject = Reference(4a45e179-ace1-4ace-9991-8276c0ba490a) // Peter Olsen
 * recordedDate = 2021-02-10
 * extension[followUpEncounter].valueReference = Reference(0c4469c9-a8c2-4691-9994-d8493217f564) // 12/2-2021
@@ -45,8 +45,8 @@ InstanceOf: KLGatewayCareCompletedIntervention
 Description: "Completed intervention doing undersøgelse og måling af værdier for Peter Olsen"
 Usage: #inline
 * status = #completed
-* code.coding.system = "urn:oid:1.2.208.176.2.21"
-* code.coding.code = #G1.41 // Undersøgelse og måling af værdier
+* code.coding[level2].system = "urn:oid:1.2.208.176.2.21"
+* code.coding[level2].code = #G1.41 // Undersøgelse og måling af værdier
 * subject = Reference(4a45e179-ace1-4ace-9991-8276c0ba490a) // Peter Olsen
 * performedDateTime = 2021-02-10T13:00:00Z
 * reasonReference = Reference(a881788d-1b27-46e3-8b76-607bc49876fd) // Respirationsproblemer
@@ -56,8 +56,8 @@ InstanceOf: KLGatewayCareCompletedIntervention
 Description: "Completed intervention doing supplerende udredning for Peter Olsen"
 Usage: #inline
 * status = #completed
-* code.coding.system = "urn:oid:1.2.208.176.2.21"
-* code.coding.code = #G1.47 // Supplerende udredning
+* code.coding[level2].system = "urn:oid:1.2.208.176.2.21"
+* code.coding[level2].code = #G1.47 // Supplerende udredning
 * subject = Reference(4a45e179-ace1-4ace-9991-8276c0ba490a) // Peter Olsen
 * performedDateTime = 2021-02-10T13:00:00Z
 * reasonReference = Reference(a881788d-1b27-46e3-8b76-607bc49876fd) // Respirationsproblemer
@@ -71,7 +71,7 @@ Usage: #inline
 * intent = #plan
 * subject = Reference(4a45e179-ace1-4ace-9991-8276c0ba490a) // Peter Olsen
 * period.start = 2021-02-10
-* activity.detail.code.coding[level2] = $KLTerminology#G1.30 // Respirationsbehandling
+* activity.detail.code.coding[level2] = $FSIII#G1.29 // Respirationsbehandling
 * activity.detail.status = #in-progress
 * activity.detail.reasonReference = Reference(ad506910-9030-4ddb-b8ce-7bb6a69d808e) // Problemer med mobilitet og bevægelse
 
@@ -107,7 +107,7 @@ Description: "Respirationsproblemer for Peter Olsen"
 Usage: #inline
 * id = "a881788d-1b27-46e3-8b76-607bc49876fd" // Real id
 * clinicalStatus = $ConditionClinical#inactive
-* code = $KLTerminology#I7.1 // Respirationsproblemer
+* code = $FSIII#I7.1 // Respirationsproblemer
 * subject = Reference(4a45e179-ace1-4ace-9991-8276c0ba490a) // Peter Olsen
 * recordedDate = 2021-02-10
 * extension[followUpEncounter].valueReference = Reference(817de94d-84f0-47c3-839a-ae438075ec6f) // 14/2-2021
@@ -119,7 +119,7 @@ Usage: #inline
 * id = "ad506910-9030-4ddb-b8ce-7bb6a69d808e" // Real id
 * clinicalStatus = $ConditionClinical#active
 * category = $ConditionCategory#problem-list-item
-* code = $KLTerminology#I2.1 // Problemer med mobilitet og bevægelse
+* code = $FSIII#I2.1 // Problemer med mobilitet og bevægelse
 * subject = Reference(4a45e179-ace1-4ace-9991-8276c0ba490a) // Peter Olsen
 * recordedDate = 2021-02-10
 * extension[followUpEncounter].valueReference = Reference(817de94d-84f0-47c3-839a-ae438075ec6f) // 14/2-2021
@@ -135,7 +135,7 @@ Usage: #inline
 * focus[+] = Reference(a881788d-1b27-46e3-8b76-607bc49876fd) // Respirationsproblemer
 * focus[+] = Reference(ad506910-9030-4ddb-b8ce-7bb6a69d808e) // Problemer med mobilitet og bevægelse
 * effectiveDateTime = 2021-02-12
-* valueCodeableConcept = $KLTerminology#E1 // Fortsættes uændret
+* valueCodeableConcept = $FSIII#E1 // Fortsættes uændret
 
 // Followup encounters
 Instance: 817de94d-84f0-47c3-839a-ae438075ec6f
@@ -159,7 +159,6 @@ Description: "Reporting of Peter Olsen after third encounter with the Acute Team
 * insert CitizenEntry(4a45e179-ace1-4ace-9991-8276c0ba490a) // Peter Olsen
 * insert ConditionEntryVersion(a881788d-1b27-46e3-8b76-607bc49876fd, v3) // Respirationsproblemer
 * insert ConditionEntryVersion(ad506910-9030-4ddb-b8ce-7bb6a69d808e, v3) // // Problemer med mobilitet og bevægelse
-* insert MatterOfInterestEntry(c9c93481-f170-4653-b837-6e8eacd716ca) // Respiration og cirkulation
 * insert FollowUpObservationEntry(c0e46d1a-bcd2-4b4f-bc74-db1237157d4e) // Afsluttes
 * insert FollowUpObservationEntry(4c160af3-dc6f-4405-a52a-b93447e06b68) // Ændres inden for rammen
 * insert EncounterEntry(1fb0990d-aac7-4661-b976-874e051c5ae6) // 15/2-2021
@@ -171,7 +170,7 @@ Description: "Respirationsproblemer for Peter Olsen"
 Usage: #inline
 * id = "a881788d-1b27-46e3-8b76-607bc49876fd" // Real id
 * clinicalStatus = $ConditionClinical#inactive
-* code = $KLTerminology#I7.1 // Respirationsproblemer
+* code = $FSIII#I7.1 // Respirationsproblemer
 * subject = Reference(4a45e179-ace1-4ace-9991-8276c0ba490a) // Peter Olsen
 * recordedDate = 2021-02-10
 
@@ -182,21 +181,10 @@ Usage: #inline
 * id = "ad506910-9030-4ddb-b8ce-7bb6a69d808e" // Real id
 * clinicalStatus = $ConditionClinical#active
 * category = $ConditionCategory#problem-list-item
-* code = $KLTerminology#I2.1 // Problemer med mobilitet og bevægelse
+* code = $FSIII#I2.1 // Problemer med mobilitet og bevægelse
 * subject = Reference(4a45e179-ace1-4ace-9991-8276c0ba490a) // Peter Olsen
 * recordedDate = 2021-02-10
 * extension[followUpEncounter].valueReference = Reference(1fb0990d-aac7-4661-b976-874e051c5ae6) // 15/2-2021
-
-// Matter of interest observations
-Instance: c9c93481-f170-4653-b837-6e8eacd716ca
-InstanceOf: KLGatewayCareMatterOfInterestObservation
-Description: "Respiration og cirkulation area is not relevant for Peter Olsen"
-Usage: #inline
-* status = #final
-* code.coding = $KLTerminology#I7 // Respiration og cirkulation
-* subject = Reference(4a45e179-ace1-4ace-9991-8276c0ba490a) // Peter Olsen
-* effectiveDateTime = 2021-02-15
-* valueCodeableConcept = $KLTerminology#B6 // Ikke relevant
 
 // Follow-up observations
 Instance: c0e46d1a-bcd2-4b4f-bc74-db1237157d4e
@@ -208,7 +196,7 @@ Usage: #inline
 * subject = Reference(4a45e179-ace1-4ace-9991-8276c0ba490a) // Peter Olsen
 * focus[+] = Reference(a881788d-1b27-46e3-8b76-607bc49876fd) // Respirationsproblemer
 * effectiveDateTime = 2021-02-12
-* valueCodeableConcept = $KLTerminology#E3 // Afsluttes
+* valueCodeableConcept = $FSIII#E3 // Afsluttes
 
 Instance: 4c160af3-dc6f-4405-a52a-b93447e06b68
 InstanceOf: KLGatewayCareFollowUpObservation
@@ -219,7 +207,7 @@ Usage: #inline
 * subject = Reference(4a45e179-ace1-4ace-9991-8276c0ba490a) // Peter Olsen
 * focus[+] = Reference(ad506910-9030-4ddb-b8ce-7bb6a69d808e) // Problemer med mobilitet og bevægelse
 * effectiveDateTime = 2021-02-14
-* valueCodeableConcept = $KLTerminology#E2 // Ændres inden for rammen
+* valueCodeableConcept = $FSIII#E2 // Ændres inden for rammen
 
 
 // Followup encounters
@@ -257,7 +245,7 @@ Usage: #inline
 * id = "ad506910-9030-4ddb-b8ce-7bb6a69d808e" // Real id
 * clinicalStatus = $ConditionClinical#active
 * category = $ConditionCategory#problem-list-item
-* code = $KLTerminology#I2.1 // Problemer med mobilitet og bevægelse
+* code = $FSIII#I2.1 // Problemer med mobilitet og bevægelse
 * subject = Reference(4a45e179-ace1-4ace-9991-8276c0ba490a) // Peter Olsen
 * recordedDate = 2021-02-10
 * extension[followUpEncounter].valueReference = Reference(99e5f54d-f9cd-44ea-9901-b6b5d6bf9285) // 17/2-2021
@@ -268,8 +256,8 @@ Description: "Gå, lette begrænsninger for Peter Olsen"
 Usage: #inline
 * clinicalStatus = $ConditionClinical#active
 * category = $ConditionCategory#problem-list-item
-* severity = $KLTerminology#B2 // Lette begrænsninger
-* code = $KLTerminology#J3.8 // Gå
+* severity = $FSIII#B2 // Lette begrænsninger
+* code = $FSIII#J3.8 // Gå
 * subject = Reference(4a45e179-ace1-4ace-9991-8276c0ba490a) // Peter Olsen
 * recordedDate = 2021-02-15
 * extension[followUpEncounter].valueReference = Reference(f5b962ec-f815-4f12-a1d8-bbd504db79ed) // 6/4-2021
@@ -281,11 +269,11 @@ Description: "Forventet tilstand, ingen eller ubetydelige begrænsninger i at g�
 Usage: #inline
 * lifecycleStatus = #planned
 * category = $KLCommonCodes#ca552020-6ed1-4cdc-b0d4-32697f1f27ad
-* description = $KLTerminology#e182c5dc-9f91-474a-92e8-f62be3d498f4
+* description = $FSIII#e182c5dc-9f91-474a-92e8-f62be3d498f4
 * subject = Reference(4a45e179-ace1-4ace-9991-8276c0ba490a) // Peter Olsen
 * startDate = 2021-02-15
 * target.measure = $KLCommonCodes#66959f77-6e2a-4574-8423-3ff097f8b9fa
-* target.detailCodeableConcept = $KLTerminology#B1 // Ingen eller ubetydelige begrænsninger
+* target.detailCodeableConcept = $FSIII#B1 // Ingen eller ubetydelige begrænsninger
 * addresses = Reference(39869f95-3b5f-4cbf-9af9-79d1344791f6) // Gå 
 
 // Planned interventions
@@ -297,7 +285,7 @@ Usage: #inline
 * intent = #plan
 * subject = Reference(4a45e179-ace1-4ace-9991-8276c0ba490a) // Peter Olsen
 * period.start = 2021-02-18
-* activity.detail.code.coding[level2] = $KLTerminology#H6.1 // Vedligehold af færdigheder
+* activity.detail.code.coding[level2] = $FSIII#H6.1 // Vedligehold af færdigheder
 * activity.detail.status = #completed
 * activity.detail.reasonReference = Reference(39869f95-3b5f-4cbf-9af9-79d1344791f6) // Gå
 
@@ -333,8 +321,6 @@ Description: "Reporting of Peter Olsen after second encounter with home nursing"
 * insert CitizenEntry(4a45e179-ace1-4ace-9991-8276c0ba490a) // Peter Olsen
 * insert ConditionEntryVersion(ad506910-9030-4ddb-b8ce-7bb6a69d808e, v5) // Problemer med mobilitet og bevægelse
 * insert PlannedInterventionEntryVersion(f99b219d-8b70-4423-a32f-d7e97d553305, v5) // Respirationsbehandling
-* insert MatterOfInterestEntry(357d2a34-8a4d-4302-988d-de69c4bfe0de) // Psykosociale forhold
-* insert MatterOfInterestEntry(f5c24a73-fac8-44c8-972e-7b4aa13c1c40) // Søvn og hvile
 * insert FollowUpObservationEntry(d54367e4-c2c5-49f6-bd28-a154af029b36) // Afsluttes
 
 // Conditions
@@ -344,7 +330,7 @@ Description: "Problemer med mobilitet og bevægelse for Peter Olsen"
 Usage: #inline
 * id = "ad506910-9030-4ddb-b8ce-7bb6a69d808e" // Real id
 * clinicalStatus = $ConditionClinical#inactive
-* code = $KLTerminology#I2.1 // Problemer med mobilitet og bevægelse
+* code = $FSIII#I2.1 // Problemer med mobilitet og bevægelse
 * subject = Reference(4a45e179-ace1-4ace-9991-8276c0ba490a) // Peter Olsen
 * recordedDate = 2021-02-15
 
@@ -359,28 +345,9 @@ Usage: #inline
 * subject = Reference(4a45e179-ace1-4ace-9991-8276c0ba490a) // Peter Olsen
 * period.start = 2021-02-10
 * period.end = 2021-02-17
-* activity.detail.code.coding[level2] = $KLTerminology#G1.30 // Respirationsbehandling
+* activity.detail.code.coding[level2] = $FSIII#G1.30 // Respirationsbehandling
 * activity.detail.status = #in-progress
 * activity.detail.reasonReference = Reference(ad506910-9030-4ddb-b8ce-7bb6a69d808e) // Problemer med mobilitet og bevægelse
-
-// Matter of interest observations
-Instance: 357d2a34-8a4d-4302-988d-de69c4bfe0de
-InstanceOf: KLGatewayCareMatterOfInterestObservation
-Description: "Psykosociale forhold area is a potential problem for Peter Olsen"
-Usage: #inline
-* status = #final
-* code.coding = $KLTerminology#I6 // Psykosociale forhold
-* subject = Reference(4a45e179-ace1-4ace-9991-8276c0ba490a) // Peter Olsen
-* effectiveDateTime = 2021-02-17
-
-Instance: f5c24a73-fac8-44c8-972e-7b4aa13c1c40
-InstanceOf: KLGatewayCareMatterOfInterestObservation
-Description: "Søvn og hvile area is a potential problem for Peter Olsen"
-Usage: #inline
-* status = #final
-* code.coding = $KLTerminology#I10 // Søvn og hvile
-* subject = Reference(4a45e179-ace1-4ace-9991-8276c0ba490a) // Peter Olsen
-* effectiveDateTime = 2021-02-17
 
 // Follow-up observations
 Instance: d54367e4-c2c5-49f6-bd28-a154af029b36
@@ -392,7 +359,7 @@ Usage: #inline
 * subject = Reference(4a45e179-ace1-4ace-9991-8276c0ba490a) // Peter Olsen
 * focus[+] = Reference(ad506910-9030-4ddb-b8ce-7bb6a69d808e) // Problemer med mobilitet og bevægelse
 * effectiveDateTime = 2021-02-17
-* valueCodeableConcept = $KLTerminology#E3 // Afsluttes
+* valueCodeableConcept = $FSIII#E3 // Afsluttes
 
 // ------------------------------------------------------------------------------------------------
 
@@ -414,22 +381,22 @@ InstanceOf: KLGatewayCareCitizensOwnObservation
 Description: "Peter Olsen udfører selv at gå"
 Usage: #inline
 * status = #final
-* code = $KLTerminology#C // Udførelse
+* code = $FSIII#C // Udførelse
 * subject = Reference(4a45e179-ace1-4ace-9991-8276c0ba490a) // Peter Olsen
 * focus = Reference(39869f95-3b5f-4cbf-9af9-79d1344791f6) // Gå
 * effectiveDateTime = 2020-08-21
-* valueCodeableConcept = $KLTerminology#C1 // Udfører selv
+* valueCodeableConcept = $FSIII#C1 // Udfører selv
 
 Instance: f35aa1be-0ed2-4d86-8d62-178a7d20c923
 InstanceOf: KLGatewayCareCitizensOwnObservation
 Description: "Peter Olsen oplever ikke begrænsninger i at gå"
 Usage: #inline
 * status = #final
-* code = $KLTerminology#D // Betydning
+* code = $FSIII#D // Betydning
 * subject = Reference(4a45e179-ace1-4ace-9991-8276c0ba490a) // Peter Olsen
 * focus = Reference(39869f95-3b5f-4cbf-9af9-79d1344791f6) // Gå
 * effectiveDateTime = 2020-08-21
-* valueCodeableConcept = $KLTerminology#D1 // Oplever ikke begrænsninger
+* valueCodeableConcept = $FSIII#D1 // Oplever ikke begrænsninger
 
 // ------------------------------------------------------------------------------------------------
 

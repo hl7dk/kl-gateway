@@ -65,6 +65,8 @@ Description: "Planned interventions for nursing and home care in Danish Municipa
 * note ..0
 * extension contains klgateway-care-follow-up-encounter-extension named followUpEncounter 0..1 MS
 * extension[followUpEncounter] ^definition = "Encounter for following up on this intervention. Must be present if a follow-up date is known"
+* activity.detail.extension contains DeliveryType named deliveryType 0..*
+* activity.detail.extension[deliveryType].valueCodeableConcept.coding from DeliveryTypes (required)
 
 //Danish descriptions
 * activity.detail.code.coding ^short = "[DK] indsatsskode"
@@ -78,9 +80,10 @@ Description: "Planned interventions for nursing and home care in Danish Municipa
 * activity.detail.reasonReference ^short = "[DK] indsatsbegrundelse"
 * activity.outcomeReference ^short = "[DK] indsatsgennemførtAktivitet"
 * activity.detail.status ^short = "[DK] indsatsAktivitetsstatus"
+* activity.detail.extension[deliveryType] ^short = "[DK] indsatsLeveringstype"
 
 
-Alias: $KLTerminology = urn:oid:1.2.208.176.2.21
+Alias: $FSIII = urn:oid:1.2.208.176.2.21
 Alias: $LocalInterventions = http://fhir.kl.dk/gateway/CodeSystem/LocallyDefinedInterventions
 
 Instance: PersonligHygiejne
@@ -90,7 +93,7 @@ Description: "Planned intervention doing personal hygiene according to FSIII on 
 * intent = #plan
 * subject = Reference(TestPerson)
 * period.start = 2020-08-14
-* activity.detail.code.coding[level2] = $KLTerminology#H1.1
+* activity.detail.code.coding[level2] = $FSIII#H1.1
 * activity.detail.code.coding[level3] = $LocalInterventions#H1.1.1 "Speciel personlig pleje"
 * activity.detail.status = #in-progress
 
@@ -101,5 +104,5 @@ Description: "Planned intervention doing dialysis according to FSIII on the test
 * intent = #plan
 * subject = Reference(TestPerson)
 * period.start = 2020-08-14
-* activity.detail.code.coding[level2] = $KLTerminology#G1.10
+* activity.detail.code.coding[level2] = $FSIII#G1.10
 * activity.detail.status = #in-progress

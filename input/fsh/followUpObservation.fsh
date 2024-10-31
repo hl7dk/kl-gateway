@@ -15,7 +15,7 @@ Description: "Structured result or outcome of a follow up."
 * subject only Reference(klgateway-care-citizen)
 * subject ^type.aggregation = #bundled
 * focus 1..
-* focus only Reference(KLGatewayCareCondition or KLGatewayCarePlannedIntervention) 
+* focus only Reference(KLGatewayCareCondition or KLGatewayCarePlannedIntervention) // after transistion only condition
 * encounter 0..0
 * effective[x] 1..1
 * effective[x] only dateTime
@@ -56,7 +56,7 @@ Description: "Follow-up observation documenting that focus on ability to wash hi
 * subject = Reference(TestPerson)
 * focus = Reference(VaskeSigLetteBegraensninger)
 * effectiveDateTime = 2020-08-14
-* valueCodeableConcept = $KLTerminology#E1
+* valueCodeableConcept = $FSIII#E1
 
 Instance: PersonligPlejeFortsaettes
 InstanceOf: KLGatewayCareFollowUpObservation
@@ -66,7 +66,7 @@ Description: "Follow-up observation documenting that focus on personal care shou
 * subject = Reference(TestPerson)
 * focus = Reference(ProblemerMedPersonligPleje)
 * effectiveDateTime = 2020-08-14
-* valueCodeableConcept = $KLTerminology#E1
+* valueCodeableConcept = $FSIII#E1
 
 Instance: PersonligHygiejneFortsaettes
 InstanceOf: KLGatewayCareFollowUpObservation
@@ -76,7 +76,7 @@ Description: "Follow-up observation documenting that the planned intervention on
 * subject = Reference(TestPerson)
 * focus = Reference(PersonligHygiejne)
 * effectiveDateTime = 2020-08-14
-* valueCodeableConcept = $KLTerminology#E1
+* valueCodeableConcept = $FSIII#E1
 
 Instance: DialyseFortsaettes
 InstanceOf: KLGatewayCareFollowUpObservation
@@ -86,4 +86,4 @@ Description: "Follow-up observation documenting that the planned intervention on
 * subject = Reference(TestPerson)
 * focus = Reference(Dialyse)
 * effectiveDateTime = 2020-08-14
-* valueCodeableConcept = $KLTerminology#E1
+* valueCodeableConcept = $FSIII#E1

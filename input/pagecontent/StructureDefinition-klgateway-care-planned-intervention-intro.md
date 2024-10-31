@@ -5,11 +5,15 @@ CarePlan.activity.detail.code.coding holds the intervention code from FSIII of t
 
 It is important to distiguish correctly between the dates and times stated in the model. CarePlan.period.start is from when the PlannedIntervention is authorized (bevillingstid). The planned end-date is CarePlan.period.end, unless the date has already occured and the status is "completed", then it is the actual end-date.
 
-CarePlan.status and CarePlan.intent are mandatory in the FHIR CarePlan resource. It is important that the intent is set to "order", when the intervention have been approved by municipality authorities (når bevillingen er sket). The status should active, revoked and completed plans. Note that the meaning of active is "ready to be acted upon", so it does not signify that the first activities have occured. CarePlan.activity.detail.status is also mandatory, and in this case it will suffice to use the values unknown and entered-in-error. Also use these for detail-status.
+CarePlan.status and CarePlan.intent are mandatory in the FHIR CarePlan resource. CarePlan.intent is always 'plan' in this implementation guide. CarePlan status should be either 'unknown', 'entered-in-error', or the status of the intervention at the time of reporting. Note that the meaning of 'active' is "ready to be acted upon", so it does not signify that the first activity has occured.
 
-Use CarePlan:extension.FollowUpEncounter to explicitely state when follow-up on the intervention should occur.
+CarePlan.activity.detail.status is also mandatory, and all the statuses in the FHIR ValueSet may be used, however 'unknown' is permitted from the time where the intervention occurs in the record until its completion. It is recommended not to use 'entered-in-error' - if the CarePlan is entered-in-error use CarePlan.status.
 
-CarePlan.activity.detail.reasonReference holds the link between conditions and interventions which are mandatory is FSIII, but optional in this context to allow reporting of interventions not yet linked to a reason. 
+CarePlan:extension.FollowUpEncounter can be used to explicitely state when follow-up on the intervention should occur. However, the followUpEncounter-extension will be depricated in the next version of this implementation guide. In the new version, GeneralEncounter can hold a reference to the PlannedIntervention.
+
+CarePlan.activity.detail.reasonReference holds the link between conditions and interventions which are mandatory is FSIII, but optional in this context to allow reporting of interventions not yet linked to a reason.
+
+CarePlan.activity.detail:extension.deliveryType can be used to state, how interventions are delivered. Valid values are 'individual', 'group based', 'delivered using a robot' 'delivered using digital solutions'. Note that more than one code may apply to one intervention e.g. cleaning may be done partially by a robot vacuum cleaner, and partially by a person. In this case, use both 'individual' and 'delivered using a robot'.
 
 ### Conversions between Danish information model and FHIR-profile
 
@@ -27,3 +31,4 @@ Nedenstående tabel oversætter mellem de attributter der er defineret i den fæ
 |indsatsPlanlagtOpfølgning|Kontakt, hvor det planlægges at følge op på tilstanden |CarePlan:extension.FollowUpEncounter|
 |indsatsbegrundelse|Tilstand som indsatsen rettes mod|CarePlan.activity.detail.reasonReference|
 |indsatsAktivitetsstatus|Indikerer om indsatsen er igangsat, eller om den ikke er startet, eller er færdiggjort|CarePlan.activity.detail.status|
+|indsatsLeveringstype|Type der beskriver hvordan indsatsen leveres|activity.detail.extension:deliveryType|

@@ -52,7 +52,7 @@ Description: "Encounter for following up on conditions, care plans, or observati
 * class ^short = "[DK] kontaktklasse"
 
 
-Instance: bfa70a76-318d-453d-9abc-76982f8d13ca
+Instance: NaesteOpfoelgningsdato
 InstanceOf: KLGatewayCareEncounter
 Description: "Encounter documenting the next date for a follow-up"
 * status = #planned

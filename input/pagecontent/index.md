@@ -1,31 +1,47 @@
-This implementation guide describes the delivery of health and eldercare data to the KL Gateway. The reporting aims for compliance with the Danish core profiles and the current work on a shared information model (FKI) for data in the Danish municipalities.
+This implementation guide describes the delivery of health and eldercare data to FK Gateway. The reporting aims for compliance with the Danish core profiles and the current work on a shared information model (FKI) for data in the Danish municipalities.
 
-The profiles for the reporting are restricted to allow only the information that is required to report to the KL Gateway. This will not be compliant with the shared information model for data in the Danish municipalities and FSII as it describes a subset where not all mandatory data is allowed.
+The profiles for the reporting are restricted to allow only the information that is required to report to the FK Gateway. This is only a subset of information described in FSIII and FKI.
 
-### Content
+Note that this is a transitional version, designed to allow a smooth implementation of the FSIII simplicfication. This front page now describes the reporting, as it will look after the simplification, but the old way is still possible, and is described on the page "Old home". Be aware, that it is also possible, to report to FK Gateway using a hybrid of old and new profiles and terminology. This will help to allow users to still have content in their records that uses the old FSIII, while new content is documented using the simplified FSIII.
 
-The data contained in the reporting is a subset of the data defined in the Danish standard for eldercare and health data (FSIII, v. 1.6), with focus on structured information about conditions and care plans where all free text information is omitted. Enhancement of FSIII with training and rehabilitation is not in scope for this reporting.
+The specific changes to the FSIII terminology will not be described here, as they are documented elsewhere, and FK-klassifikation holds the authoritative copy. However, be aware of the following:
+* Both the FSIII codes valid before the simplification and after the simplification are accepted in this IG. After the transition, only new codes will be accepted.
+* In the transition period, FK Gateway accepts old FSIII displays and legacy codes (brugervendte nøgler). After the transistion, only UUID's and only current titles/displays from FSIII as defined by FK-klassifikation will be accepted in reporting.
 
-An overview of the model of the delivery report content is provided in the following illustration:
+Other changes include:
+* A new encounter called GeneralEncounter has been designed. GeneralEncounter will superseed Encounter after the transition period. GeneralEncounter can be used to report the planned follow-up encounters, as well as completed encounters that have delivered interventions. GeneralEncounter uses more values for the class-attribute. This means that the mode of delivery can be repported e.g. home visit, screen visit etc. GeneralEncounter can reference both conditions (on which it is a follow-up) and interventions (on which it is a delivery). Consequently the Condition profile, will no longer need the FollowUpEncounterExtension. So this will be depricated after the transistion as well.
+* CitizensOwnObservation and MatterOfInterestObservation will be depricated after the transition period.
+* FollowUpObservation will only be used in home care, not in nursing, after the transition. After the transistion, FollowUpObservation will only be allowed to reference Condition in the focus-attribute. Right now, both Condition and PlannedIntervention can be referenced.
+* The citizen profile has two new attributes. Patient.active and Patient.deceased. Patient.active is optional, and used for error-reporting. Patient.deceased is optional in the transition, and is used to state whether the citizen is alive or dead. A warning will be thrown, if data is reported about dead citizens. Patient.deseased will be mandatory after the transition, and reporting about dead citizens will not be accepted and result in an error.
+* Error-reporting documentation have been updated. Read it here [here](./FejlrettelseNotatKLGateway.pdf) (in Danish): 
 
-<img alt="Model" src="./GatewayModel.png" style="float:none; display:block; margin-left:auto; margin-right:auto;" />
+## Overview
+The data is reported as a collection of instances. A report may contain instances that conforms to the profiles defined in this implementation guide. See figure below.
 
-__Note:__ All resources refer to citizen in the bundle (some relations are omitted from the diagram to make it readable).
+<img alt="OverviewModel" src="./DeliveryReport.png" style="float:none; display:block; margin-left:auto; margin-right:auto;" />
 
-The reporting contains the following types of information:
+In addition to being structured as a report, relationships exist between the profiles. These are illustrated in the UML Class Diagram in the figure below.
+
+<img alt="ClassDiagram" src="./ClassDiagramGateway.png" style="float:none; display:block; margin-left:auto; margin-right:auto;" />
+
+The Class diagram shows that all profiles refer to Citizen. Other than that, the documentation is centered aroung Conditions. The PlannedInterventions and CompletedInterventions can reference the Condition to document why these activities are carried out. A goal (forvented tilstand) always focuses on a certain Condition. A followUpObservation references the Condition which it follow up on.
+The GeneralEncounter can be used to report a planned follow up date for Conditions, which is mandatory. It can also be used to report the delivery of PlannedInterventions, which is optional.
+
+The content of the DeliveryReport is described in more detail in the following:
 
 #### Citizen
-Information about the citizen that is the subject of the report. The main information about the citizen is the civil registration number (CPR-nr) and identification of the municipality holding and reporting the data.
+Information about the citizen that is the subject of the report. The main information about the citizen is the civil registration number (CPR-nr) and identification of the municipality holding and reporting the data. Information about deceased status is includes as well. 
 
 ##### Validation
 - Only one citizen resource is present in the report
 - The civil registration number is a syntactically valid CPR-nr.
 - The managing organization is a syntactically valid SOR code (only code length is currently validated in the profile, but the authorization validates the actual SOR code)
+- The citizen is not dead (throws warning)
 
-#### Conditions
+#### Condition
 Information about the conditions (FSIII tilstande) of the citizen as assessed by the care practitioners. A condition represents an assessement of either a home care or a nursing condition and it must contain the level 2 condition code as defined by FSIII, the time that it was recorded, and a reference to an encounter with the follow-up date of the condition if it is known. Home care conditions must also contain the severity of the condition represented as the functioning level as defined by FSIII.
 
-All information about conditions that has changed since the last reporting must be contained in a new report, including referenced follow-up encounters. Changes in the assessment may include conditions that are new, updated by a new assessment or no longer in relevant. A condition that has changed since previously reported shall have the same code according to FSIII and is considered to be an update to the assessment regardless of the id of the resource.
+All information about conditions that has changed since the last reporting must be contained in a new report. Changes in the assessment may include conditions that are new, updated by a new assessment or no longer is relevant. A condition that has changed since previously reported shall have the same code according to FSIII.
 
 Free text information about the conditions is not part of this reporting.
 
@@ -39,10 +55,10 @@ Note: A potential problem at home care or nursing condition area level is not a 
 - Nursing conditions have a valid nursing condition code according to FSIII (Helbredstilstand)
 - Nursing conditions does not have a severity code
 
-#### Goals
+#### Goal
 Information about the goal (FSIII forventet tilstand) for each home care condition. The goal must contain the condition that the goal addresses and the expected severity as defined by FSIII. Only one goal for a home care condition must exist at a given time.
 
-All changes to the goals since the last reporting must be included in a new report, including the referenced conditions and all the resources referenced by the conditions.
+All changes to the goals since the last reporting must be included in a new report. However, changes typically only include entered-in-error. Other changes are considered to be new goals.
 
 Free text information about the goals is not part of this reporting.
 
@@ -52,28 +68,14 @@ Free text information about the goals is not part of this reporting.
 - Goals does not address nursing conditions
 - The target of a goal is a valid severity code according to FSIII (Funktionsniveau - forventet tilstand)
 
-#### Citizens Own Observations
-Information provided by the citizen about the conditions assessed by the care practitioners or a matter of interest. This includes the citizens own observation of their performance (FSIII udførelse) and the importance (FSIII betydning) of the condition or matter of interest in focus.
-
-All changed to the observations sinces the last reporting must be contained in a new report, including the referenced conditions and all the resources referenced by the conditions.
-
-Free text information about the citizens own observations is not part of this reporting.
-
-##### Validation
-- Citizens own observations are either importance or performance observations
-- Citizens own observations refer to the citizen included in the report
-- Citizens own observations focus on one home care condition or one home care matter of interest included in the report
-- The value of an importance observation is a valid importance code according to FSIII (Betydning)
-- The value of a performance observation is a valid performance code according to FSIII (Udførelse)
-
-#### Planned Interventions
-Information about the planned interventions (FSIII indsatser) that the municipality has granted to address the conditions of the citizen. A planned intervention represents one type of care given to the citizen. It must contain the level 2 code for the intervention, the start time, the end time if ended, references to the conditions the intervention addresses if known, and a reference to an encounter with the follow-up date of the intervention if known.
+#### Planned Intervention
+Information about the planned interventions (FSIII indsatser) that the municipality has granted to address the conditions of the citizen. A planned intervention represents one type of care given to the citizen. It must contain the level 2 code for the intervention, the start time, the end time if ended, references to the conditions that the intervention addresses if known.
 
 A citizen may be granted several level 3 interventions for the same level 2 intervention. Level 3 interventions are reported using both the level 2 code and the locally defined level 3 code. Interventions are allowed to be overlapping to support this.
 
-All changes to the planned interventions since the last reporting must be contained in a new report, including conditions and follow-up encounters referenced by the reported interventions.
+All changes to the planned interventions since the last reporting must be contained in a new report, including conditions referenced by the reported interventions.
 
-Free text information about care plans is not part of this reporting.
+Free text information about Planned interventions is not part of this reporting.
 
 ##### Validation
 - Planned interventions refer to the citizen included in the report
@@ -81,8 +83,8 @@ Free text information about care plans is not part of this reporting.
 - Planned interventions have a valid home care or nursing intervention code according to FSIII (Servicelov/sundhedslovlov indsats)
 - Planned interventions refer to zero or more health care or nursing conditions included in the report as reason for intervention
 
-#### Completed Interventions
-Information about completed interventions (FSIII Indsatser) that the municipality has delivered acute or in any other way not as planned interventions. A completed intervention represents one type of care given to the citizen. It must contain the level 2 code for the intervention, references to the conditions the intervention addresses if known, and the start time of the delivery.
+#### Completed Intervention
+Information about completed interventions (FSIII Indsatser) that the municipality has delivered acute or in any other way not as planned interventions. A completed intervention represents one type of care given to the citizen. It must contain the level 2 code for the intervention, references to the conditions the intervention addresses if known, and the start time of the delivery. CompletedIntervention may reference an Encounter, but this is optional.
 
 A completed intervention my be documented as a level 3 intervension. Level 3 interventions are reported using both the level 2 code and the locally defined level 3 code.
 
@@ -96,20 +98,12 @@ Free text information about care plans is not part of this reporting.
 - Completed interventions have a valid home care or nursing intervention code according to FSIII (Servicelov/sundhedslovlov indsats)
 - Planned interventions refer to zero or more health care or nursing conditions included in the report as reason for intervention
 
-#### Matter of Interest Observations
-Information about matters of interest for home care or nursing condition areas (FSIII tilstandsområder). A matter of interest observation must contain the condition area, either home care or nursing, and the time of the observation.
+#### General Encounters
+GeneralEncounter can be used to report a planned follow-up date for Conditions, which is mandatory. It can also be used to report delivered PlannedInterventions, which is optional. The encounter references the relevant Conditions and PlannedInterventions.
 
-All changes to the matter of interest observations since the last reporting must be included in a new report, including referenced follow-up encounters.
+The type of the encounter can be reported as a follow-up or a delivery of an intervention.
 
-Free text information about area observations is not part of this reporting.
-
-##### Validation
-- Matter of interest observations refer to the citizen included in the report
-- Matter of interest observations have a valid matter of interest code according to FSIII (Funktionsevneområde eller helbredsområde)
-- Matter of interest observations have a timestamp for the observation
-
-#### Encounters
-Information about the encounters referenced from conditions and care plans to hold the follow-up dates. The encounter must contain the expected start date of the next follow-up.
+The encounter must contain the expected start date or the actual start time.
 
 All referenced encounters from other resources in a report must also be included.
 
@@ -117,22 +111,23 @@ Free text information about encounters is not part of this reporting.
 
 ##### Validation
 - Encounters refer to the citizen included in the report
-- Encounters have a start date (Opfølgningsdato)
+- Encounters have a start date (opfølgningsdato eller starttidspunkt)
+- Encounter have a type, that state whether it is a follow-up or a delivery of an intervention.
 
 #### Follow-up Observations
-Information about the outcome of a follow-up encounter. The follow-up observations must contain the coding for the outcome (FSIII resultat af opfølgning) and a reference to condition or intervension about which the observation is made.
+Information about the outcome of a follow-up encounter. The follow-up observations must contain the coding for the outcome (FSIII resultat af opfølgning) and a reference to one or more conditions about which the observation is made.
 
-All changes to the follow-up observations since the last reporting must be included in a new report, including the conditions and intervensions referenced by the observations.
+All changes to the follow-up observations since the last reporting must be included in a new report, including the conditions and interventions referenced by the observations.
 
 Free text information about the follow-up outcome is not part of this reporting.
 
 ##### Validation
 - Follow-up observations refer to the citizen included in the report
-- Follow-up observations refer to a condition or planned intervension included in the report
+- Follow-up observations refer to one or more conditions included in the report
 - Follow-up observations have a timestamp for the observation
 - Follow-up observations have a valid follow-up code according to FSIII (Resultat af opfølgning)
 
-### Reporting
+### DeliveryReport
 Reporting is done using the profile KLGatewayCareDeliveryReport, which is a bundle containing multiple resources about one citizen. The source systems must periodically (at least daily) transfer a delivery report containing a snapshot of the current information for each changed citizen with all registrations that has changed since the previous delivery report was transferred. Multiple delivery reports must be delivered if the previous reporting for some reason happened more than one day ago, each covering no more than one day. A full history of changes is not required.
 
 Note, that the snapshot of the current information contains information about the hole day, not only the current state for the citizen. An intervention that fx has ended during the day shall therefore be included in the report with an end date and time along with possible new interventions.
@@ -152,3 +147,15 @@ The gateway is not able to validate immediately whether the reported data confli
 The implementation guide contains a number of examples for each profile used in a delivery report. See [Delivery report example](Bundle-TestPersonReport.html) for an example of a complete delivery report.
 
 __Note:__ Must support markers are used according to the FHIR specification and means that it shall be included in the report if the information is available. A precise definition of what available means in each case is described in the definition of the element.
+
+## Dependencies
+{% include dependency-table.xhtml %}
+
+## Cross Version Analysis
+{% include cross-version-analysis.xhtml %}
+
+## Global Profiles
+{% include globals-table.xhtml %}
+
+## IP Statements
+{% include ip-statements.xhtml %}

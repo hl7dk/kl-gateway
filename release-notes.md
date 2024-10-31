@@ -1,3 +1,2 @@
-Initial release of KL-Gateway for nursing and home care
-
-This is the same content as earlier released as hl7.fhir.dk.kl.gateway.care#1.0.4 with cannonical  http://gateway.kl.dk/1.0. However, canonical and package id have changed to accomodate new naming conventions. Additionally, this version inherit its terminologi from KLTerm rather than from KL's core models (FKI).
+Release 1.2.0. Dependency to kl-term 2.2.0 established. Updated to be compliant with the simplification of FSIII (Forenklingen), but without breaking changes. New home care interventions added, as a concequence of ældreloven. Old FSIII codes and terms are still accepted. A new encounter called GeneralEncounter has been included.
+The citizen profile has two new attributes: Patient.active and Patient.deceased. deliveryType on PlannedIntervention has been added. Incremental delivery have been added, so that FLIS may use this IG for data delivery.
