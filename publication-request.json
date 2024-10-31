@@ -6,5 +6,5 @@
     "status" : "release",
     "sequence" : "Releases",
     "descmd": "@release-notes.md",
-    "desc": "Compliant with the simplification of FSIII (Forenklingen), but without breaking changes"
+    "desc": "Compliant with the simplification of FSIII (Forenklingen), but without breaking changes. Adding ældrelovsindsaster"
   }

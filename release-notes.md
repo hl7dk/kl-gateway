@@ -1,4 +1,2 @@
-New release of KL-Gateway for nursing and home care
-
-Updated to be compliant with the simplification of FSIII (Forenklingen), but without breaking changes. Old FSIII codes and terms are still accepted. A new encounter called GeneralEncounter has been included.
-The citizen profile has two new attributes: Patient.active and Patient.deceased.
+Release 1.2.0. Dependency to kl-term 2.2.0 established. Updated to be compliant with the simplification of FSIII (Forenklingen), but without breaking changes. New home care interventions added, as a concequence of ældreloven. Old FSIII codes and terms are still accepted. A new encounter called GeneralEncounter has been included.
+The citizen profile has two new attributes: Patient.active and Patient.deceased. deliveryType on PlannedIntervention has been added. Incremental delivery have been added, so that FLIS may use this IG for data delivery.

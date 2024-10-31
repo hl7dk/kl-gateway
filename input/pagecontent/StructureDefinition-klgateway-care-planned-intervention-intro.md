@@ -31,3 +31,4 @@ Nedenstående tabel oversætter mellem de attributter der er defineret i den fæ
 |indsatsPlanlagtOpfølgning|Kontakt, hvor det planlægges at følge op på tilstanden |CarePlan:extension.FollowUpEncounter|
 |indsatsbegrundelse|Tilstand som indsatsen rettes mod|CarePlan.activity.detail.reasonReference|
 |indsatsAktivitetsstatus|Indikerer om indsatsen er igangsat, eller om den ikke er startet, eller er færdiggjort|CarePlan.activity.detail.status|
+|indsatsLeveringstype|Type der beskriver hvordan indsatsen leveres|activity.detail.extension:deliveryType|
