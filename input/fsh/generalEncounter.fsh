@@ -13,7 +13,7 @@ Description: "Encounter for planned and completed meetings between citizens and 
 * class.userSelected ..0
 * classHistory ..0
 * type 1..*
-* type from http://fhir.kl.dk/term/ValueSet/KLEncounterTypes (required)
+* type from KLGatewayCareEncounterTypes (required)
 * type.coding 1..1
 * type.coding.version ..0
 * type.coding.userSelected ..0
