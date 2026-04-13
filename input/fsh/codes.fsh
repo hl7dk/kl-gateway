@@ -54,7 +54,7 @@ Title: "GatewayKontaktTyper"
 Description: "Values for encounter types used in the gateway"
 * ^experimental = false
 * $KLCommonCodes#9f03dfbb-7a97-45a5-94db-d4c3501714a9
-* TemporaryCodes#d7ff926a-4955-478f-b300-0b0ec0785013
+* TemporaryCodes#4530b499-d74b-4d2e-9df9-247047fb231d
 
 
 ValueSet: KLGatewayCareMatterOfInterestValues

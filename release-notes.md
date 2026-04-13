@@ -1,1 +1,1 @@
-Release 1.3.0. Dependency to kl-term 2.3.0 established. This version is adding a few changes to codes and attributes associated with the way encounters and interventions are delivered.This IG is still compliant with the simplification of FSIII (Forenklingen), but without breaking changes.
+Release 1.3.0. Dependency to kl-term 2.3.0 established. This version is adding a small change to codes associated with Encounter.type. This IG is still compliant with the simplification of FSIII (Forenklingen), but without breaking changes.

@@ -3,7 +3,7 @@ The Encounter may be instantiated whenever citizens and practitioners meet in a 
 
 It is mandatory in FSIII to be able to express follow-up encounters on Conditions. In the planning state, these are documented by setting Encounter.status = 'planned', and Encounter.type.coding = 'opfølgning'. Encounter.status may be changed to 'finished' when the follow-up has taken place, but this is is optional.
 
-Encounters which are are used to deliver an intervention can also be be reported. Use Encounter.type.coding = 'Udførelse af planlagt indsats' and Encounter.status 'finished'. Reporting on finished encounters is optional.
+Encounters which are used to deliver an intervention can also be be reported. Use Encounter.type.coding = 'Udførelse af indsats' and Encounter.status 'finished'. Reporting on finished encounters is optional.
 
 To report errors use status 'entered-in-error'
 

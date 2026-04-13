@@ -227,7 +227,8 @@ Description: "General encounter used to document delivery of Jens Hansen's Inter
 Usage: #inline
 * status = http://hl7.org/fhir/encounter-status#finished
 * class = $v3-ActCode#HH
-* type = $KLCommonCodes#784275f1-6822-4a88-b361-d958007d5253 "udførelse af planlagt indsats"
+//* type = $KLCommonCodes##4530b499-d74b-4d2e-9df9-247047fb231d "udførelse af indsats"
+* type = TemporaryCodes#4530b499-d74b-4d2e-9df9-247047fb231d "udførelse af indsats"
 * subject = Reference(0533e773-c9e6-4cf5-b42d-f3ee07a9c624)
 * period.start = 2021-02-13T08:05:00Z
 * period.end = 2021-02-13T08:25:00Z
@@ -242,7 +243,8 @@ Description: "General encounter used to document delivery of Jens Hansen's Inter
 Usage: #inline
 * status = http://hl7.org/fhir/encounter-status#finished
 * class = $v3-ActCode#HH
-* type = $KLCommonCodes#784275f1-6822-4a88-b361-d958007d5253 "udførelse af planlagt indsats"
+//* type = $KLCommonCodes##4530b499-d74b-4d2e-9df9-247047fb231d "udførelse af indsats"
+* type = TemporaryCodes#4530b499-d74b-4d2e-9df9-247047fb231d "udførelse af indsats"
 * subject = Reference(0533e773-c9e6-4cf5-b42d-f3ee07a9c624)
 * period.start = 2021-02-13T13:25:00Z
 * period.end = 2021-02-13T13:45:00Z
@@ -256,7 +258,8 @@ Description: "General encounter used to document delivery of Jens Hansen's Inter
 Usage: #inline
 * status = http://hl7.org/fhir/encounter-status#finished
 * class = $v3-ActCode#HH
-* type = $KLCommonCodes#784275f1-6822-4a88-b361-d958007d5253 "udførelse af planlagt indsats"
+//* type = $KLCommonCodes##4530b499-d74b-4d2e-9df9-247047fb231d "udførelse af indsats"
+* type = TemporaryCodes#4530b499-d74b-4d2e-9df9-247047fb231d "udførelse af indsats"
 * subject = Reference(0533e773-c9e6-4cf5-b42d-f3ee07a9c624)
 * period.start = 2021-02-13T21:00:00Z
 * period.end = 2021-02-13T21:20:00Z
