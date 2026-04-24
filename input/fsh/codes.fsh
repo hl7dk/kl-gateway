@@ -39,14 +39,14 @@ Description: "Coding system to indicate a code defined locally in the managing o
 * ^experimental = false
 * ^caseSensitive = true
 
-CodeSystem: TemporaryCodes
-Id: TemporaryCodes
-Title: "TemporaryCodes"
-Description: "Coding system to be used until formal dependency of a new version of KL-tem can be established"
-* ^content = #fragment
-* ^experimental = false
-* ^caseSensitive = true
-* #4530b499-d74b-4d2e-9df9-247047fb231d "udførelse af indsats" "Indsats udført ved kontakt"
+// CodeSystem: TemporaryCodes
+// Id: TemporaryCodes
+// Title: "TemporaryCodes"
+// Description: "Coding system to be used until formal dependency of a new version of KL-tem can be established"
+// * ^content = #fragment
+// * ^experimental = false
+// * ^caseSensitive = true
+// * #4530b499-d74b-4d2e-9df9-247047fb231d "udførelse af indsats" "Indsats udført ved kontakt"
 
 ValueSet: KLGatewayCareEncounterTypes
 Id: KLGatewayCareEncounterTypes
@@ -54,7 +54,7 @@ Title: "GatewayKontaktTyper"
 Description: "Values for encounter types used in the gateway"
 * ^experimental = false
 * $KLCommonCodes#9f03dfbb-7a97-45a5-94db-d4c3501714a9
-* TemporaryCodes#4530b499-d74b-4d2e-9df9-247047fb231d
+* $KLCommonCodes#4530b499-d74b-4d2e-9df9-247047fb231d
 
 
 ValueSet: KLGatewayCareMatterOfInterestValues

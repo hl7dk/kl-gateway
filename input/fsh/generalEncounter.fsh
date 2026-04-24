@@ -81,8 +81,8 @@ InstanceOf: klgateway-care-general-encounter
 Description: "General encounter used to document delivery of an intervention"
 * status = http://hl7.org/fhir/encounter-status#finished
 * class = $v3-ActCode#HH
-//* type = $KLCommonCodes##4530b499-d74b-4d2e-9df9-247047fb231d "udførelse af indsats"
-* type = TemporaryCodes#4530b499-d74b-4d2e-9df9-247047fb231d "udførelse af indsats"
+* type = $KLCommonCodes#4530b499-d74b-4d2e-9df9-247047fb231d "udførelse af indsats"
+//* type = TemporaryCodes#4530b499-d74b-4d2e-9df9-247047fb231d "udførelse af indsats"
 * subject = Reference(TestPerson)
 * period.start = 2020-08-16
 * extension[basedOnIntervention].valueReference = Reference(Dialyse)
