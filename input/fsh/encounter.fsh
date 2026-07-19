@@ -14,7 +14,7 @@ Description: "Encounter for following up on conditions, care plans, or observati
 * class.userSelected ..0
 * classHistory ..0
 * type 1..1
-* type from http://fhir.kl.dk/term/ValueSet/KLEncounterTypes (required)
+* type from KLGatewayCareEncounterTypes (required)
 * type.coding 1..1
 * type.coding = $KLCommonCodes#9f03dfbb-7a97-45a5-94db-d4c3501714a9
 * type.coding.version ..0

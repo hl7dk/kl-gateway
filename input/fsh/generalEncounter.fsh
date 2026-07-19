@@ -13,7 +13,7 @@ Description: "Encounter for planned and completed meetings between citizens and 
 * class.userSelected ..0
 * classHistory ..0
 * type 1..*
-* type from http://fhir.kl.dk/term/ValueSet/KLEncounterTypes (required)
+* type from KLGatewayCareEncounterTypes (required)
 * type.coding 1..1
 * type.coding.version ..0
 * type.coding.userSelected ..0
@@ -81,7 +81,8 @@ InstanceOf: klgateway-care-general-encounter
 Description: "General encounter used to document delivery of an intervention"
 * status = http://hl7.org/fhir/encounter-status#finished
 * class = $v3-ActCode#HH
-* type = $KLCommonCodes#784275f1-6822-4a88-b361-d958007d5253 "udførelse af planlagt indsats"
+* type = $KLCommonCodes#4530b499-d74b-4d2e-9df9-247047fb231d "udførelse af indsats"
+//* type = TemporaryCodes#4530b499-d74b-4d2e-9df9-247047fb231d "udførelse af indsats"
 * subject = Reference(TestPerson)
 * period.start = 2020-08-16
 * extension[basedOnIntervention].valueReference = Reference(Dialyse)
