@@ -15,7 +15,7 @@ Description: "Structured result or outcome of a follow up."
 * subject only Reference(klgateway-care-citizen)
 * subject ^type.aggregation = #bundled
 * focus 1..
-* focus only Reference(KLGatewayCareCondition or KLGatewayCarePlannedIntervention) // after transistion only condition
+* focus only Reference(KLGatewayCareCondition)
 * encounter 0..0
 * effective[x] 1..1
 * effective[x] only dateTime
@@ -38,7 +38,10 @@ Description: "Structured result or outcome of a follow up."
 * obeys gateway-care-follow-up-1
 
 //Danish descriptions
-* subject ^short = "[DK] opfølgningsubjekt"
+* code.coding ^short = "[DK] opfølgningskode"
+* value[x].coding ^short = "[DK] opfølgningsresultatStruktureret"
+* focus ^short = "[DK] opfølgningsfokus"
+* subject ^short = "[DK] opfølgningssubjekt"
 * effective[x] ^short = "[DK] opfølgningstid"
 * status ^short = "[DK] opfølgningsstatus"
 
@@ -56,7 +59,7 @@ Description: "Follow-up observation documenting that focus on ability to wash hi
 * subject = Reference(TestPerson)
 * focus = Reference(VaskeSigLetteBegraensninger)
 * effectiveDateTime = 2020-08-14
-* valueCodeableConcept = $FSIII#E1
+* valueCodeableConcept = $FSIII#9c90b0e5-9c0a-4b72-a18c-76cd6d6c6213
 
 Instance: PersonligPlejeFortsaettes
 InstanceOf: KLGatewayCareFollowUpObservation
@@ -66,24 +69,5 @@ Description: "Follow-up observation documenting that focus on personal care shou
 * subject = Reference(TestPerson)
 * focus = Reference(ProblemerMedPersonligPleje)
 * effectiveDateTime = 2020-08-14
-* valueCodeableConcept = $FSIII#E1
+* valueCodeableConcept = $FSIII#9c90b0e5-9c0a-4b72-a18c-76cd6d6c6213
 
-Instance: PersonligHygiejneFortsaettes
-InstanceOf: KLGatewayCareFollowUpObservation
-Description: "Follow-up observation documenting that the planned intervention on personal hygiene should be continued for the test person"
-* status = #final
-* code = $SnomedCT#712744002
-* subject = Reference(TestPerson)
-* focus = Reference(PersonligHygiejne)
-* effectiveDateTime = 2020-08-14
-* valueCodeableConcept = $FSIII#E1
-
-Instance: DialyseFortsaettes
-InstanceOf: KLGatewayCareFollowUpObservation
-Description: "Follow-up observation documenting that the planned intervention on dialysis should be continued for the test person"
-* status = #final
-* code = $SnomedCT#712744002
-* subject = Reference(TestPerson)
-* focus = Reference(Dialyse)
-* effectiveDateTime = 2020-08-14
-* valueCodeableConcept = $FSIII#E1

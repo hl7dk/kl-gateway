@@ -73,7 +73,3 @@ Description: "Example of a delivery report for the test person"
 * entry[=].resource = VaskeSigFortsaettes
 * entry[+].fullUrl = "https://test.fhir.dk/Observation/PersonligPlejeFortsaettes"
 * entry[=].resource = PersonligPlejeFortsaettes
-* entry[+].fullUrl = "https://test.fhir.dk/Observation/PersonligHygiejneFortsaettes"
-* entry[=].resource = PersonligHygiejneFortsaettes
-* entry[+].fullUrl = "https://test.fhir.dk/Observation/DialyseFortsaettes"
-* entry[=].resource = DialyseFortsaettes
