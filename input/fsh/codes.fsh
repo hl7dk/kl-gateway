@@ -79,3 +79,10 @@ Title: "DeliveryTypes"
 Description: "The delivery context types"
 * ^experimental = false
 * include codes from system $KLCommonCodes where concept descendent-of #3f79cee2-b148-4f2c-9cbd-387820e74685
+
+ValueSet: FollowUpCodesFSIII
+Title: "OpfølgningKoderFSIII"
+Description: "Follow-up codes used in FSIII"
+* ^experimental = false
+* include codes from system $FSIII where concept descendent-of #ad78224f-b339-462c-9f2c-90b3120605cb //Resultat af opfølgning
+
