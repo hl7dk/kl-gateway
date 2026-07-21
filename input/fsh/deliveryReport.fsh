@@ -15,7 +15,7 @@ Description: "Deliver report to deliver for each citizen."
     KLGatewayCareGoal or
     KLGatewayCarePlannedIntervention or
     KLGatewayCareCompletedIntervention or
-    Observation or // KLGatewayCareCitizensOwnObservation or KLGatewayCareMatterOfInterestObservation or  KLGatewayCareFollowUpObservation
+    Observation or // KLGatewayCareFollowUpObservation
     Encounter //klgateway-care-general-encounter, KLGatewayCareEncounter
 * entry.resource ^short = "Content constrained to known profiles (see also constraint gateway-care-report-1)"
 * entry.search ..0
@@ -27,12 +27,10 @@ Description: "Deliver report to deliver for each citizen."
 
 
 Invariant: gateway-care-report-1
-Description: "All observation resources shall conform to either klgateway-care-citizens-own-observation profile, klgateway-care-matter-of-interest-observation, or klgateway-care-follow-up-observation"
+Description: "All observation resources shall conform to klgateway-care-follow-up-observation"
 Severity: #error
 Expression: "entry.select(resource as Observation).all(
-    $this.conformsTo('http://fhir.kl.dk/gateway/StructureDefinition/klgateway-care-citizens-own-observation')
-    or $this.conformsTo('http://fhir.kl.dk/gateway/StructureDefinition/klgateway-care-matter-of-interest-observation')
-    or $this.conformsTo('http://fhir.kl.dk/gateway/StructureDefinition/klgateway-care-follow-up-observation'))"
+    $this.conformsTo('http://fhir.kl.dk/gateway/StructureDefinition/klgateway-care-follow-up-observation'))"
 
 Invariant: gateway-care-report-2
 Description: "All Encounter resources shall conform to profiles in this implementation guide"
@@ -53,10 +51,6 @@ Description: "Example of a delivery report for the test person"
 * entry[=].resource = VaskeSigLetteBegraensninger 
 * entry[+].fullUrl = "https://test.fhir.dk/Goal/ForventetIngenBegraensninger"
 * entry[=].resource = ForventetIngenBegraensninger
-* entry[+].fullUrl = "https://test.fhir.dk/Observation/OpleverIkkeBegraensningerMedVaskeSig"
-* entry[=].resource = OpleverIkkeBegraensningerMedVaskeSig
-* entry[+].fullUrl = "https://test.fhir.dk/Observation/UdfoererSelvVaskeSig"
-* entry[=].resource = UdfoererSelvVaskeSig
 * entry[+].fullUrl = "https://test.fhir.dk/Condition/ProblemerMedPersonligPleje"
 * entry[=].resource = ProblemerMedPersonligPleje
 * entry[+].fullUrl = "https://test.fhir.dk/CarePlan/PersonligHygiejne"
@@ -65,8 +59,6 @@ Description: "Example of a delivery report for the test person"
 * entry[=].resource = Dialyse
 * entry[+].fullUrl = "https://test.fhir.dk/Procedure/Saarbehandling"
 * entry[=].resource = Saarbehandling    
-* entry[+].fullUrl = "https://test.fhir.dk/Observation/EgensomsorgBegraensninger"
-* entry[=].resource = EgensomsorgBegraensninger
 * entry[+].fullUrl = "https://test.fhir.dk/Encounter/NaesteOpfoelgningsdato"
 * entry[=].resource = NaesteOpfoelgningsdato
 * entry[+].fullUrl = "https://test.fhir.dk/Observation/VaskeSigFortsaettes"

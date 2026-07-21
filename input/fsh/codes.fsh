@@ -23,14 +23,6 @@ Description: "Interventions defined by FSIII for nursing and home care"
 * include codes from valueset http://fhir.kl.dk/term/ValueSet/KLNursingInterventionsFSIII
 * include codes from valueset http://fhir.kl.dk/term/ValueSet/KLHomeCareInterventionsFSIII
 
-ValueSet: FSIIICareMatterOfInterests
-Id: FSIIICareMatterOfInterests
-Title: "FSIIICareMatterOfInterests"
-Description: "Matters of Interests (areas) defined by FSIII for nursing and home care"
-* ^experimental = false
-* include codes from valueset http://fhir.kl.dk/term/ValueSet/KLNursingAreasFSIII
-* include codes from valueset http://fhir.kl.dk/term/ValueSet/KLHomeCareAreasFSIII
-
 CodeSystem: LocallyDefinedInterventions
 Id: LocallyDefinedInterventions
 Title: "LocallyDefinedInterventions"
@@ -55,15 +47,6 @@ Description: "Values for encounter types used in the gateway"
 * ^experimental = false
 * $KLCommonCodes#9f03dfbb-7a97-45a5-94db-d4c3501714a9
 * $KLCommonCodes#4530b499-d74b-4d2e-9df9-247047fb231d
-
-
-ValueSet: KLGatewayCareMatterOfInterestValues
-Id: KLGatewayCareMatterOfInterestValues
-Title: "KLGatewayCareMatterOfInterestValues"
-Description: "Values of Matters of Interests (areas)"
-* ^experimental = false
-* $FSIII#B6
-* $FSIII#d7ff926a-4955-478f-b300-0b0ec0785013
 
 ValueSet: EncounterClassCodes
 Title: "KontaktKlasseKoder"

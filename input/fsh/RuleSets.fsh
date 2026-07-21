@@ -20,10 +20,6 @@ RuleSet: GoalEntryVersion(instance, version)
 * entry[+].fullUrl = "https://test.fhir.dk/Goal/{instance}"
 * entry[=].resource = {instance}-{version}
 
-RuleSet: CitizensOwnObservationEntry(instance)
-* entry[+].fullUrl = "https://test.fhir.dk/Observation/{instance}"
-* entry[=].resource = {instance}
-
 RuleSet: PlannedInterventionEntry(instance)
 * entry[+].fullUrl = "https://test.fhir.dk/CarePlan/{instance}"
 * entry[=].resource = {instance}
@@ -50,6 +46,3 @@ RuleSet: FollowUpObservationEntry(instance)
 * entry[+].fullUrl = "https://test.fhir.dk/Observation/{instance}"
 * entry[=].resource = {instance}
 
-RuleSet: MatterOfInterestEntry(instance)
-* entry[+].fullUrl = "https://test.fhir.dk/Observation/{instance}"
-* entry[=].resource = {instance}
