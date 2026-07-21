@@ -74,7 +74,7 @@ Description: "General encounter used to document the next date for a follow-up"
 * type = $KLCommonCodes#9f03dfbb-7a97-45a5-94db-d4c3501714a9 "opfølgning"
 * subject = Reference(TestPerson)
 * period.start = 2020-08-14
-* reasonReference[+] = Reference(VaskeSigLetteBegraensningerNy)
+* reasonReference[+] = Reference(VaskeSigLetteBegraensninger)
 
 Instance: LeveringAfDialyse
 InstanceOf: klgateway-care-general-encounter

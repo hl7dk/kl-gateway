@@ -60,6 +60,6 @@ InstanceOf: KLGatewayCareCompletedIntervention
 Description: "Completed intervention doing wound treatment according to FSIII on the test person"
 * status = #completed
 * code.coding[level2].system = "urn:oid:1.2.208.176.2.21"
-* code.coding[level2].code = #G1.39
+* code.coding[level2].code = #76878386-b3d2-4320-828a-a700e8a66234 "Sårbehandling"
 * subject = Reference(TestPerson)
 * performedDateTime = 2020-08-14T10:15:00Z

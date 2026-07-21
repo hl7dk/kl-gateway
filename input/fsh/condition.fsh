@@ -30,7 +30,7 @@ Description: "Detailed information about conditions."
 * category.text ..0
 * severity 0..1
 * severity.coding 1..1
-* severity from http://fhir.kl.dk/term/ValueSet/KLSeveritiesFSIII (required)
+* severity from SeveritiesFSIII (required)
 * code 1..1
 * code from FSIIICareConditions (required)
 * code.coding 1..1
@@ -64,8 +64,8 @@ Description: "Detailed information about conditions."
 Invariant: klgateway-severity-mandatory-in-home-care-not-allowed-in-nursing
 Description: "The severity is mandatory for home care and not allowed for nursing conditions"
 Severity: #error
-Expression: "(severity.exists() and code.coding.memberOf('http://fhir.kl.dk/term/ValueSet/KLConditionCodesHomeCare'))
-          or (severity.empty() and code.coding.memberOf('http://fhir.kl.dk/term/ValueSet/KLConditionCodesNursing'))"
+Expression: "(severity.exists() and code.coding.memberOf('http://fhir.kl.dk/kl-gateway/ValueSet/ConditionCodesHomeCare'))
+          or (severity.empty() and code.coding.memberOf('http://fhir.kl.dk/kl-gateway/ValueSet/ConditionCodesNursing'))"
 
 
 Instance: VaskeSigLetteBegraensninger
@@ -73,21 +73,9 @@ InstanceOf: KLGatewayCareCondition
 Description: "Assessed ability for the test person to wash himself"
 * clinicalStatus = $ConditionClinical#active
 * category = $ConditionCategory#problem-list-item
-* severity = $FSIII#B2
+* severity = $FSIII#fcc16cb1-41f0-4832-b834-110fba0aaabe "Lette begrænsninger"
 * verificationStatus.coding = $VerificationStatus#confirmed
-* code = $FSIII#J1.1
-* subject = Reference(TestPerson)
-* recordedDate = 2020-08-14
-* extension[followUpEncounter].valueReference = Reference(NaesteOpfoelgningsdato)
-
-Instance: VaskeSigLetteBegraensningerNy
-InstanceOf: KLGatewayCareCondition
-Description: "Assessed ability for the test person to wash himself - new way of defining followUp Encounter"
-* clinicalStatus = $ConditionClinical#active
-* category = $ConditionCategory#problem-list-item
-* severity = $FSIII#B2
-* verificationStatus.coding = $VerificationStatus#confirmed
-* code = $FSIII#J1.1
+* code = $FSIII#0c126894-60e1-4781-96b7-9b227677bfb6 "Vaske sig"
 * subject = Reference(TestPerson)
 * recordedDate = 2020-08-14
 
@@ -96,7 +84,7 @@ InstanceOf: KLGatewayCareCondition
 Description: "Assessed ability for the test person to perform personal care"
 * clinicalStatus = $ConditionClinical#active
 * category = $ConditionCategory#problem-list-item
-* code = $FSIII#I1.1
+* code = $FSIII#b4e4bb41-7734-4c84-967f-fa1916662972 "Problemer med personlig pleje"
 * subject = Reference(TestPerson)
 * recordedDate = 2020-08-14
 * extension[followUpEncounter].valueReference = Reference(NaesteOpfoelgningsdato)

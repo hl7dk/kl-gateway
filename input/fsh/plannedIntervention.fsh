@@ -93,7 +93,7 @@ Description: "Planned intervention doing personal hygiene according to FSIII on 
 * intent = #plan
 * subject = Reference(TestPerson)
 * period.start = 2020-08-14
-* activity.detail.code.coding[level2] = $FSIII#H1.1
+* activity.detail.code.coding[level2] = $FSIII#17312894-b23f-43d9-9723-b725ac25d872 "Personlig hygiejne"
 * activity.detail.code.coding[level3] = $LocalInterventions#H1.1.1 "Speciel personlig pleje"
 * activity.detail.status = #in-progress
 
@@ -104,5 +104,5 @@ Description: "Planned intervention doing dialysis according to FSIII on the test
 * intent = #plan
 * subject = Reference(TestPerson)
 * period.start = 2020-08-14
-* activity.detail.code.coding[level2] = $FSIII#G1.10
+* activity.detail.code.coding[level2] = $FSIII#363f2ea2-6781-497b-969d-71221c676883 "Dialyse"
 * activity.detail.status = #in-progress
