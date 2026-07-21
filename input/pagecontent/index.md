@@ -117,7 +117,7 @@ Free text information about encounters is not part of this reporting.
 #### Follow-up Observations
 Information about the outcome of a follow-up encounter. The follow-up observations must contain the coding for the outcome (FSIII resultat af opfølgning) and a reference to one or more conditions about which the observation is made.
 
-All changes to the follow-up observations since the last reporting must be included in a new report, including the conditions and interventions referenced by the observations.
+All changes to the follow-up observations since the last reporting must be included in a new report, including the conditions referenced by the observations.
 
 Free text information about the follow-up outcome is not part of this reporting.
 
