@@ -1,1 +1,1 @@
-Release 1.3.0. Dependency to kl-term 2.3.0 established. This version is adding a small change to codes associated with Encounter.type. This IG is still compliant with the simplification of FSIII (Forenklingen), but without breaking changes.
+Release 2.0.0. Dependency to kl-term 3.0.0 established. Major update related to the simplification, where rules are enforced. Simplification rules results in changes to followUpObservation,....... In addition to enforcing simplification rules, support for the new intervention codes for midlertidige ophold has been introduced.

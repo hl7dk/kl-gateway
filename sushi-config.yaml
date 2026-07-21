@@ -2,7 +2,7 @@ id: kl.dk.fhir.gateway
 canonical: http://fhir.kl.dk/gateway
 name: KLGateway
 status: active # draft # active
-version: "1.3.0"
+version: "2.0.0"
 fhirVersion: 4.0.1
 copyrightYear: 2021+
 releaseLabel: release # CI Build # release
