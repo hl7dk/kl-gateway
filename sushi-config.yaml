@@ -17,7 +17,6 @@ dependencies:
 
 menu:
   Home: index.html
-  Old Home: indexOld.html
   Artifacts: artifacts.html
   Homecare Examples: HomecareNew.html
   Nursing Examples: NursingNew.html

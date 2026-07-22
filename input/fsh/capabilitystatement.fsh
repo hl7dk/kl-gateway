@@ -20,7 +20,7 @@ Usage: #definition
 * format[+] = #ttl
 * rest.mode = #server
 * rest.resource[0].type = #Bundle
-* rest.resource[=].profile = "http://gateway.kl.dk/1.0/StructureDefinition/klgateway-care-delivery-report"
+* rest.resource[=].profile = "http://fhir.kl.dk/gateway/StructureDefinition/klgateway-care-delivery-report"
 * rest.resource[=].interaction[0].code = #search-type
 * rest.resource[=].interaction[+].code = #update
 * rest.resource[=].interaction[+].code = #vread
