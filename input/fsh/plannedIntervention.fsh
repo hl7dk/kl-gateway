@@ -63,8 +63,7 @@ Description: "Planned interventions for nursing and home care in Danish Municipa
 * activity.detail.quantity ..0
 * activity.detail.description ..0
 * note ..0
-* extension contains klgateway-care-follow-up-encounter-extension named followUpEncounter 0..1 MS
-* extension[followUpEncounter] ^definition = "Encounter for following up on this intervention. Must be present if a follow-up date is known"
+
 * activity.detail.extension contains DeliveryType named deliveryType 0..*
 * activity.detail.extension[deliveryType].valueCodeableConcept.coding from DeliveryTypes (required)
 
@@ -76,7 +75,7 @@ Description: "Planned interventions for nursing and home care in Danish Municipa
 * status ^short = "[DK] indsatsstatus"
 * intent ^short = "[DK] indsatshensigt"
 * subject ^short = "[DK] indsatssubjekt"
-* extension[followUpEncounter] ^short = "[DK] indsatsPlanlagtOpfølgning"
+
 * activity.detail.reasonReference ^short = "[DK] indsatsbegrundelse"
 * activity.outcomeReference ^short = "[DK] indsatsgennemførtAktivitet"
 * activity.detail.status ^short = "[DK] indsatsAktivitetsstatus"

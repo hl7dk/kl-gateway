@@ -46,8 +46,7 @@ Description: "Detailed information about conditions."
 * stage ..0
 * evidence ..0
 * note ..0
-* extension contains klgateway-care-follow-up-encounter-extension named followUpEncounter 0..1
-* extension[followUpEncounter] ^definition = "Encounter for following up on this condition. Will be depricated October 2025"
+
 * obeys klgateway-severity-mandatory-in-home-care-not-allowed-in-nursing
 
 //Danish descriptions
@@ -57,7 +56,7 @@ Description: "Detailed information about conditions."
 * clinicalStatus ^short = "[DK] tilstandsstatus"
 * verificationStatus ^short = "[DK] tilstandsstatus"
 * recordedDate ^short = "[DK] tilstandsoprettelsestid" 
-* extension[followUpEncounter] ^short = "[DK] tilstandsplanlagtOpfølgning" 
+ 
 * subject ^short = "[DK] tilstandssubjekt" 
 * category.coding ^short = "[DK] tilstandsfokus"
 
@@ -86,5 +85,4 @@ Description: "Assessed ability for the test person to perform personal care"
 * category = $ConditionCategory#problem-list-item
 * code = $FSIII#b4e4bb41-7734-4c84-967f-fa1916662972 "Problemer med personlig pleje"
 * subject = Reference(TestPerson)
-* recordedDate = 2020-08-14
-* extension[followUpEncounter].valueReference = Reference(NaesteOpfoelgningsdato)
+* recordedDate = 2020-08-14

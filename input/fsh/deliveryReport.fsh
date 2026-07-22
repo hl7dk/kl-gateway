@@ -16,14 +16,13 @@ Description: "Deliver report to deliver for each citizen."
     KLGatewayCarePlannedIntervention or
     KLGatewayCareCompletedIntervention or
     Observation or // KLGatewayCareFollowUpObservation
-    Encounter //klgateway-care-general-encounter, KLGatewayCareEncounter
+    KLGatewayCareGeneralEncounter
 * entry.resource ^short = "Content constrained to known profiles (see also constraint gateway-care-report-1)"
 * entry.search ..0
 * entry.request ..0
 * entry.response ..0
 * signature ..0
 * obeys gateway-care-report-1
-* obeys gateway-care-report-2
 
 
 Invariant: gateway-care-report-1
@@ -31,14 +30,6 @@ Description: "All observation resources shall conform to klgateway-care-follow-u
 Severity: #error
 Expression: "entry.select(resource as Observation).all(
     $this.conformsTo('http://fhir.kl.dk/gateway/StructureDefinition/klgateway-care-follow-up-observation'))"
-
-Invariant: gateway-care-report-2
-Description: "All Encounter resources shall conform to profiles in this implementation guide"
-Severity: #error
-Expression: "entry.select(resource as Encounter).all(
-    $this.conformsTo('http://fhir.kl.dk/gateway/StructureDefinition/klgateway-care-general-encounter')
-    or $this.conformsTo('http://fhir.kl.dk/gateway/StructureDefinition/klgateway-care-encounter'))"
-
 
 Instance: TestPersonReport
 InstanceOf: KLGatewayCareDeliveryReport
@@ -59,8 +50,8 @@ Description: "Example of a delivery report for the test person"
 * entry[=].resource = Dialyse
 * entry[+].fullUrl = "https://test.fhir.dk/Procedure/Saarbehandling"
 * entry[=].resource = Saarbehandling    
-* entry[+].fullUrl = "https://test.fhir.dk/Encounter/NaesteOpfoelgningsdato"
-* entry[=].resource = NaesteOpfoelgningsdato
+* entry[+].fullUrl = "https://test.fhir.dk/Encounter/NaesteOpfoelgning"
+* entry[=].resource = NaesteOpfoelgning
 * entry[+].fullUrl = "https://test.fhir.dk/Observation/VaskeSigFortsaettes"
 * entry[=].resource = VaskeSigFortsaettes
 * entry[+].fullUrl = "https://test.fhir.dk/Observation/PersonligPlejeFortsaettes"
