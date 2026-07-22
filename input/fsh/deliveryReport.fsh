@@ -23,6 +23,7 @@ Description: "Deliver report to deliver for each citizen."
 * entry.response ..0
 * signature ..0
 * obeys gateway-care-report-1
+* obeys klgateway-deceased-planned-intervention-period-end
 
 
 Invariant: gateway-care-report-1
@@ -30,6 +31,12 @@ Description: "All observation resources shall conform to klgateway-care-follow-u
 Severity: #error
 Expression: "entry.select(resource as Observation).all(
     $this.conformsTo('http://fhir.kl.dk/gateway/StructureDefinition/klgateway-care-follow-up-observation'))"
+
+Invariant: klgateway-deceased-planned-intervention-period-end
+Description: "If a citizen is deceased, all planned interventions (CarePlan) must have a period.end populated"
+Severity: #error
+Expression: "entry.select(resource as Patient).where(deceased.ofType(boolean) = true).exists() implies
+    entry.select(resource as CarePlan).all(period.end.exists())"
 
 Instance: TestPersonReport
 InstanceOf: KLGatewayCareDeliveryReport

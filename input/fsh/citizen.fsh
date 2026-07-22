@@ -8,7 +8,7 @@ Description: "Administrative information about a citizen receiving care or care 
 * identifier[d-ecpr] 0..0
 * identifier[cpr] 1..1
 * deceasedDateTime 0..0
-* deceasedBoolean 0..1 //should be changed to 1..1
+* deceasedBoolean 1..1 //should be changed to 1..1
 * active ..1
 * name[official] 0..0
 * name ..0
