@@ -64,8 +64,8 @@ Description: "Detailed information about conditions."
 Invariant: klgateway-severity-mandatory-in-home-care-not-allowed-in-nursing
 Description: "The severity is mandatory for home care and not allowed for nursing conditions"
 Severity: #error
-Expression: "(severity.exists() and code.coding.memberOf('http://fhir.kl.dk/kl-gateway/ValueSet/ConditionCodesHomeCare'))
-          or (severity.empty() and code.coding.memberOf('http://fhir.kl.dk/kl-gateway/ValueSet/ConditionCodesNursing'))"
+Expression: "(severity.exists() and code.coding.memberOf('http://fhir.kl.dk/gateway/ValueSet/ConditionCodesHomeCare'))
+          or (severity.empty() and code.coding.memberOf('http://fhir.kl.dk/gateway/ValueSet/ConditionCodesNursing'))"
 
 
 Instance: VaskeSigLetteBegraensninger
@@ -73,9 +73,9 @@ InstanceOf: KLGatewayCareCondition
 Description: "Assessed ability for the test person to wash himself"
 * clinicalStatus = $ConditionClinical#active
 * category = $ConditionCategory#problem-list-item
-* severity = $FSIII#fcc16cb1-41f0-4832-b834-110fba0aaabe "Lette begrænsninger"
+* severity = $FSIII#fcc16cb1-41f0-4832-b834-110fba0aaabe "1"
 * verificationStatus.coding = $VerificationStatus#confirmed
-* code = $FSIII#0c126894-60e1-4781-96b7-9b227677bfb6 "Vaske sig"
+* code = $FSIII#4d46bd94-9518-431c-82e8-ebb91bca307a "Vaske sig"
 * subject = Reference(TestPerson)
 * recordedDate = 2020-08-14
 

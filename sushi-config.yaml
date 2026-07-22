@@ -19,8 +19,8 @@ menu:
   Home: index.html
   Old Home: indexOld.html
   Artifacts: artifacts.html
-  New Homecare Ex: HomecareNew.htmls
-  New Nursing Ex: NursingNew.html
+  Homecare Examples: HomecareNew.html
+  Nursing Examples: NursingNew.html
   Downloads: downloads.html
 
 parameters:
